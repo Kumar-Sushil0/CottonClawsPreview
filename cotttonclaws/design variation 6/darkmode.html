@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CottonClaws - Deconstructivist Dark Edition</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ffffff",
+                        "secondary": "#000000",
+                        "background-dark": "#000000",
+                        "background-light": "#ffffff",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .outline-text {
+            color: transparent;
+            -webkit-text-stroke: 1px currentColor;
+        }
+        .diagonal-text-container {
+            transform: skewY(-5deg);
+        }
+        .diagonal-text-content {
+            transform: skewY(5deg);
+        }body {
+            background-color: #000000;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body class="bg-black text-white font-display overflow-x-hidden antialiased selection:bg-white selection:text-black">
+<header class="fixed top-0 left-0 w-full z-50 mix-blend-difference text-white px-6 py-4 flex justify-between items-center border-b border-white/20">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-2xl">texture</span>
+<span class="font-bold text-xl tracking-tighter">COTTONCLAWS</span>
+</div>
+<nav class="hidden md:flex gap-8 text-sm uppercase tracking-widest">
+<a class="hover:underline underline-offset-4" href="#">Shop</a>
+<a class="hover:underline underline-offset-4" href="#">Collections</a>
+<a class="hover:underline underline-offset-4" href="#">Archive</a>
+</nav>
+<div class="flex gap-4">
+<button class="hover:opacity-70"><span class="material-symbols-outlined">search</span></button>
+<button class="hover:opacity-70"><span class="material-symbols-outlined">shopping_bag</span></button>
+</div>
+</header>
+<section class="relative h-screen w-full flex flex-col justify-between overflow-hidden bg-black text-white pt-20 border-b border-white">
+<h1 class="text-[15vw] leading-[0.8] font-bold tracking-tighter text-center z-10 mix-blend-exclusion select-none">
+        COTTON
+    </h1>
+<div class="absolute inset-0 flex items-center justify-center z-0 pointer-events-none opacity-60">
+<div class="w-[60vw] h-[70vh] bg-cover bg-center grayscale contrast-125" data-alt="High fashion black and white model portrait with avant-garde styling" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAPcTgQCxVzBJ0Wb1cijBOQv9A2_mpLJhXcIsSxcW0GA5pgUyfca7LGooqeRRwxae-ifRqrxKJb0JdtuLfgNXfucM8rZMJT85cZIleWCtVRp_K4I103GqVp2qLfeKi0-xyl831ybBaYYX9KuUIurn4wnDuE62Hz4BZuoriifpAU6hYt37WfjZURlOpmHTIGNLRRSdth6APMDwhOkRAK3ScsTaPae3OaGKW5Gac-SuD1LaDME4eDlE39t7purhCDbEh7LPrMbr8UrsI')"></div>
+</div>
+<h1 class="text-[15vw] leading-[0.8] font-light tracking-tighter text-center z-10 mix-blend-exclusion select-none">
+        CLAWS
+    </h1>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 animate-bounce">
+<span class="text-xs uppercase tracking-[0.3em]">Explore</span>
+<span class="material-symbols-outlined">arrow_downward</span>
+</div>
+</section>
+<section class="bg-black text-white px-6 py-24 md:px-12 border-b border-white">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-7xl mx-auto">
+<div class="flex flex-col gap-4">
+<span class="text-6xl font-light text-white opacity-20">01</span>
+<p class="text-2xl font-light leading-snug">
+                We exist in the margins. Between structure and chaos. CottonClaws is not just clothing; it is an architectural statement for the body.
+            </p>
+</div>
+<div class="flex flex-col gap-4 md:pt-24">
+<span class="text-6xl font-normal text-white opacity-40">02</span>
+<p class="text-2xl font-normal leading-snug">
+                Rebelling against the symmetry of traditional luxury. We fracture the silhouette to reveal the raw beauty of the construction underneath.
+            </p>
+</div>
+<div class="flex flex-col gap-4 md:pt-48">
+<span class="text-6xl font-bold text-white opacity-100">03</span>
+<p class="text-2xl font-bold leading-tight">
+                Strictly monochrome. No distractions. Only form, texture, and the void. This is deconstructed luxury for the modern avant-garde.
+            </p>
+</div>
+</div>
+</section>
+<section class="bg-black text-white py-32 overflow-hidden relative min-h-[100vh] border-b border-white">
+<div class="absolute top-10 left-10 z-20 mix-blend-difference">
+<h2 class="text-8xl font-bold tracking-tighter text-white">THE<br/>FRACTURE</h2>
+</div>
+<div class="relative w-full max-w-7xl mx-auto h-[800px]">
+<div class="absolute top-0 right-10 w-1/3 aspect-[3/4] z-10 border border-white bg-cover bg-center grayscale hover:grayscale-0 transition-all duration-700" data-alt="Abstract fashion silhouette in monochrome" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCeKIkCeE7NBBl2EM_8dqoreMDmWf0hsPBriW9vBV5hXjeMC7IZpOGZdtSHLbcl2vw2EhUl-B6ssWmwsNa0lTHFRUEl4XcOiti77DJ61i9lhQUgTwNVRG8tK30NWKMJfTj4A2YT-Sz_FcAk8lBUvP-3NF_vsOBX6CL4MEQhvkWSBbJP6diboz1ZNfhWqchWzCR2UZq7iScpOs14wHbdSUUo2Lzvw6D7n8_t824s6h9-DsJMkLlpx0DGPTUqhv63ZNSMiAT8LotjO1s')"></div>
+<div class="absolute top-40 left-20 w-1/4 aspect-square z-20 border-2 border-white bg-cover bg-center grayscale contrast-125 hover:scale-105 transition-transform duration-500" data-alt="Close up of textured black fabric" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBlvYt_FV0iliYA4xRNMwHEB9uQy0PhWsRLYoPkjiPeWzCc62LnitspnMj10RebjUsB4vr07hvo4utRCh9-oHQQXaJBkbCKlEicMLUaKWtlEnNdGBGC6mOkVaXjO76xAfw9TzcGekl7ETM7wBkBAJjzy34wCX8hz5egVKEkzt732R67X6n-MZ1Iq31tW3Dc2aB_khhGJRtN6rpcsL7RM-4CnlnSPCp7Z0g9Zxc_Zu5g_jnmTKcUA4vQtVatHpXr_PRu6uAhvTmTqeE')"></div>
+<div class="absolute top-1/4 left-1/3 w-2/5 aspect-[4/3] z-30 border border-white bg-cover bg-center grayscale brightness-75 hover:brightness-100 transition-all duration-500" data-alt="Model walking on a runway dark setting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBYdcHwbZCPC_0ttVRvp-KQAqlE6nTGofZFxUvg2SSZsTIBIdFctKQ0dIlNM_lK06_CLD-Ivr30kfrKXI1pAcq1HGKAK-sd0pMPplvdIF9_hbRNBGWfAWGB2_mJrPkdtEOYLbN7b1xdXvpezg4xV0i6MS8PZPuNj2q0m8Mbkf0RjytNE3EwhUScv3XfZvijWgMHgj8prnIFWdkB-o2YGi8Ljt1e6BeZpTqsrZyXtLYYewB2aVKvaIm1-S-exFuMxCZOnBQUwy_nbVA')">
+<div class="absolute bottom-0 left-0 bg-white text-black p-4 border-t border-r border-black">
+<span class="text-xl font-bold">COLLECTION 24/25</span>
+</div>
+</div>
+<div class="absolute bottom-20 right-1/4 w-1/4 aspect-[2/3] z-20 border border-white bg-cover bg-center grayscale" data-alt="Model posing in architectural structured clothing" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCHiAe96cjlyxNrblw3F2Jaw_5Wko55OeZRhtyGCvz16aaVc_uvy880ZZ3-LtsPTI7IiDc3IXOLk-ECbQw8SBaqvBuFcOqpKS2nxRcWkL-9azrVZnFaefMubomuop-vcPmGUILc37RNeBXxwwi62AJDzYEja1Ysv2PHwOCqTiQgc0ZbBMhCh9b5roS4PMZPl_sM7JV4UNVa4o1D3aqfyVNrWJDlh0RUZEfCOmpWtZxNVD2U27qjWH0abJ6iO6QEF4JcPTDuP8V4BS0')"></div>
+</div>
+</section>
+<section class="bg-black text-white py-24 px-4 md:px-0 border-b border-white">
+<div class="max-w-6xl mx-auto flex flex-col gap-32">
+<div class="group relative flex flex-col md:flex-row items-start md:items-center gap-8">
+<span class="text-[12rem] leading-none font-bold tracking-tighter text-white mix-blend-overlay opacity-20 md:absolute md:-left-20 md:-top-20 z-0 group-hover:opacity-40 transition-opacity">01</span>
+<div class="w-full md:w-1/2 z-10 pl-8">
+<h3 class="text-4xl font-bold mb-2 text-white">VOID TRENCH</h3>
+<p class="text-lg text-gray-300 mb-6 max-w-sm">Oversized lapels with raw hem finish. Italian wool blend.</p>
+<button class="bg-white text-black px-8 py-3 text-sm font-bold uppercase tracking-widest hover:bg-gray-200">Shop Now</button>
+</div>
+<div class="w-full md:w-1/2 h-[500px] bg-gray-900 border border-white relative z-10 overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-700" data-alt="Long black trench coat on a model" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBH9UmNtMxj6hr8F5zhdZIU5Gu4HlTJgr3iNH57cuhCRs8_0ACbgZ4OenHsvyAWfzruU29FzV9XFg-_vE0T2T7Et_P8FyExrjcPOdgY8gu9qvG1Kcx0JuHBwAubQfiLQAVpfnZM9qpyV_1_jrLAnGWeymBlvUYrDzC_zO8gN8IdJj1s1Gk7KIggSuyKSs_6G94WKBv3BaHqGlIHemjS-b_G141l-h1zZ4P4nxkbC_5rFVTAljqgEdX50OFDXSc5igA8dDPocUxl2zs')"></div>
+</div>
+</div>
+<div class="group relative flex flex-col md:flex-row-reverse items-start md:items-center gap-8 md:mt-20">
+<span class="text-[12rem] leading-none font-bold tracking-tighter text-white mix-blend-overlay opacity-20 md:absolute md:-right-20 md:-bottom-20 z-0 group-hover:opacity-40 transition-opacity">02</span>
+<div class="w-full md:w-1/2 z-10 pr-8 text-right md:text-right flex flex-col items-end">
+<h3 class="text-4xl font-bold mb-2 text-white">ASYMMETRIC KNIT</h3>
+<p class="text-lg text-gray-300 mb-6 max-w-sm">Deconstructed weave with intentional dropped stitches.</p>
+<button class="bg-white text-black px-8 py-3 text-sm font-bold uppercase tracking-widest hover:bg-gray-200">Shop Now</button>
+</div>
+<div class="w-full md:w-1/2 h-[400px] bg-gray-900 border border-white relative z-10 ml-auto md:mr-12 overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-700" data-alt="Close up of knitted white fabric texture" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCu0fhixcB3utcHqaXlV2iZJThvQDCliF5kmDQl-uud3XSzADmX_AiifYUMuig448-1PAhOhNCxAr1v4oPGge96UsCkAHv31jP--cN9C6PHXOxYIgb__9vu2JMkLAlmtFXHYcwD_zC_vUfuoNt1lHBGTU2xC5cUdb53czRbNi1RNfR9tvGVhZ0fUgoUgIYK6ua2R5uYFPjoxVJz141lXL7T-LWY01FSItpl4TvausaydGzf6DTqVupGcY2tPmpzBwG7ZLOM2rUedqg')"></div>
+</div>
+</div>
+</div>
+</section>
+<section class="flex flex-col md:flex-row h-screen border-b border-white">
+<div class="w-full md:w-1/2 bg-white text-black flex items-center justify-center p-12 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-full opacity-10" style="background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, #000 10px, #000 20px);"></div>
+<div class="z-10 max-w-md">
+<h4 class="text-sm uppercase tracking-[0.5em] mb-8 text-gray-600">Philosophy</h4>
+<p class="text-3xl md:text-4xl font-light italic leading-relaxed">
+                "To create is to destroy.<br/>
+                We unravel the thread<br/>
+                to find the soul<br/>
+                of the fabric."
+            </p>
+<div class="mt-12 w-24 h-1 bg-black"></div>
+</div>
+</div>
+<div class="w-full md:w-1/2 bg-black relative border-l border-white md:border-l-0">
+<div class="absolute inset-0 p-20 flex items-center justify-center">
+<div class="w-full h-full bg-cover bg-center grayscale contrast-150 border border-white/20" data-alt="Macro shot of needle and black thread sewing" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAREh7Sx3ufLeoLCDYaHDLMvhvGjfjf-FU7_duGWkpaqyyw1nQ6_5xIvC9ww0l9Ej-SKiZceu_LAvrc2ZPsRmb_9SbHo87RtODhoc0kRf1xLB8gw5zCZaQ8IZVfprRekDDNqVEYITtXOaOvSK1onsUhLNJ44WxUINNqpcNUrDpP7S355sMRgTdXz0NzagPEtLR2pgiUgXFsoqouSkeZ9OsVmHRB4jk3Raftfb3yfveYKWmHC5D1y5KzaxCF5XjAjwc8isxx64nqMoA')"></div>
+</div>
+<div class="absolute bottom-8 right-8 text-white text-right">
+<p class="font-bold text-lg">HAND FINISHED</p>
+<p class="text-sm opacity-70">TOKYO ATELIER</p>
+</div>
+</div>
+</section>
+<section class="bg-black py-16 border-b border-white text-white">
+<div class="flex items-center justify-between px-8 mb-8">
+<h2 class="text-4xl font-bold uppercase tracking-tighter">RUNWAY / EDIT</h2>
+<span class="text-sm font-mono">SCROLL →</span>
+</div>
+<div class="flex overflow-x-auto hide-scrollbar gap-1 px-8 pb-8 snap-x">
+<div class="flex-none w-[300px] md:w-[400px] snap-center flex flex-col gap-2">
+<div class="aspect-[2/3] bg-gray-900 w-full overflow-hidden border border-white/20">
+<div class="w-full h-full bg-cover bg-center grayscale hover:grayscale-0 transition-all duration-300" data-alt="Fashion model on runway full body shot" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAv0moaTK4wPx4sHM-ssjMuHbdbQywlPMCIhCJfvDv3QD4T6mpQaWrG4_ZDhVyLR5P_VxN-SPnKfIkg6oXgJPuLMhq4bTF6oTJVRwHgPK8zJ_p49ABzLGdO7nX-AzN_0n1eBMF2813ycXtRZvCM7gFXXiSAIdpwdlFF9qI-65PTRFC_EHAHblkY9Lwrk5g8KO7NLwfakgdhuU93lq3JPgmwiZSKnFDdAMgfO1xxjDf_gGP1IrBnpSj82AWCwHjGv3IzaAuD9PJR7_M')"></div>
+</div>
+<div class="flex justify-between text-xs font-bold uppercase border-t border-white pt-2">
+<span>Look 01</span>
+<span>SS24</span>
+</div>
+</div>
+<div class="flex-none w-[300px] md:w-[400px] snap-center flex flex-col gap-2">
+<div class="aspect-[2/3] bg-gray-900 w-full overflow-hidden border border-white/20">
+<div class="w-full h-full bg-cover bg-center grayscale hover:grayscale-0 transition-all duration-300" data-alt="Fashion model back view showing clothing detail" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAaXl7izwUos_15RaHOW2bvDwxSq88d8LiBeKqRjM1aGNAX5hkywgQ_vH1QoB7TDd4rgpuuECcRaSQucBfd0ra9oMCX8aV1DoLaBgpc54p6PNxVC8Au33v01jUhJYdSlqIw8K25ealMoGfVfcc_4YOB_Rfev4qWnPtvKTXzSO3GR6qEBWFr5A8cVEKYV_jhzb5gMT_eES4sqFgXQjmEmDvMBYwrM8GXNK5gefoM9dRRihJ6BFk0ui4Mm-P9hj2G_VIUyDHNdV4KDtg')"></div>
+</div>
+<div class="flex justify-between text-xs font-bold uppercase border-t border-white pt-2">
+<span>Look 02</span>
+<span>SS24</span>
+</div>
+</div>
+<div class="flex-none w-[300px] md:w-[400px] snap-center flex flex-col gap-2">
+<div class="aspect-[2/3] bg-gray-900 w-full overflow-hidden border border-white/20">
+<div class="w-full h-full bg-cover bg-center grayscale hover:grayscale-0 transition-all duration-300" data-alt="Fashion model portrait close up" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBx7AxIvb3lNWZ4SKr7WG8OUvfVBTOPPfeeHaNiTZ4uo4qZebOIvZkA2-Y1lI_qg9pF2L4DZGgH0t0HZygvNIk6crDlnQc-ki2oO6uoO9VJybVXL4OoG5Uix9HK8gG2300N5DXjZu8Ex7eCOPa-n0ZMGddyRw_vsbYxB3zK596Em9sslqMrP7dNTbSENM59ejFHMmdZwYpAsq41jsHvkQ4Llgqkm1ev_gyG_yrfX5FkcNcA26fBmeSMWxSfU4HsLKm1apkwoLYSkw8')"></div>
+</div>
+<div class="flex justify-between text-xs font-bold uppercase border-t border-white pt-2">
+<span>Look 03</span>
+<span>SS24</span>
+</div>
+</div>
+<div class="flex-none w-[300px] md:w-[400px] snap-center flex flex-col gap-2">
+<div class="aspect-[2/3] bg-gray-900 w-full overflow-hidden border border-white/20">
+<div class="w-full h-full bg-cover bg-center grayscale hover:grayscale-0 transition-all duration-300" data-alt="Fashion model sitting pose" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDa5gR5JnjBUvngP_U6J1R7njnKqSzVZCcjWuBSr0242tkNfwCKhPcNNp0FytX6V4Tm3t68j5TMCyycDoAXoJfAdtalieXxWISwvO6oEKk6RI5bcnZS1GEElmUdB-NXffG6sDT468oIRo74DEJDhHdrEGiVZrcBYwTHKlAqVCOVTXWzPgMh3nh1etvflwMitGJXIDLv0i_IJSbo-wLo-WsW5rLWXRbs6eubsNaJXJKwscPb5Hpen_s725krqjMN_UpLD0vw9fYHEPA')"></div>
+</div>
+<div class="flex justify-between text-xs font-bold uppercase border-t border-white pt-2">
+<span>Look 04</span>
+<span>SS24</span>
+</div>
+</div>
+<div class="flex-none w-[200px] flex items-center justify-center">
+<a class="text-xl font-bold underline decoration-2 underline-offset-8 text-white" href="#">VIEW ALL LOOKS</a>
+</div>
+</div>
+</section>
+<section class="bg-black text-white py-32 flex flex-col items-center justify-center relative overflow-hidden border-b border-white">
+<div class="absolute inset-0 flex items-center justify-center opacity-10">
+<span class="text-[30vw] font-black outline-text text-white">ZERO</span>
+</div>
+<div class="relative w-[500px] h-[500px] flex items-center justify-center animate-[spin_20s_linear_infinite]">
+<svg class="w-full h-full fill-white" viewBox="0 0 100 100">
+<path d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="transparent" id="circlePath"></path>
+<text font-size="11" font-weight="bold" letter-spacing="2">
+<textPath href="#circlePath" startOffset="0%">
+                    ETHICAL • ETERNAL • ESSENTIAL • COTTONCLAWS • 
+                </textPath>
+</text>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="text-center bg-white text-black p-8 rounded-full w-48 h-48 flex flex-col items-center justify-center z-10 border-4 border-black">
+<span class="material-symbols-outlined text-4xl mb-2">recycling</span>
+<span class="font-bold text-sm uppercase">100% Organic</span>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-black text-white overflow-hidden py-24 relative border-b border-white">
+<div class="diagonal-text-container bg-white text-black w-[120%] -ml-[10%] py-16 shadow-[0_0_50px_rgba(255,255,255,0.2)]">
+<div class="diagonal-text-content px-12 md:px-32">
+<div class="flex flex-col gap-8 max-w-4xl mx-auto text-center">
+<p class="text-3xl md:text-5xl font-bold leading-tight">
+                    "AN AVANT-GARDE COMFORT THAT FEELS LIKE ARMOR FOR THE MODERN WORLD."
+                </p>
+<div class="flex justify-center gap-4 items-center text-black">
+<div class="h-px w-12 bg-black/50"></div>
+<span class="text-sm font-mono uppercase tracking-widest">Vogue Italia</span>
+<div class="h-px w-12 bg-black/50"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-black py-24 px-4 md:px-12 border-b border-white">
+<h2 class="text-white text-center text-sm font-bold uppercase tracking-[0.5em] mb-12">Manifesto</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 max-w-5xl mx-auto border-2 border-white text-white">
+<div class="border-b-2 md:border-b-2 md:border-r-2 border-white p-12 hover:bg-white hover:text-black transition-colors duration-300 group">
+<span class="material-symbols-outlined text-4xl mb-4 group-hover:text-black">straighten</span>
+<h3 class="text-xl font-bold mb-2">PRECISION</h3>
+<p class="text-sm opacity-70">Every stitch calculated. Every cut deliberate.</p>
+</div>
+<div class="border-b-2 border-white p-12 hover:bg-white hover:text-black transition-colors duration-300 group">
+<span class="material-symbols-outlined text-4xl mb-4 group-hover:text-black">contrast</span>
+<h3 class="text-xl font-bold mb-2">CONTRAST</h3>
+<p class="text-sm opacity-70">Finding balance in the extremes of light and dark.</p>
+</div>
+<div class="border-b-2 md:border-b-0 md:border-r-2 border-white p-12 hover:bg-white hover:text-black transition-colors duration-300 group">
+<span class="material-symbols-outlined text-4xl mb-4 group-hover:text-black">all_inclusive</span>
+<h3 class="text-xl font-bold mb-2">TIMELESS</h3>
+<p class="text-sm opacity-70">Designed to outlive trends and seasons.</p>
+</div>
+<div class="p-12 hover:bg-white hover:text-black transition-colors duration-300 group">
+<span class="material-symbols-outlined text-4xl mb-4 group-hover:text-black">fingerprint</span>
+<h3 class="text-xl font-bold mb-2">IDENTITY</h3>
+<p class="text-sm opacity-70">Wearable art that defines the individual.</p>
+</div>
+</div>
+</section>
+<section class="bg-black text-white py-32 px-6 flex flex-col items-center justify-center text-center border-b border-white">
+<h2 class="text-5xl md:text-7xl font-bold mb-8 tracking-tighter">JOIN THE CULT</h2>
+<p class="mb-12 text-gray-300 max-w-lg">Receive exclusive access to limited drops and private archives.</p>
+<form class="w-full max-w-4xl flex flex-col md:flex-row gap-0 border border-white p-2">
+<input class="flex-1 bg-transparent border-none text-white placeholder-gray-500 text-xl px-6 py-4 focus:ring-0 focus:outline-none text-center md:text-left" placeholder="ENTER YOUR EMAIL" type="email"/>
+<button class="bg-white text-black text-2xl font-black uppercase tracking-wider py-6 px-12 md:w-1/2 hover:bg-gray-200 transition-colors" type="button">
+            SUBSCRIBE
+        </button>
+</form>
+</section>
+<footer class="bg-black text-white h-[50vh] relative p-8 md:p-12 text-sm font-bold uppercase tracking-widest">
+<div class="absolute top-12 left-12 flex flex-col gap-2">
+<a class="hover:line-through decoration-2" href="#">Instagram</a>
+<a class="hover:line-through decoration-2" href="#">Twitter/X</a>
+<a class="hover:line-through decoration-2" href="#">Pinterest</a>
+</div>
+<div class="absolute top-12 right-12 flex flex-col gap-2 text-right">
+<a class="hover:line-through decoration-2" href="#">Shipping</a>
+<a class="hover:line-through decoration-2" href="#">Returns</a>
+<a class="hover:line-through decoration-2" href="#">FAQ</a>
+</div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+<span class="material-symbols-outlined text-6xl opacity-20">texture</span>
+</div>
+<div class="absolute bottom-12 left-12">
+<p>© 2024 CottonClaws Inc.</p>
+</div>
+<div class="absolute bottom-12 right-12 text-right">
+<p>Deconstructed in New York</p>
+<p class="text-[10px] text-gray-400 mt-1">Privacy Policy / Terms</p>
+</div>
+</footer>
+
+</body></html>

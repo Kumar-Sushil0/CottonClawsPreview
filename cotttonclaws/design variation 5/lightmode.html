@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CottonClaws Swiss-Minimalist Edition</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800;900&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#000000",
+                        "background-light": "#ffffff",
+                        "background-dark": "#000000",
+                    },
+                    fontFamily: {
+                        "display": ["Work Sans", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0", "lg": "0", "xl": "0", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom utilities for Swiss design touches */
+        .text-justified-block {
+            text-align: justify;
+            text-justify: inter-word;
+        }
+        .writing-vertical {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+        /* Hide scrollbar for cleaner look */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background-light text-primary font-display antialiased overflow-x-hidden selection:bg-primary selection:text-white">
+<!-- Header -->
+<header class="fixed top-0 left-0 w-full z-50 bg-white border-b-2 border-primary mix-blend-difference text-white">
+<!-- Using mix-blend-difference to ensure visibility over any background, a common Swiss brutalist technique -->
+<div class="flex items-center justify-between px-6 py-4 md:px-12">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-4xl">checkroom</span>
+<span class="text-xl font-black tracking-tighter uppercase hidden md:block">CottonClaws</span>
+</div>
+<nav class="hidden md:flex gap-12">
+<a class="text-sm font-bold uppercase tracking-widest hover:underline decoration-2 underline-offset-4" href="#">Shop</a>
+<a class="text-sm font-bold uppercase tracking-widest hover:underline decoration-2 underline-offset-4" href="#">Editions</a>
+<a class="text-sm font-bold uppercase tracking-widest hover:underline decoration-2 underline-offset-4" href="#">Studio</a>
+</nav>
+<div class="flex items-center gap-6">
+<button class="uppercase text-xs font-bold tracking-widest border border-current px-4 py-2 hover:bg-white hover:text-black transition-colors">Cart (0)</button>
+</div>
+</div>
+</header>
+<!-- Spacer for fixed header -->
+<div class="h-[74px]"></div>
+<!-- 1. Hero Section -->
+<section class="relative w-full h-[90vh] flex items-center justify-center overflow-hidden border-b-2 border-primary">
+<!-- Massive CC Monogram Background -->
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-5">
+<span class="text-[40vw] font-black leading-none tracking-tighter select-none">CC</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 w-full h-full max-w-[1920px] mx-auto relative">
+<!-- Left Text Block -->
+<div class="col-span-1 md:col-span-4 flex flex-col justify-end p-8 md:p-12 z-10">
+<h2 class="font-serif text-4xl md:text-6xl italic mb-4">Swiss<br/>Engineered.</h2>
+<p class="text-sm font-bold uppercase tracking-widest max-w-xs leading-relaxed">
+                    Precision textiles for the modern brutalist. Unyielding comfort designed strictly in monochrome.
+                </p>
+</div>
+<!-- Center Image - Tall & Narrow -->
+<div class="col-span-1 md:col-span-4 relative h-full flex items-center justify-center z-0 border-x-2 border-primary md:border-primary/0">
+<div class="h-full w-full md:w-[80%] relative overflow-hidden bg-gray-100">
+<div class="absolute inset-0 bg-cover bg-center grayscale contrast-125" data-alt="High contrast black and white fashion model in minimal clothing posing strictly" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD6UfVgE1tyzKMk42iwaWPkFTDV_Sw9NjgYsvZ0pfFxzZNZHZQEnIeKwqPsJVl-SBJrC4jAs9cSXQjLa8JS0eupvU0ouIiq47Cxk5R2sDWj1Yq1MvWIb2tf_y7j4M6Pz9HoWwwk9qIoyfDi5yczcVf-Z1JkTSriVR7ADxocLdDzKM4gmoeONVDEoupKx4078IHTI6tvFWPeJq2vqzD3Ct6Hkb2LL7Z_iGjyBCoMMWTsWzFVo-YuSsYN4ldqcRVOh9d5ckC2-WcxlMg');"></div>
+<div class="absolute inset-0 bg-black/10"></div>
+</div>
+</div>
+<!-- Right Headline Overlay -->
+<div class="col-span-1 md:col-span-4 flex flex-col justify-start md:justify-center p-8 md:p-12 z-20 pointer-events-none mix-blend-difference text-white md:text-primary md:mix-blend-normal">
+<h1 class="text-6xl md:text-8xl lg:text-9xl font-black leading-[0.85] tracking-tighter uppercase text-right md:text-left md:-ml-32">
+                    Crafted<br/>Comfort
+                </h1>
+</div>
+</div>
+</section>
+<!-- 2. Brand Story / Manifesto -->
+<section class="py-24 px-6 md:px-12 border-b-2 border-primary">
+<div class="max-w-4xl mx-auto">
+<p class="text-justified-block font-bold text-2xl md:text-4xl leading-tight uppercase tracking-tight">
+<span class="text-6xl md:text-7xl font-serif italic normal-case block mb-2">The Philosophy —</span>
+                We believe that true luxury lies in reduction. By stripping away the unnecessary, we reveal the essential quality of the fabric and the integrity of the weave. <span class="bg-primary text-white px-2">Our garments are not designed;</span> they are engineered for the human form. No decoration. No distraction. Pure function.
+            </p>
+</div>
+</section>
+<!-- 3. Collections Grid (4x4) -->
+<section class="border-b-2 border-primary">
+<div class="grid grid-cols-2 md:grid-cols-4 divide-x-2 divide-y-2 divide-primary border-t-0 border-b-0">
+<!-- Grid Items loop -->
+<!-- Item 1 -->
+<div class="aspect-square relative group flex flex-col justify-between p-6 hover:bg-black hover:text-white transition-colors duration-300">
+<span class="text-xs font-bold uppercase tracking-widest">001 — Basics</span>
+<div class="w-1/2 mx-auto aspect-[3/4] bg-gray-100 grayscale group-hover:grayscale-0 transition-all duration-500 bg-cover bg-center" data-alt="Minimalist white t-shirt on hanger" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDRdTpcf-mJDn8xjI5Kf66O5011tpmP7TSRe1wzC0SAcqOpix-eGODZQKdrAQJIxGRfrwPo1FJxRMfDnDSV3H5ZCjzZq4Osr1423ykVH5HF3vG9P0zRvW-7m7SY_RpMVAes-TEnP6JrpPP7R9OMNQCdA9NGkj7oea1EunGOenOfvxJCV-SHoRiaFq9TapspD9fmwVwRjt_K2222-c2l2REvm9XEHmkR2BMGXDbILgJ6q4LfA7u-ahf0syZQAuYTRiGao00nDrG6T8k');"></div>
+<div class="flex justify-between items-end">
+<span class="text-lg font-bold font-serif italic">Tee</span>
+<span class="text-xs font-mono">$80</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="aspect-square relative group flex flex-col justify-between p-6 hover:bg-black hover:text-white transition-colors duration-300">
+<span class="text-xs font-bold uppercase tracking-widest">002 — Outerwear</span>
+<div class="w-1/2 mx-auto aspect-[3/4] bg-gray-100 grayscale group-hover:grayscale-0 transition-all duration-500 bg-cover bg-center" data-alt="Black structured jacket studio shot" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAa544X_vuITTvC7kY6y0HkKJ-2X7jZxVeJUJG8NpuKalhuDE8jcdeupOfBbtNUNt7XMHFa4N1FANQqoQ5XJgv8mophc_8DZah7nvrmiyYT1BWMlbldGPprpIdxnPRUNKGn0MidcmRTcWqUiKJX62Q-1JppMTJIokaNa0nhF1AvFayns7UxIb1TdwPAUdSVLLWZ6bfChdqLuFYnvnMLwMaM9sZTLyzXiCtJrR8GwRoP_ZTXt-p1PEQ86V8-8KMkG-VbeNq68oUT16s');"></div>
+<div class="flex justify-between items-end">
+<span class="text-lg font-bold font-serif italic">Coat</span>
+<span class="text-xs font-mono">$450</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="aspect-square relative group flex flex-col justify-between p-6 hover:bg-black hover:text-white transition-colors duration-300">
+<span class="text-xs font-bold uppercase tracking-widest">003 — Trousers</span>
+<div class="w-1/2 mx-auto aspect-[3/4] bg-gray-100 grayscale group-hover:grayscale-0 transition-all duration-500 bg-cover bg-center" data-alt="Tailored black trousers flat lay" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD0d-9FvtaaLJDTzqfzI1cJSHrFQrTWFNIL1DgZEZqJMT7YZN0FhsMP7D-ogKOkJ8DXqFEcZq_s1M3h6UVni5j23nz5KX4H-beTmD0mcwiO8Qh0ndbG4QbPSAw1isxhRVBIhZe1_36RmKvnFBmf5RGaqOieExweoH_8FzYTkPAv9FKGpRi_xErEHk3eWagrfcgmHPvbfl1xBOzczaZeuOJSjTfmzHpNiPQBKOwAyaFamYCLmYg1ilZrycrLIqSl9FONxrQRFYRGi6c');"></div>
+<div class="flex justify-between items-end">
+<span class="text-lg font-bold font-serif italic">Pant</span>
+<span class="text-xs font-mono">$220</span>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="aspect-square relative group flex flex-col justify-between p-6 hover:bg-black hover:text-white transition-colors duration-300">
+<span class="text-xs font-bold uppercase tracking-widest">004 — Accessories</span>
+<div class="w-1/2 mx-auto aspect-[3/4] bg-gray-100 grayscale group-hover:grayscale-0 transition-all duration-500 bg-cover bg-center" data-alt="Leather bag detail" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC4knEQIqHZFu5AH6Ri5UnleNHOqvy6M51sFPJrB07h89h7YQ4Rrzf1lni_qSkdjIpRMCkZ31KPTbdeMMWKqlwcoCL7sZBhlDjI-e0R6Y8w4q7Z8-c8yP4zziywc4meocZ9OAQSRHyCMFsqMbRqAsMLXB0eGYGv6Ud-f5Nm9r9A9fTgxug-tYHYxd_Yolbr7_HWiXASDI3ux4Op4XSHULkrvIf-kQXk_-i010_6GMmzGbe4d-qjn_ljiaVrkO-QI2EjPUIupMgNPyQ');"></div>
+<div class="flex justify-between items-end">
+<span class="text-lg font-bold font-serif italic">Bag</span>
+<span class="text-xs font-mono">$380</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. Best Sellers (Vertical Typography) -->
+<section class="flex flex-col md:flex-row h-auto md:h-[600px] border-b-2 border-primary bg-primary text-white overflow-hidden">
+<!-- Sidebar Label -->
+<div class="w-full md:w-24 p-6 border-b-2 md:border-b-0 md:border-r-2 border-white/20 flex md:flex-col justify-between items-center md:items-start">
+<span class="material-symbols-outlined text-3xl">star</span>
+<span class="text-xs font-bold uppercase tracking-widest md:writing-vertical md:rotate-180">Best Sellers Selection</span>
+</div>
+<!-- Interactive List -->
+<div class="flex-1 flex flex-col">
+<!-- Item 1 -->
+<div class="group relative flex-1 border-b border-white/20 flex items-center px-8 md:px-12 cursor-pointer transition-all duration-500 hover:bg-white hover:text-black hover:flex-[2]">
+<h3 class="text-4xl md:text-6xl font-black uppercase tracking-tighter z-10">The Heavyweight</h3>
+<span class="ml-auto font-serif italic text-2xl z-10 opacity-0 group-hover:opacity-100 transition-opacity">Cotton</span>
+<!-- Reveal Image -->
+<div class="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-20 transition-opacity duration-500 pointer-events-none grayscale" data-alt="Texture of heavy cotton fabric close up" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC0p8tKc4cFljCbRl6nKlXlP4uhi_2-YEx3OBA8J1UJVSp4PFrrjloi7MbhSZBuSa_-q5t-_Nq2dA7haDTHtPXVFquVzYGmVaIYjv2duFar8C77R8ZoxIRjfR6X4E7zkqrMHLkkdbLqcrgwVgpA9tlKu13bZcnqGJny7Zol-9jAwCPfaC82hKAyscuXXbNNGYswaKQo07tU3t7MtyKzU-oSExBtqcvNWr2IvoGr6ki1ti7107G7k4Qpy1MEUBUlhEePJRGPKIRI9u0');"></div>
+</div>
+<!-- Item 2 -->
+<div class="group relative flex-1 border-b border-white/20 flex items-center px-8 md:px-12 cursor-pointer transition-all duration-500 hover:bg-white hover:text-black hover:flex-[2]">
+<h3 class="text-4xl md:text-6xl font-black uppercase tracking-tighter z-10">The Oxford</h3>
+<span class="ml-auto font-serif italic text-2xl z-10 opacity-0 group-hover:opacity-100 transition-opacity">Weave</span>
+<div class="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-20 transition-opacity duration-500 pointer-events-none grayscale" data-alt="White oxford shirt texture" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDaviWA6SGcEecvmirA27lTgmV83FsVENM358GEGvJMG-3j9TEtnnTwEM8sJuk3F7ry4yFNYAFCKy6AjVeyzS9NuUPHtcNx3pZ82rOvgZD_b4Is6SQjAYOVBr3BBT4p27Q3Dl3z83JxMT-g6o6hjUllRzL7gYWYiFFmKnDjugATEJGcIE2SQl7yh0aesX-UiEHgLzFMVMfpXaDYBecsHAU1uGE14EJQv9Ea9CSkslM14h-ThSpq0aV6otbR4dDlR1paVocbW0KkZgw');"></div>
+</div>
+<!-- Item 3 -->
+<div class="group relative flex-1 flex items-center px-8 md:px-12 cursor-pointer transition-all duration-500 hover:bg-white hover:text-black hover:flex-[2]">
+<h3 class="text-4xl md:text-6xl font-black uppercase tracking-tighter z-10">The Cashmere</h3>
+<span class="ml-auto font-serif italic text-2xl z-10 opacity-0 group-hover:opacity-100 transition-opacity">Wool</span>
+<div class="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-20 transition-opacity duration-500 pointer-events-none grayscale" data-alt="Soft cashmere sweater texture" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCdZrex8-znrXHjNky6eUfxjp5k7vITM2HiTDPytdcnG3v4wX2Nw_6u2GleO-yoyn4fXpLQR97EQBrMBUmNL66Da2uT8-rE0HY8utJEI1SVeq9bbxWJgFQQ0gLx2Ik4ua33cYNbDFCf7NZX1rodibMQ9zec3hQckuQm9ZZcvByAp9ASvRns7DVpSee3UullCF9fROi8T3HcYYK6uczKVXWSP-QNJZXyCsiOjPRa_ExgB04FDDFIjCyEcUm1LArIxL_9-NnxoUv92Y4');"></div>
+</div>
+</div>
+</section>
+<!-- 5. Craftsmanship Diagram -->
+<section class="py-24 px-6 md:px-12 border-b-2 border-primary bg-white">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+<!-- Text Side -->
+<div>
+<h2 class="text-5xl font-black uppercase tracking-tight mb-8">Technical<br/>Breakdown</h2>
+<div class="space-y-8">
+<div class="flex items-start gap-4">
+<span class="font-mono text-sm border border-black rounded-full w-6 h-6 flex items-center justify-center shrink-0">1</span>
+<div>
+<h4 class="font-bold text-lg uppercase mb-1">Double-Stitched Seams</h4>
+<p class="text-sm text-gray-800 leading-relaxed">Reinforced binding ensuring longevity under stress. 100% Nylon thread.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="font-mono text-sm border border-black rounded-full w-6 h-6 flex items-center justify-center shrink-0">2</span>
+<div>
+<h4 class="font-bold text-lg uppercase mb-1">Mercerized Cotton</h4>
+<p class="text-sm text-gray-800 leading-relaxed">Treated for increased luster and affinity to dye. Zero shrinkage.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="font-mono text-sm border border-black rounded-full w-6 h-6 flex items-center justify-center shrink-0">3</span>
+<div>
+<h4 class="font-bold text-lg uppercase mb-1">Tailored Fit</h4>
+<p class="text-sm text-gray-800 leading-relaxed">Laser-cut panels assembled for ergonomic movement.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Visual Diagram Side -->
+<div class="relative w-full aspect-[4/5] border border-black p-4 flex items-center justify-center bg-gray-50">
+<!-- Background Grid Lines -->
+<div class="absolute inset-0" style="background-image: linear-gradient(to right, #e5e5e5 1px, transparent 1px), linear-gradient(to bottom, #e5e5e5 1px, transparent 1px); background-size: 40px 40px;"></div>
+<!-- Diagram Image -->
+<div class="relative z-10 w-3/4 h-3/4 bg-contain bg-no-repeat bg-center mix-blend-multiply grayscale contrast-125" data-alt="Technical flat lay of a shirt with blueprint style aesthetic" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCVOSi0-0iFCEu5clMEpmKo3iNhzU2u3qsDpTO33kykOUVJ_EI-SG1nV_KA9yGYWyqqs0WUqM8O5MxAiHa8MMPfNzVUUeKvYFFgMPeIvQRHu3_zG03TKhBFiYBBp52ErLhjA-i4lQBZX4k7BbHRm0zjyn_mnIkRa097t06Q0I98CCBezqOSvXm1dPKj1Z6H2_4WdmCUQzhxEl78qx4dnTXtq5LBVIK7YVGcJ-CWWlS_2nG7wud47LHEJ5mT-YgDXdVUjyf0exfUr1c');"></div>
+<!-- Connector Lines (Visual CSS art) -->
+<div class="absolute top-1/4 left-1/4 w-8 h-[1px] bg-black z-20"></div>
+<div class="absolute top-1/4 left-[15%] text-xs font-mono bg-black text-white px-1">FIG 1</div>
+<div class="absolute bottom-1/3 right-1/4 w-12 h-[1px] bg-black z-20"></div>
+<div class="absolute bottom-1/3 right-[15%] text-xs font-mono bg-black text-white px-1">FIG 2</div>
+</div>
+</div>
+</section>
+<!-- 6. Lookbook Staircase -->
+<section class="py-24 overflow-hidden border-b-2 border-primary bg-background-light">
+<div class="container mx-auto px-4">
+<div class="flex flex-col items-center mb-16">
+<h2 class="font-serif italic text-4xl">The Lookbook</h2>
+<p class="text-xs font-bold uppercase tracking-widest mt-2">Volume V</p>
+</div>
+<div class="relative w-full max-w-6xl mx-auto h-[800px] md:h-[600px]">
+<!-- Image 1: Top Left -->
+<div class="absolute top-0 left-0 md:left-10 w-[40%] md:w-[25%] aspect-[3/4] border-2 border-black z-10 bg-gray-200">
+<div class="w-full h-full bg-cover bg-center grayscale hover:grayscale-0 transition-all duration-700" data-alt="Model in black suit walking away" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuARxIz1H8ok2iT4Rvbg9stiiRCr5hax_-DyZErKK3lrIFyYAd1cHmRILOPBqd20ch_0bueJhTfweRRFfuWX_cn36FBlemPTyVOAudTLXECp6Qo0-qu8kjriXog6NHO333MIH6viLAyXO6iYHtKTKu8ZS6rogUmV71pl4pRNJLYYXnimBY-j7HVa990NNvisiSZfe_fyqbe0Ani_9JVJ7GUbpVFZlSZDYYqIxP9EwxnxbrUevdTPzvhpNi_LOPbHRqQVBAguDeLY1c0');"></div>
+</div>
+<!-- Image 2: Center -->
+<div class="absolute top-[20%] left-[30%] md:left-[35%] w-[45%] md:w-[30%] aspect-[4/5] border-2 border-black z-20 shadow-2xl bg-gray-200">
+<div class="w-full h-full bg-cover bg-center grayscale hover:grayscale-0 transition-all duration-700" data-alt="Close up of black fabric texture on model" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAhtCI4FrNvagQ1853b6vtwzgUm0m1hjyZI665_0t8FzD4QkJicmNs3qcJUp9vHZEBu9V2UY-wjkjucIgtNAckLGvoKPJwUvGKGBn5LAVmgt4PrIP-md8xG1OrG12yaTkGoSTk42Wyi3EXUigq_zewPU6T4csMkaJnbAJmqkto2YkSL9utPPNK_bzSDYaNbfvZdvrv2_R036y4973lVl6otCjxESbRVtijQL0vX4E0byn8P0xxeQw3-8SLMVRzk_7lTAvQIzIsL81U');"></div>
+</div>
+<!-- Image 3: Bottom Right -->
+<div class="absolute bottom-0 right-4 md:right-20 w-[35%] md:w-[25%] aspect-square border-2 border-black z-10 bg-gray-200">
+<div class="w-full h-full bg-cover bg-center grayscale hover:grayscale-0 transition-all duration-700" data-alt="Model posing in minimalism studio" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCMtEGY8lNk_jbU7CB7Y-ZuhPDIipWSxBSzcJVvfc14kxClwI7TYy6T1xEYNC-xoC8tpMf1MxU3bceGf7gkztfs78gVD6MWJhK9ICwoouldT4Rtbg831r12KfLed7b0D2qy6trosHW41t6NuopZJ6-z1zTB9SR5ZiFGZIyIE4sbtfTDVSrx_5cD8qwqbLLfMhjCvDt8lx3fgDrJ7bC20NTV_PwIbSpUl4LAH5Otv0Yi2WvSSPeOdhLXkBgEx9_wmn1Khyq0jwfQfiU');"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. Sustainability (Geometric Icons) -->
+<section class="border-b-2 border-primary">
+<div class="grid grid-cols-1 md:grid-cols-3 divide-y-2 md:divide-y-0 md:divide-x-2 divide-primary">
+<!-- Icon 1 -->
+<div class="p-12 flex flex-col items-center text-center hover:bg-black hover:text-white transition-colors duration-300">
+<div class="w-16 h-16 border-2 border-current rounded-full flex items-center justify-center mb-6">
+<div class="w-1 h-8 bg-current"></div>
+</div>
+<h3 class="font-bold uppercase tracking-widest text-sm mb-2">Zero Waste</h3>
+<p class="font-serif italic text-sm opacity-80">Circular production models.</p>
+</div>
+<!-- Icon 2 -->
+<div class="p-12 flex flex-col items-center text-center hover:bg-black hover:text-white transition-colors duration-300">
+<div class="w-16 h-16 border-2 border-current flex items-center justify-center mb-6">
+<div class="w-8 h-8 border border-current rounded-full"></div>
+</div>
+<h3 class="font-bold uppercase tracking-widest text-sm mb-2">Organic</h3>
+<p class="font-serif italic text-sm opacity-80">GOTS certified materials only.</p>
+</div>
+<!-- Icon 3 -->
+<div class="p-12 flex flex-col items-center text-center hover:bg-black hover:text-white transition-colors duration-300">
+<div class="w-16 h-16 flex items-center justify-center mb-6 relative">
+<div class="absolute w-16 h-[2px] bg-current rotate-45"></div>
+<div class="absolute w-16 h-[2px] bg-current -rotate-45"></div>
+</div>
+<h3 class="font-bold uppercase tracking-widest text-sm mb-2">Cruelty Free</h3>
+<p class="font-serif italic text-sm opacity-80">No animal byproducts. Ever.</p>
+</div>
+</div>
+</section>
+<!-- 8. Testimonials (Screen Filling Quote) -->
+<section class="h-[60vh] flex items-center justify-center bg-black text-white px-8 text-center border-b-2 border-white/20">
+<blockquote class="max-w-4xl">
+<span class="text-6xl text-white/20 font-serif leading-none">“</span>
+<p class="text-3xl md:text-5xl font-serif italic leading-snug">
+                CottonClaws has redefined my wardrobe. It's not just clothing; it's architecture for the body. The precision is palpable in every stitch.
+            </p>
+<footer class="mt-8 text-sm font-bold uppercase tracking-widest text-white/60">— Jean-Luc M., Zurich</footer>
+</blockquote>
+</section>
+<!-- 9. Brand Promise (Horizontal Bars) -->
+<section class="bg-white">
+<div class="border-b-2 border-black py-8 px-6 md:px-12 flex justify-between items-center group hover:bg-black hover:text-white transition-colors cursor-default">
+<span class="text-2xl md:text-4xl font-black uppercase tracking-tighter">Lifetime Guarantee</span>
+<span class="material-symbols-outlined text-4xl group-hover:rotate-45 transition-transform">arrow_forward</span>
+</div>
+<div class="border-b-2 border-black py-8 px-6 md:px-12 flex justify-between items-center group hover:bg-black hover:text-white transition-colors cursor-default">
+<span class="text-2xl md:text-4xl font-black uppercase tracking-tighter">Global Shipping</span>
+<span class="material-symbols-outlined text-4xl group-hover:rotate-45 transition-transform">arrow_forward</span>
+</div>
+<div class="border-b-2 border-black py-8 px-6 md:px-12 flex justify-between items-center group hover:bg-black hover:text-white transition-colors cursor-default">
+<span class="text-2xl md:text-4xl font-black uppercase tracking-tighter">Free Returns</span>
+<span class="material-symbols-outlined text-4xl group-hover:rotate-45 transition-transform">arrow_forward</span>
+</div>
+</section>
+<!-- 10. Newsletter -->
+<section class="py-32 px-6 md:px-12 bg-white text-black border-b-2 border-primary">
+<div class="max-w-5xl mx-auto text-center">
+<h2 class="text-6xl md:text-8xl font-black uppercase tracking-tighter mb-8 leading-[0.8]">Join The Club</h2>
+<div class="flex flex-col md:flex-row border-2 border-black max-w-2xl mx-auto">
+<input class="w-full bg-transparent border-none text-black placeholder-black/50 font-bold uppercase tracking-widest px-6 py-4 focus:ring-0 text-sm md:text-base" placeholder="YOUR EMAIL ADDRESS" type="email"/>
+<button class="bg-black text-white px-10 py-4 font-bold uppercase tracking-widest text-sm hover:bg-gray-900 transition-colors shrink-0">Subscribe</button>
+</div>
+</div>
+</section>
+<!-- 11. Footer (Architectural Journal Style) -->
+<footer class="bg-black text-white pt-16 pb-8 px-6 md:px-12 text-xs font-mono">
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-y-12 gap-x-8 mb-16">
+<!-- Col 1 -->
+<div class="flex flex-col gap-4">
+<h4 class="font-bold uppercase tracking-widest text-white/50 mb-2">Index 01 — Shop</h4>
+<a class="hover:text-white/70" href="#">New Arrivals</a>
+<a class="hover:text-white/70" href="#">Best Sellers</a>
+<a class="hover:text-white/70" href="#">The Essentials</a>
+<a class="hover:text-white/70" href="#">Accessories</a>
+</div>
+<!-- Col 2 -->
+<div class="flex flex-col gap-4">
+<h4 class="font-bold uppercase tracking-widest text-white/50 mb-2">Index 02 — Info</h4>
+<a class="hover:text-white/70" href="#">About Us</a>
+<a class="hover:text-white/70" href="#">Sustainability</a>
+<a class="hover:text-white/70" href="#">Careers</a>
+<a class="hover:text-white/70" href="#">Press</a>
+</div>
+<!-- Col 3 -->
+<div class="flex flex-col gap-4">
+<h4 class="font-bold uppercase tracking-widest text-white/50 mb-2">Index 03 — Support</h4>
+<a class="hover:text-white/70" href="#">Contact</a>
+<a class="hover:text-white/70" href="#">Shipping</a>
+<a class="hover:text-white/70" href="#">Returns</a>
+<a class="hover:text-white/70" href="#">Size Guide</a>
+</div>
+<!-- Col 4 -->
+<div class="flex flex-col gap-4 col-span-2 md:col-span-1 lg:col-span-2">
+<h4 class="font-bold uppercase tracking-widest text-white/50 mb-2">Index 04 — Legal</h4>
+<p class="text-white/70 max-w-xs leading-relaxed">
+                    © 2024 CottonClaws Inc.<br/>
+                    Designed in Zurich, Switzerland.<br/>
+                    All rights reserved.
+                </p>
+<div class="flex gap-4 mt-4">
+<a class="underline underline-offset-2" href="#">Privacy</a>
+<a class="underline underline-offset-2" href="#">Terms</a>
+</div>
+</div>
+<!-- Col 5: Brand Mark -->
+<div class="col-span-2 lg:col-span-1 flex items-start lg:justify-end">
+<div class="border border-white w-16 h-16 flex items-center justify-center rounded-full">
+<span class="font-serif italic text-2xl">CC</span>
+</div>
+</div>
+</div>
+<!-- Bottom Data Row -->
+<div class="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+<div class="flex gap-8">
+<span>COORD: 47.3769° N, 8.5417° E</span>
+<span>EST. 2023</span>
+</div>
+<div class="flex gap-6 uppercase tracking-widest">
+<a href="#">Inst</a>
+<a href="#">Twit</a>
+<a href="#">Link</a>
+</div>
+</div>
+</footer>
+</body></html>

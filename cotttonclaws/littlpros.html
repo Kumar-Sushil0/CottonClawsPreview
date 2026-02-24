@@ -1,705 +1,732 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html class="scroll-smooth" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>LittlePros Sports Hub - Kids Sports Club</title>
+<title>CottonClaws - Technical Streetwear</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;600;700&amp;family=Nunito:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,400&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
 <script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        primary: "#FFC107", // Bright Yellow from logo
-                        secondary: "#FF6F00", // Orange from logo
-                        accent: "#0056D2", // Brand Blue
-                        "primary-dark": "#FFA000",
-                        "background-light": "#F9FAFB",
-                        "background-dark": "#0F172A",
-                        "card-light": "#FFFFFF",
-                        "card-dark": "#1E293B",
-                    },
-                    fontFamily: {
-                        display: ["Fredoka", "sans-serif"],
-                        body: ["Nunito", "sans-serif"],
-                    },
-                    borderRadius: {
-                        DEFAULT: "1rem",
-                        'xl': '1.5rem',
-                        '2xl': '2rem',
-                        '3xl': '3rem',
-                    },
-                },
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#000000",
+              secondary: "#ffffff",
+              "background-light": "#F2F2F2",
+              "background-dark": "#0A0A0A",
+              "neutral-100": "#f5f5f5",
+              "neutral-800": "#262626",
             },
-        };
+            fontFamily: {
+              display: ['Archivo', 'sans-serif'],
+              sans: ['Inter', 'sans-serif'],
+            },
+            borderRadius: {
+              DEFAULT: "0px", // Brutalist usually means sharp corners
+              'sm': '2px',
+              'md': '4px',
+              'full': '9999px',
+            },
+            spacing: {
+                '128': '32rem',
+            },
+            letterSpacing: {
+                'tighter': '-0.05em',
+                'tight': '-0.025em',
+                'widest': '0.1em',
+            }
+          },
+        },
+      };
     </script>
-<style type="text/tailwindcss">
-        .blob-shape {
-            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+<style>.blur-text {
+            color: transparent;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6), 0 0 40px rgba(255, 255, 255, 0.4);
+            animation: glitch 3s infinite alternate;
+        }
+        @keyframes glitch {
+            0% { text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 2px 0 2px rgba(255,0,0,0.5); transform: skewX(0deg); }
+            20% { text-shadow: 0 0 5px rgba(255, 255, 255, 0.9), -2px 0 2px rgba(0,0,255,0.5); transform: skewX(-2deg); }
+            40% { text-shadow: 0 0 20px rgba(255, 255, 255, 0.6); transform: skewX(0deg); }
+            100% { text-shadow: 0 0 15px rgba(255, 255, 255, 0.7), 4px 0 1px rgba(0,255,0,0.5); transform: skewX(1deg); }
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-100%); }
+        }
+        .animate-marquee {
+            display: inline-block;
+            white-space: nowrap;
+            animation: marquee 20s linear infinite;
+        }
+        .barcode {
+            background-image: repeating-linear-gradient(90deg, currentColor 0px, currentColor 1px, transparent 1px, transparent 3px);
+            height: 12px;
+            width: 60px;
+            display: inline-block;
+        }
+        .barcode-lg {
+             background-image: repeating-linear-gradient(90deg, currentColor 0px, currentColor 2px, transparent 2px, transparent 4px);
+             height: 16px;
+             width: 80px;
+             display: inline-block;
         }
     </style>
 </head>
-<body class="font-body bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-100 transition-colors duration-300">
-<nav class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md shadow-sm border-b border-slate-100 dark:border-slate-800">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="flex justify-between h-20 items-center">
-<div class="flex items-center gap-2">
-<div class="h-12 w-12 bg-accent rounded-full flex items-center justify-center text-primary font-display font-bold text-2xl border-4 border-primary">
-                        LP
-                    </div>
-<span class="font-display font-bold text-2xl text-accent dark:text-primary tracking-wide">LittlePros</span>
+<body class="font-sans antialiased text-gray-900 bg-background-light dark:bg-background-dark dark:text-gray-100 transition-colors duration-300">
+<nav class="sticky top-0 z-50 bg-white/90 dark:bg-black/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+<div class="max-w-[1920px] mx-auto px-6 h-16 flex items-center justify-between">
+<div class="flex items-center gap-6">
+<a class="font-display font-black text-xl tracking-tighter" href="#">COTTONCLAWS</a>
+<span class="hidden md:inline text-xs text-gray-500 dark:text-gray-400 font-mono">EST. 2024 // TYO</span>
 </div>
-<div class="hidden md:flex items-center space-x-8">
-<a class="text-slate-600 dark:text-slate-300 hover:text-accent dark:hover:text-primary font-bold transition-colors" href="#about">About</a>
-<a class="text-slate-600 dark:text-slate-300 hover:text-accent dark:hover:text-primary font-bold transition-colors" href="#programs">Programs</a>
-<a class="text-slate-600 dark:text-slate-300 hover:text-accent dark:hover:text-primary font-bold transition-colors" href="#coaches">Coaches</a>
-<a class="text-slate-600 dark:text-slate-300 hover:text-accent dark:hover:text-primary font-bold transition-colors" href="#gallery">Gallery</a>
-<a class="bg-primary hover:bg-primary-dark text-slate-900 px-6 py-2 rounded-full font-display font-bold transition-transform transform hover:scale-105 shadow-md" href="#contact">
-                        Join the Team
-                    </a>
-<button class="p-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-yellow-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" onclick="document.documentElement.classList.toggle('dark')">
-<span class="material-symbols-outlined">light_mode</span>
+<div class="hidden md:flex items-center gap-8 font-medium text-sm">
+<a class="hover:text-gray-500 transition-colors" href="#">Shots <span class="material-icons-outlined text-sm align-middle">expand_more</span></a>
+<div class="bg-pink-500 text-white p-2 rounded-full flex items-center justify-center w-8 h-8">
+<span class="material-icons-outlined text-sm">search</span>
+</div>
+<a class="hover:text-gray-500 transition-colors" href="#">Explore <span class="material-icons-outlined text-sm align-middle">expand_more</span></a>
+<a class="hover:text-gray-500 transition-colors" href="#">Hire Talent <span class="material-icons-outlined text-sm align-middle">expand_more</span></a>
+<a class="hover:text-gray-500 transition-colors" href="#">Get Hired <span class="material-icons-outlined text-sm align-middle">expand_more</span></a>
+<a class="hover:text-gray-500 transition-colors" href="#">Community</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors">
+<span class="material-icons-outlined">favorite_border</span>
+</button>
+<button class="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors">
+<span class="material-icons-outlined">shopping_bag</span>
 </button>
 </div>
-<div class="md:hidden flex items-center">
-<button class="mr-4 p-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-yellow-300" onclick="document.documentElement.classList.toggle('dark')">
-<span class="material-symbols-outlined text-sm">light_mode</span>
-</button>
-<button class="text-slate-600 dark:text-slate-200">
-<span class="material-symbols-outlined text-3xl">menu</span>
-</button>
 </div>
+<div class="border-t border-gray-100 dark:border-gray-800 px-6 py-3 flex justify-between items-center text-xs font-mono">
+<div>
+<span class="font-bold">One Week Wonders</span>
+<span class="text-green-500 ml-2">Available for work</span>
+<a class="ml-4 text-gray-500 hover:text-black dark:hover:text-white underline" href="#">Follow</a>
 </div>
 </div>
 </nav>
-<section class="relative overflow-hidden bg-accent dark:bg-blue-900 pt-16 pb-24 lg:pt-32 lg:pb-40">
-<div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10 pointer-events-none">
-<div class="absolute top-10 left-10 w-32 h-32 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl"></div>
-<div class="absolute top-10 right-10 w-32 h-32 bg-orange-300 rounded-full mix-blend-multiply filter blur-xl"></div>
-<div class="absolute -bottom-8 left-20 w-32 h-32 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl"></div>
+<section class="relative h-screen w-full overflow-hidden flex flex-col items-center justify-center bg-black">
+<div class="absolute inset-0 z-0">
+<img alt="Model in leather jacket" class="w-full h-full object-cover grayscale opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzx4tA9purl0CU9jmMay84K9SltiHi-8ZPnaz-Lh60JS6c1MSayuKYleku8hbariU-rGeFl303chBe1lqUzzMUGR5GZDeEzgoGXGpBD4hZaaLFfFt8CKoktE3QqNkeXNquUF9vIl0Riq6xpC8ooM3ZC4UGjYQDQQOvI-SowUFOOzA299lw88SygEONVYtS6Wa4O-Qf9OYThECT1w_IDPn8NMxYC5kgqQb3LgiEYiz6_6f9Cts4HXMjgy4t-IDkVqYTFzABx2V16uKV"/>
+<div class="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/80"></div>
 </div>
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-<div class="grid lg:grid-cols-2 gap-12 items-center">
-<div class="text-center lg:text-left space-y-8">
-<span class="inline-block px-4 py-2 rounded-full bg-primary/20 text-primary font-bold text-sm tracking-wider uppercase border border-primary/30 backdrop-blur-sm">
-                        Registration Open for Fall 2023
+<div class="absolute top-24 left-10 md:left-20 max-w-xs text-[10px] md:text-xs leading-relaxed text-gray-300 z-10 hidden md:block">
+<p>You could be quieter.<br/>But why would you?</p>
+</div>
+<div class="absolute top-24 right-10 md:right-20 max-w-xs text-[10px] md:text-xs leading-relaxed text-gray-300 text-right z-10 hidden md:block">
+<p>We believe bold<br/>can be comfortable.</p>
+</div>
+<div class="absolute bottom-24 left-10 md:left-20 max-w-xs text-[10px] md:text-xs leading-relaxed text-gray-400 z-10">
+<p>We don't believe in choosing<br/>between style and comfort.</p>
+</div>
+<div class="absolute bottom-24 right-10 md:right-20 max-w-xs text-[10px] md:text-xs leading-relaxed text-gray-400 text-right z-10">
+<p>Too much. Exactly right.</p>
+</div>
+<div class="relative z-10 w-full text-center px-4">
+<h1 class="text-6xl md:text-8xl lg:text-[10rem] font-display font-bold tracking-widest uppercase blur-text select-none leading-none">
+                COTTONCLAWS
+            </h1>
+<div class="mt-4 text-[10px] md:text-xs max-w-md mx-auto text-gray-300 uppercase tracking-wide">
+                Clothing for those who don't fit in — and never planned to. Bold silhouettes. Black as a base. Comfort that doesn't apologize.
+            </div>
+<button class="mt-12 bg-white text-black px-12 py-3 text-xs font-bold uppercase tracking-widest hover:bg-gray-200 transition-colors">
+                Shop Now
+            </button>
+</div>
+</section>
+<div class="bg-black text-white py-4 overflow-hidden w-full">
+<div class="animate-marquee whitespace-nowrap font-display font-bold uppercase tracking-wider text-sm flex items-center w-full">
+<span class="mx-8">NIGHT SERIES ©</span>
+<span class="mx-8">BUILT FOR AFTER DARK ©</span>
+<span class="mx-8">NO NOISE // JUST PRESENCE ©</span>
+<span class="mx-8">COTTONCLAWS ©</span>
+<span class="mx-8">NIGHT SERIES ©</span>
+<span class="mx-8">BUILT FOR AFTER DARK ©</span>
+<span class="mx-8">NO NOISE // JUST PRESENCE ©</span>
+<span class="mx-8">COTTONCLAWS ©</span>
+<span class="mx-8">NIGHT SERIES ©</span>
+<span class="mx-8">BUILT FOR AFTER DARK ©</span>
+<span class="mx-8">NO NOISE // JUST PRESENCE ©</span>
+<span class="mx-8">COTTONCLAWS ©</span>
+</div>
+</div>
+<section class="bg-background-dark text-white py-12 md:py-16 px-6 md:px-12 relative overflow-hidden">
+<div class="max-w-[1920px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
+<div class="md:col-span-12 flex flex-col md:flex-row justify-between items-start mb-4 md:mb-12">
+<div class="mb-6 md:mb-0">
+<p class="text-[10px] md:text-xs font-mono text-gray-400 mb-1">// DESIGNED <br/> FOR EVERYDAY USE.</p>
+</div>
+<div class="text-right">
+<h2 class="font-display font-black text-4xl md:text-6xl lg:text-7xl uppercase tracking-tighter leading-none">
+                    The Uniform // Of <br/> The Unseen
+                </h2>
+</div>
+</div>
+<div class="md:col-span-3 mt-4">
+<div class="flex justify-between text-xs font-mono text-gray-500 mb-2">
+<span>//</span>
+<span>01</span>
+</div>
+<div class="relative group cursor-pointer mb-2">
+<img alt="Techwear backpack detail" class="w-full aspect-[3/4] object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMzvVEAQhK3rEYKR8wvNnUY6_7NLa_XY3tzdqLSlpbXFFZ-aZeqZPm2ZYoP3ccQIy7Shv6tY_W3wHLafq4qnCKrs5t-9wEOsNCXMFsjlEGPM53DNUjLDoiEFDWnUd6zKaO5hFEJEk2ylK4abH0H1XZlLnLTc2qFMqcVLSn5aYkzxUldGKGvCIbzFHFHi-vAyZww7_HPoBTgdPyOeF2_ARZ8uqHFZE7WJAJRoNfPP5MFMR4X3HmHHomiB9B_w6tzysHSKVGlv2NrGI9"/>
+</div>
+<div class="flex justify-between items-end mt-2">
+<span class="text-[10px] uppercase font-bold text-gray-400">Timeless Cuts</span>
+<div class="barcode text-gray-500"></div>
+</div>
+</div>
+<div class="md:col-span-5 md:col-start-4 flex flex-col relative h-full justify-between pl-0 md:pl-8">
+<div class="max-w-md mx-auto md:mx-0">
+<p class="text-xs font-mono leading-relaxed text-gray-400 uppercase tracking-wide mb-12 md:mb-24 mt-4">
+                    Not a costume — a daily uniform for those who walk their own path. From structured jackets and relaxed pants to essential accessories — every piece is built to last, not to shout.
+                </p>
+<div class="mb-8 md:mb-0">
+<span class="text-xs font-mono uppercase text-white hover:text-gray-400 transition-colors cursor-pointer group">
+                        ( <span class="group-hover:tracking-wider transition-all duration-300">Look Closer</span> ↗ )
                     </span>
-<h1 class="text-5xl lg:text-7xl font-display font-bold text-white leading-tight">
-                        Where Little <span class="text-primary relative inline-block">Champions
-                            <svg class="absolute w-full h-3 -bottom-1 left-0 text-secondary" preserveAspectRatio="none" viewBox="0 0 100 10">
-<path d="M0 5 Q 50 10 100 5" fill="none" stroke="currentColor" stroke-width="8"></path>
-</svg>
-</span> Begin!
-                    </h1>
-<p class="text-xl text-blue-100 max-w-lg mx-auto lg:mx-0 font-medium">
-                        Fun, safe, and energetic evening sports sessions for energetic kids. We build confidence, teamwork, and healthy habits through play.
-                    </p>
-<div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-<a class="px-8 py-4 bg-primary hover:bg-yellow-400 text-slate-900 font-display font-bold text-lg rounded-xl shadow-[0_6px_0_rgb(202,138,4)] active:shadow-none active:translate-y-1 transition-all" href="#contact">
-                            Join the Team 🏆
-                        </a>
-<a class="px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-display font-bold text-lg rounded-xl backdrop-blur-sm border border-white/20 transition-all flex items-center justify-center gap-2" href="#programs">
-                            View Sports <span class="material-symbols-outlined">arrow_downward</span>
+</div>
+</div>
+<div class="mt-12 md:mt-auto">
+<h3 class="font-display font-black text-4xl text-white mb-1">°CORE</h3>
+<p class="text-[10px] font-mono text-gray-500 uppercase">ESSENTIALS // ONLY</p>
+</div>
+<div class="absolute right-0 bottom-0 w-48 md:w-56 hidden md:block translate-y-8 translate-x-4">
+<div class="flex justify-between text-xs font-mono text-gray-500 mb-2">
+<span>//</span>
+<span>02</span>
+</div>
+<div class="relative group cursor-pointer mb-2">
+<img alt="Retro inspired techwear" class="w-full aspect-[3/4] object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQoBTwvMRfRyyQgn8pR2AK289h7JCyDDEMuKpN3w83c6tohCcRyrhLJbdFPUk2n9LLLKM5DiDWt7tGXMxuUAuL7KnTgOqqXf4E3VefyoKzrUMNXqHT4zkRdAst_w078jVRoIiZ62Et9SsF30FQEUXL2ZGnlKX1P0gl6-QqNfi0G_JdXBv7VUOjvz9aMJRoFr7j9boJQQUArkN5YMUV_ANbITQynceMFs2lDaXkwYdVuqz2LZur1f66cglpNgCQCKw4ckWGGU3nbGz_"/>
+</div>
+<div class="flex justify-between items-end mt-2">
+<span class="text-[10px] uppercase font-bold text-gray-400">Retro-Inspired</span>
+<div class="barcode text-gray-500 w-12"></div>
+</div>
+</div>
+<div class="mt-8 md:hidden">
+<div class="flex justify-between text-xs font-mono text-gray-500 mb-2">
+<span>//</span>
+<span>02</span>
+</div>
+<div class="relative group cursor-pointer mb-2">
+<img alt="Retro inspired techwear" class="w-full aspect-[3/4] object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQoBTwvMRfRyyQgn8pR2AK289h7JCyDDEMuKpN3w83c6tohCcRyrhLJbdFPUk2n9LLLKM5DiDWt7tGXMxuUAuL7KnTgOqqXf4E3VefyoKzrUMNXqHT4zkRdAst_w078jVRoIiZ62Et9SsF30FQEUXL2ZGnlKX1P0gl6-QqNfi0G_JdXBv7VUOjvz9aMJRoFr7j9boJQQUArkN5YMUV_ANbITQynceMFs2lDaXkwYdVuqz2LZur1f66cglpNgCQCKw4ckWGGU3nbGz_"/>
+</div>
+<div class="flex justify-between items-end mt-2">
+<span class="text-[10px] uppercase font-bold text-gray-400">Retro-Inspired</span>
+<div class="barcode text-gray-500 w-12"></div>
+</div>
+</div>
+</div>
+<div class="md:col-span-4 md:col-start-9 mt-8 md:mt-0 flex flex-col justify-end h-full">
+<div class="flex justify-between text-xs font-mono text-gray-500 mb-2">
+<span>//</span>
+<span>03</span>
+</div>
+<div class="relative group cursor-pointer mb-2">
+<img alt="Everyday movement techwear" class="w-full aspect-[4/5] object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAe8zakSsAVd2vfFfKL3FfAdEEEbdJ44qbCboeUMnj9Sp16hb1cn8pmUVn5eSuDIIikIaWw3BLm3CdM_YStrXelc9f8fWihNwiDlUUGAnLxEoRuCr36x971aIFw65nFh9vOuUKtumBlGPRqP05nrg6fYB9tceqOB7OPzMPBMjcKNN9ewlKlXtAYX-s8y3oocOL94AUgRnFSl82Ji1R1tFNu5ZncNhe9ZSQ-Jon7LTioXn3uTsFs4QN55354d-eDAOTnPRJcguWnp9N1"/>
+</div>
+<div class="flex justify-between items-end mt-2">
+<span class="text-[10px] uppercase font-bold text-gray-400">Designed for Everyday Movement</span>
+<div class="barcode text-gray-500"></div>
+</div>
+</div>
+</div>
+</section>
+<div class="bg-black text-white py-4 overflow-hidden border-t border-white/10 sticky top-0 z-30 w-full">
+<div class="animate-marquee whitespace-nowrap font-display font-bold uppercase tracking-wider text-sm flex items-center w-full">
+<span class="mx-6">EXPLORE MORE ↓</span>
+<span class="mx-6 text-gray-500">//</span>
+<span class="mx-6">LATEST // DROPS ↓</span>
+<span class="mx-6 text-gray-500">//</span>
+<span class="mx-6">COTTONCLAWS ↓</span>
+<span class="mx-6 text-gray-500">//</span>
+<span class="mx-6">EXPLORE MORE ↓</span>
+<span class="mx-6 text-gray-500">//</span>
+<span class="mx-6">LATEST // DROPS ↓</span>
+<span class="mx-6 text-gray-500">//</span>
+<span class="mx-6">COTTONCLAWS ↓</span>
+<span class="mx-6 text-gray-500">//</span>
+<span class="mx-6">EXPLORE MORE ↓</span>
+<span class="mx-6 text-gray-500">//</span>
+<span class="mx-6">LATEST // DROPS ↓</span>
+<span class="mx-6 text-gray-500">//</span>
+<span class="mx-6">COTTONCLAWS ↓</span>
+</div>
+</div>
+<section class="bg-background-light dark:bg-background-dark py-12 px-6">
+<div class="max-w-[1920px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-4">
+<div class="col-span-1 lg:col-span-2 relative h-[50vh] lg:h-[70vh] group overflow-hidden">
+<img alt="Archived motion editorial background" class="w-full h-full object-cover grayscale brightness-50 contrast-125 group-hover:scale-105 transition-transform duration-700 absolute inset-0 z-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAromEoNoO_2FdUL3U_5OzzhDf8yQxTJRw0sJOOWiCwA_i5TCIe38uRFwKFKu0NbVU8_6kJWIyFLiSDKpnfVVEJPT_mVQ9kCBzZxjvs-24xz0InEm2syYUGZEXIwZ3GGlcV79dGQiOWKQtFnVDzkrNCPkd9zr6BtPX26t4nqyZZOCKccT7RZcMVU4ZoZ48rx85Eq8OHSvxo2YC28xuPLAcSN00f_Po-pfFMvi68G12FkUb1bvRek87icG9GJQXxKpRV8TI3I7ge2uO_"/>
+<div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center p-6 z-10">
+<h2 class="font-display font-black text-4xl md:text-6xl text-white uppercase mb-4 drop-shadow-lg">Archived // Motion</h2>
+<p class="text-white/90 font-mono text-xs max-w-md drop-shadow-md">CLEAN SILHOUETTES CAPTURED IN MOTIONLESS MOMENTS. DESIGNED TO HOLD PRESENCE WITHOUT EFFORT.</p>
+<div class="mt-6 barcode text-white opacity-80 scale-150"></div>
+</div>
+</div>
+<div class="relative h-[400px] bg-gray-100 dark:bg-gray-800">
+<img alt="Model portrait grey scale" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCH5hTFEqiXDL4spJoXA9hbQPkG6yNAFDubXj9eHhT4ky8gfH9PH88ZOojC-Fl_hS91ZnTQnRWbEcE3J8QKZfg1FMsAs-3TLo0a5Dxw4QRqJ_2B4TOmCJvoLsb3wDVwx7wc8IW27cCT0za0uKabn8Affz0cY_6_fWsKHkpnjshOGeU7_J9SASPAbQH7xO8gY71C0-gTTlzwTZ-4umTm4ZvC77RlN7FpGFpVS7CmposeqcLHvTxL3WB-awhOczA_sN2WaiFix2oGntM"/>
+</div>
+<div class="relative h-[400px] bg-gray-100 dark:bg-gray-800">
+<img alt="Model in oversized coat" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7gkGIMhYop46raWU5ZHMnRLGMIBfWbGG1h1_b6gvzxXZ3CBYFYAwEWO0RaZvcCAfaakQslb7YodgwApAyjOaSHk0GYVXlnYWPSPnLSBrnqj_jTrCXKuQV-7adWdCFcVjZxLkWuAP88fPuqSZ4H4CNhmMiIB55BD6SBW6tn3eJdb8JfmEFFificlYrwH5BPqShd0Ool_Nj_WDzMuWW35EyPUlnn6ztxldj55NuNMxKBHGqDjCXyhXHry_PFJgI0_sxjEreRVGQCCDo"/>
+</div>
+</div>
+</section>
+<section class="bg-white dark:bg-white text-black py-16 px-6 border-b border-gray-200">
+<div class="max-w-[1920px] mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-10 pb-6">
+<div>
+<p class="text-[10px] font-mono text-gray-500 uppercase mb-1">// CHOSEN FOR <br/> EVERYDAY PRESENCE.</p>
+</div>
+<h2 class="font-display font-black text-4xl md:text-5xl uppercase tracking-tighter">Everyday // Selection</h2>
+<div class="flex items-center gap-2 mt-4 md:mt-0">
+<span class="text-xs font-mono font-bold uppercase">Sort By</span>
+<button class="bg-transparent border border-black text-xs font-mono px-3 py-2 uppercase flex items-center justify-between w-40">
+<span>Popularity</span>
+<span class="material-icons-outlined text-sm">expand_more</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col lg:flex-row gap-8">
+<aside class="w-full lg:w-60 flex-shrink-0 flex flex-col border border-black h-fit">
+<div class="p-4 border-b border-black">
+<h4 class="font-bold text-xs font-mono uppercase mb-4 flex justify-between cursor-pointer">
+<span>// Category</span>
+<span class="material-icons-outlined text-sm">expand_less</span>
+</h4>
+<div class="space-y-3 text-xs font-mono uppercase">
+<label class="flex items-center gap-2 cursor-pointer group">
+<div class="w-3 h-3 border border-gray-300 rounded-full group-hover:border-black flex items-center justify-center"></div>
+<span class="text-gray-800 group-hover:text-black">Tops</span>
+<span class="bg-blue-200 text-blue-800 text-[9px] px-1 rounded-full ml-auto">21</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<div class="w-3 h-3 border border-gray-300 rounded-full group-hover:border-black flex items-center justify-center"></div>
+<span class="text-gray-800 group-hover:text-black">Bottoms</span>
+<span class="bg-blue-200 text-blue-800 text-[9px] px-1 rounded-full ml-auto">10</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<div class="w-3 h-3 border border-gray-300 rounded-full group-hover:border-black flex items-center justify-center"></div>
+<span class="text-gray-800 group-hover:text-black">Outerwear</span>
+<span class="bg-blue-200 text-blue-800 text-[9px] px-1 rounded-full ml-auto">12</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<div class="w-3 h-3 border border-gray-300 rounded-full group-hover:border-black flex items-center justify-center"></div>
+<span class="text-gray-800 group-hover:text-black">Shoes</span>
+<span class="bg-blue-200 text-blue-800 text-[9px] px-1 rounded-full ml-auto">8</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<div class="w-3 h-3 border border-gray-300 rounded-full group-hover:border-black flex items-center justify-center"></div>
+<span class="text-gray-800 group-hover:text-black">Accessories</span>
+<span class="bg-blue-200 text-blue-800 text-[9px] px-1 rounded-full ml-auto">10</span>
+</label>
+</div>
+</div>
+<div class="p-4 border-b border-black">
+<h4 class="font-bold text-xs font-mono uppercase mb-4 flex justify-between cursor-pointer">
+<span>// Size</span>
+<span class="material-icons-outlined text-sm">expand_less</span>
+</h4>
+<div class="space-y-3 text-xs font-mono uppercase">
+<label class="flex items-center gap-2 cursor-pointer group">
+<div class="w-3 h-3 border border-gray-300 rounded-sm group-hover:border-black"></div>
+<span>S</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<div class="w-3 h-3 border border-gray-300 rounded-sm group-hover:border-black"></div>
+<span>M</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<div class="w-3 h-3 bg-blue-400 border border-blue-400 rounded-sm flex items-center justify-center">
+<span class="material-icons-outlined text-[8px] text-white">check</span>
+</div>
+<span>L</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<div class="w-3 h-3 border border-gray-300 rounded-sm group-hover:border-black"></div>
+<span>XL</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<div class="w-3 h-3 border border-gray-300 rounded-sm group-hover:border-black"></div>
+<span>XXL</span>
+</label>
+</div>
+</div>
+<div class="p-4 border-b border-black">
+<h4 class="font-bold text-xs font-mono uppercase mb-4 flex justify-between cursor-pointer">
+<span>// Availability</span>
+<span class="material-icons-outlined text-sm">expand_less</span>
+</h4>
+<div class="space-y-3 text-xs font-mono uppercase">
+<label class="flex items-center gap-2 cursor-pointer group">
+<div class="w-3 h-3 bg-blue-400 border border-blue-400 rounded-sm flex items-center justify-center">
+<span class="material-icons-outlined text-[8px] text-white">check</span>
+</div>
+<span>All</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<div class="w-3 h-3 border border-gray-300 rounded-sm group-hover:border-black"></div>
+<span>In Stock</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<div class="w-3 h-3 border border-gray-300 rounded-sm group-hover:border-black"></div>
+<span>Discount</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<div class="w-3 h-3 border border-gray-300 rounded-sm group-hover:border-black"></div>
+<span>Limited</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<div class="w-3 h-3 border border-gray-300 rounded-sm group-hover:border-black"></div>
+<span>Archived</span>
+</label>
+</div>
+</div>
+<div class="p-4 flex-grow flex flex-col justify-between">
+<div class="mb-8">
+<h4 class="font-bold text-xs font-mono uppercase mb-4 flex justify-between cursor-pointer">
+<span>// Price</span>
+<span class="material-icons-outlined text-sm">expand_less</span>
+</h4>
+<div class="flex items-center gap-2 font-mono text-xs">
+<div class="relative w-full">
+<span class="absolute left-2 top-1/2 -translate-y-1/2 text-gray-400">$</span>
+<input class="w-full border border-gray-200 bg-white py-1 pl-4 pr-1 text-xs focus:ring-black focus:border-black" placeholder="50" type="text"/>
+</div>
+<span>-</span>
+<div class="relative w-full">
+<span class="absolute left-2 top-1/2 -translate-y-1/2 text-gray-400">$</span>
+<input class="w-full border border-gray-200 bg-white py-1 pl-4 pr-1 text-xs focus:ring-black focus:border-black" placeholder="150" type="text"/>
+</div>
+</div>
+</div>
+<button class="w-full bg-black text-white py-3 px-4 font-bold text-xs font-mono uppercase hover:opacity-90 transition-opacity flex justify-between items-center mt-auto">
+<span>SEARCH</span>
+<span class="material-icons-outlined text-sm">north_east</span>
+</button>
+</div>
+</aside>
+<div class="flex-1">
+<div class="flex flex-wrap gap-2 mb-6 text-[10px] font-mono uppercase items-center">
+<span class="font-bold mr-2 text-xs">APPLIED FILTERS:</span>
+<span class="border border-black px-3 py-1 flex items-center gap-2">L <span class="cursor-pointer font-bold">×</span></span>
+<span class="border border-black px-3 py-1 flex items-center gap-2">ALL <span class="cursor-pointer font-bold">×</span></span>
+<span class="border border-black px-3 py-1 flex items-center gap-2">$50 - $150 <span class="cursor-pointer font-bold">×</span></span>
+<div class="ml-auto flex gap-2">
+<span class="w-8 h-8 border border-black flex items-center justify-center font-bold text-xs">1</span>
+<span class="w-8 h-8 flex items-center justify-center text-gray-400 hover:text-black cursor-pointer text-xs font-bold">2</span>
+<span class="w-8 h-8 flex items-center justify-center text-gray-400 hover:text-black cursor-pointer text-xs font-bold">3</span>
+<span class="w-8 h-8 flex items-center justify-center text-gray-400 hover:text-black cursor-pointer text-xs font-bold">4</span>
+<span class="w-8 h-8 border border-gray-200 flex items-center justify-center cursor-pointer hover:border-black text-xs">
+<span class="material-icons-outlined text-sm">chevron_right</span>
+</span>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 gap-y-10">
+<div class="group cursor-pointer">
+<div class="bg-[#F5F5F5] aspect-[3/4] mb-3 overflow-hidden">
+<img alt="Puffer Jacket" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJdhaH99wJZ3127kHMZj381RnCpBQMsjTz6LprINQstmg050WudYNGM-g17CwAoGZ0zgIHGgr0BF8XEXQscpBk0waH1eKkYvQLmzWyKODtEGZNiBRSeQ2SdIGhrQ1nn8vPOecoqCDMigabEOtN6qg78RlohfHdMBAkpWph2B6MpvDRF8mYbgLFhAwB0HzFtWfR08AdVLVYBC_k6-fpM-hw6lsEdZEhVt1YCu_N_Ex58QcS5F1zzTNW9gM2GIPNBxwJId-v6xzJUbIe"/>
+</div>
+<div class="flex justify-between items-start text-xs font-mono">
+<div>
+<h3 class="font-bold uppercase mb-1">Nightcore Puffer</h3>
+<p class="text-gray-500 hidden">Outerwear</p>
+</div>
+<span class="font-bold">$189</span>
+</div>
+</div>
+<div class="group cursor-pointer">
+<div class="bg-[#F5F5F5] aspect-[3/4] mb-3 overflow-hidden">
+<img alt="Fleece Jacket" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAG2V28HcKy2qlHC-8_h3-zoiTz6yeLx_3qAwEQPrMZOOGs9kBs7csRyyCZRhyV1HWlzzOmmKjhHE0duSmcfsMwaERH6a0fdmXZxD2pt7iL8TUzjKJeGTFam472CKowezFgabKyEqWcMllKPEE1LDdMTeoIRIhpU4CVOHFpvFsbcCG4cDeX49dy-BiGtw-l7Cl6WeLaVVm_GaSp5fuhS7a3f7EQCuKykWK_4r2CLblb4Y9KhU9DffvQc4yj4kGVMGlYLn-IYuu3dahV"/>
+</div>
+<div class="flex justify-between items-start text-xs font-mono">
+<div>
+<h3 class="font-bold uppercase mb-1">Fleece Jacket</h3>
+<p class="text-gray-500 hidden">Mid-layer</p>
+</div>
+<span class="font-bold">$149</span>
+</div>
+</div>
+<div class="group cursor-pointer">
+<div class="bg-[#F5F5F5] aspect-[3/4] mb-3 overflow-hidden p-6 flex items-center justify-center">
+<img alt="Carry Duffel" class="w-full h-auto object-contain object-center group-hover:scale-105 transition-transform duration-500 mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBADtAIpAvmJTWNW809FqkVSeP63KeDtFOGQ0FoTVUZVRHeozrESIGsxeQqynI_WkZeyP_wB6b2yn73UN-JVYVycoj5JCpFYoATBjn8pkFSLUIb0mucBle082hhPuw6n7TyK9dpnGduXcaRjC0LHxQuui03cbYo0nUWHQlTrtsv0bLXHFC5Mbi0RsxXo-awlzT5ljWocsu2Onp5-i703F4nO1CqwPCCsqbDf6VsztuP7NSKB2qZqKunWFc4LhDUxDBsv2PJWao4OHl3"/>
+</div>
+<div class="flex justify-between items-start text-xs font-mono">
+<div>
+<h3 class="font-bold uppercase mb-1">Carry Duffel</h3>
+<p class="text-gray-500 hidden">Accessories</p>
+</div>
+<span class="font-bold">$210</span>
+</div>
+</div>
+<div class="group cursor-pointer">
+<div class="bg-[#F5F5F5] aspect-[3/4] mb-3 overflow-hidden">
+<img alt="Cloudline Puffer" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVS6fZ_b5xxIJ2Sxg_u1ttZ45nSseh_RRAL080mn294SNzprteH5QzbWQz49u7AGMThEhBAVIE8Be7x7nB8e2PRYpVG3KU0uR8dL-XH-600C2wlnFwZRT7kh0e_WEuAS011j5zzRZ2mJlVfO15aeiZqXecJO6HPN__iG-7goTRb2eI1hOGtH6TmDBKAm62apoDI2WOIlgFoZxEuTabmeIv0PGnJOC-dnYkoIfs7fGcCnkrgq0IRtzRQJ2l8arp-Mq6L5Zkr3piV6Vv"/>
+</div>
+<div class="flex justify-between items-start text-xs font-mono">
+<div>
+<h3 class="font-bold uppercase mb-1">Cloudline Puffer</h3>
+<p class="text-gray-500 hidden">Outerwear</p>
+</div>
+<span class="font-bold">$179</span>
+</div>
+</div>
+<div class="group cursor-pointer">
+<div class="bg-[#F5F5F5] aspect-[3/4] mb-3 overflow-hidden">
+<img alt="Softshell Jacket" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSk0kaLJnUYex7-1ZxmlZJqo2ulvLpgr-0-haHEQtXfD3LCtgYXJd_2OxDjxGjP_cHdLljIywFkCW8z_gHE-zcYUm3p46lOuQdXCUdEXvCBhE4SkN4XUJgPhyjr2GixupTJAgjL2uxko10gsJ0VH4XkJqA67pNhHdaM8tckJ2GDJs7EQ6gTF2bwtzkCBbp_EBP3wD_CYFqOavoDvos2BYO9sO6B5B_55UlXWUXXQVD_qT6F4GjJfxYOZYO_IZmHz92yGtX1NGde9wM"/>
+</div>
+<div class="flex justify-between items-start text-xs font-mono">
+<div>
+<h3 class="font-bold uppercase mb-1">Softshell Jacket</h3>
+<p class="text-gray-500 hidden">Outerwear</p>
+</div>
+<span class="font-bold">$169</span>
+</div>
+</div>
+<div class="group cursor-pointer">
+<div class="bg-[#F5F5F5] aspect-[3/4] mb-3 overflow-hidden flex items-center justify-center p-4">
+<img alt="Crossway Utility Bag" class="w-full h-auto object-contain object-center group-hover:scale-105 transition-transform duration-500 mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQRSBuhpN5xIBAxeUs6SrowXh4gWyOR0SaJhjwdXrnRMPh6RqweGaoKkt3fxbJftvHMNhBQY6IqSegK-dBAbR9ULMhMiSocaVW2SGzy4hGzDNv7dqfQnYH2ghpVeRZBFgK2Oj8xxQfSfGhMpKOfjb9t_UqUBcydluKUPq8jSvge9yuHDz0lLowWDYgRF1VhKkiKrwi-8A1OrQRT-mCg1xRUbdeywjW2D5Rt2MpICEhXn2PDWAfS1C5z7uayvutdz_Q366brYVgUWHA"/>
+</div>
+<div class="flex justify-between items-start text-xs font-mono">
+<div>
+<h3 class="font-bold uppercase mb-1">Crossway Utility Bag</h3>
+<p class="text-gray-500 hidden">Accessories</p>
+</div>
+<span class="font-bold">$89</span>
+</div>
+</div>
+<div class="group cursor-pointer">
+<div class="bg-[#F5F5F5] aspect-[3/4] mb-3 overflow-hidden">
+<img alt="Shield Puffer" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfLiEK56vl3ItFwzEj7XngCMzey4Oi3EZ0Hx30fg5lZOmiac01gXvukCTUpNiB78BAvWeyA2RsUe0vKXFwtTmVWjobNv72vP5FHgiAz3RJLhC9JlYrk9qN9iS20eRTQAPOn6kh9VLmkcVDDQEjljuM9X-8XCux2iyEkjNPXVWVKsLL3Ijhq0XyPdvbqWrMgUquYaXZjit8lhpJSydyyAa3sZHQrFK6MuZ1EYjNt6jEoqQRXN4mSawjLGfNNaq_SjItK9Q4pyEifqVx"/>
+</div>
+<div class="flex justify-between items-start text-xs font-mono">
+<div>
+<h3 class="font-bold uppercase mb-1">Shield Puffer</h3>
+<p class="text-gray-500 hidden">Outerwear</p>
+</div>
+<span class="font-bold">$199</span>
+</div>
+</div>
+<div class="group cursor-pointer">
+<div class="bg-[#F5F5F5] aspect-[3/4] mb-3 overflow-hidden flex items-center justify-center p-4">
+<img alt="Urban Trail Pack" class="w-full h-auto object-contain object-center group-hover:scale-105 transition-transform duration-500 mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgk5YBNoBoPqn1-T2rHJFEyXxg2WXo782JbJiLi7MlVs-EgiEgbss5Tpopra-DYamE6lLUDD7PDJNeM7_SyyuUZQZPUwxuPMv0RzNHgn89dLiqoOGQhLgd3GzfoziwcRGr_0Vzz_CWWU9wrKQihpWxzBFK7rOAAkjyWKkVLXOgByVlwp7aBj4yeAnu47DELhZqhSgtrCOUL-mhzzlBt4P6syWYNPin0hWI39OUfgMB87MNmuQideaodk-x9vVQRXjBGh0uZizev_Bc"/>
+</div>
+<div class="flex justify-between items-start text-xs font-mono">
+<div>
+<h3 class="font-bold uppercase mb-1">Urban Trail Pack</h3>
+<p class="text-gray-500 hidden">Accessories</p>
+</div>
+<span class="font-bold">$139</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="bg-black text-white py-4 overflow-hidden border-t border-white/10 w-full">
+<div class="animate-marquee whitespace-nowrap font-display font-bold uppercase tracking-wider text-sm flex items-center w-full">
+<span class="mx-8">PROVEN IN REAL USE ↓</span>
+<span class="mx-8">NO ADJUSTMENT // NEEDED ↓</span>
+<span class="mx-8">COTTONCLAWS ↓</span>
+<span class="mx-8">DESIGNED TO STAY ↓</span>
+<span class="mx-8">PROVEN IN REAL USE ↓</span>
+<span class="mx-8">NO ADJUSTMENT // NEEDED ↓</span>
+<span class="mx-8">COTTONCLAWS ↓</span>
+<span class="mx-8">DESIGNED TO STAY ↓</span>
+<span class="mx-8">PROVEN IN REAL USE ↓</span>
+<span class="mx-8">NO ADJUSTMENT // NEEDED ↓</span>
+<span class="mx-8">COTTONCLAWS ↓</span>
+<span class="mx-8">DESIGNED TO STAY ↓</span>
+</div>
+</div>
+<section class="bg-black text-white py-16">
+<div class="max-w-[1920px] mx-auto px-6">
+<div class="flex justify-between items-end mb-12">
+<div>
+<p class="text-[10px] font-mono text-gray-400 uppercase">// JUST LIFE.<br/>NO CAMPAIGN ENERGY</p>
+</div>
+<h2 class="font-display font-black text-3xl md:text-5xl uppercase tracking-tight text-center">Trusted By // Routine</h2>
+<div class="flex gap-4 items-center">
+<span class="text-xs font-mono text-gray-400">(</span>
+<span class="material-icons-outlined hover:text-white cursor-pointer text-sm">west</span>
+<span class="material-icons-outlined hover:text-white cursor-pointer text-sm">east</span>
+<span class="text-xs font-mono text-gray-400">)</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="bg-black border border-cyan-300/60 p-6 flex flex-col justify-between aspect-[3/4]">
+<div class="flex justify-between items-start">
+<span class="text-xs font-mono text-cyan-300/80">// 01</span>
+<div class="barcode-lg text-cyan-300/80"></div>
+</div>
+<div>
+<p class="text-sm font-mono leading-relaxed text-white mb-6 tracking-wide">
+                "I WEAR IT ALMOST EVERY DAY NOW. IT DOESN'T SCREAM STYLE, BUT SOMEHOW IT ALWAYS LOOKS RIGHT."
+            </p>
+<div class="text-[10px] font-bold font-mono text-cyan-300 uppercase tracking-widest">— @ALEX.TURNER</div>
+</div>
+</div>
+<div class="relative bg-neutral-900 aspect-[3/4] overflow-hidden">
+<img alt="User in snow" class="w-full h-full object-cover grayscale contrast-125" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAIokhNDaKfnXBpQaGp2RYXVOiBGIqnEVtxBDPWRJz82roBTGDJ2GubUHEXh1kfwDytIH8Xz_MtZ56LuPxojPgAdVChO03Qyx3uJQBtEWyqSxWIJ5IfrJ5sefP94eiXXlZEjx82ChNbkkpQ33aVaNUKCf0CKohm7CISoyzOk00g0iO5Rx0AFwclSCgBNo8ijllwLtu62DuKi0WRJyojEDI3eF1RkSDe-6zNd9eoU_4uCAbxjvr2FQee5kbBLTvQ6dEhHzxsghQRuD2"/>
+</div>
+<div class="bg-black border border-cyan-300/60 p-6 flex flex-col justify-between aspect-[3/4]">
+<div class="flex justify-between items-start">
+<span class="text-xs font-mono text-cyan-300/80">// 02</span>
+<div class="barcode-lg text-cyan-300/80"></div>
+</div>
+<div>
+<p class="text-sm font-mono leading-relaxed text-white mb-6 tracking-wide">
+                QUIETLY RELIABLE. THE KIND OF PIECE YOU KEEP REACHING FOR WITHOUT THINKING. NO ADJUSTMENT NEEDED.
+            </p>
+<div class="text-[10px] font-bold font-mono text-cyan-300 uppercase tracking-widest">— @SAM.ARCH</div>
+</div>
+</div>
+<div class="relative bg-neutral-900 aspect-[3/4] overflow-hidden">
+<img alt="User in navy coat" class="w-full h-full object-cover grayscale contrast-125" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7gkGIMhYop46raWU5ZHMnRLGMIBfWbGG1h1_b6gvzxXZ3CBYFYAwEWO0RaZvcCAfaakQslb7YodgwApAyjOaSHk0GYVXlnYWPSPnLSBrnqj_jTrCXKuQV-7adWdCFcVjZxLkWuAP88fPuqSZ4H4CNhmMiIB55BD6SBW6tn3eJdb8JfmEFFificlYrwH5BPqShd0Ool_Nj_WDzMuWW35EyPUlnn6ztxldj55NuNMxKBHGqDjCXyhXHry_PFJgI0_sxjEreRVGQCCDo"/>
+</div>
+<div class="relative bg-neutral-900 aspect-[3/4] overflow-hidden">
+<img alt="User in black coat/glasses" class="w-full h-full object-cover grayscale contrast-125" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCH5hTFEqiXDL4spJoXA9hbQPkG6yNAFDubXj9eHhT4ky8gfH9PH88ZOojC-Fl_hS91ZnTQnRWbEcE3J8QKZfg1FMsAs-3TLo0a5Dxw4QRqJ_2B4TOmCJvoLsb3wDVwx7wc8IW27cCT0za0uKabn8Affz0cY_6_fWsKHkpnjshOGeU7_J9SASPAbQH7xO8gY71C0-gTTlzwTZ-4umTm4ZvC77RlN7FpGFpVS7CmposeqcLHvTxL3WB-awhOczA_sN2WaiFix2oGntM"/>
+</div>
+<div class="bg-black border border-cyan-300/60 p-6 flex flex-col justify-between aspect-[3/4]">
+<div class="flex justify-between items-start">
+<span class="text-xs font-mono text-cyan-300/80">// 03</span>
+<div class="barcode-lg text-cyan-300/80"></div>
+</div>
+<div>
+<p class="text-sm font-mono leading-relaxed text-white mb-6 tracking-wide">
+                EVERYTHING JUST WORKS. THE FIT, THE WEIGHT, THE DETAILS — NOTHING FEELS EXTRA.
+            </p>
+<div class="text-[10px] font-bold font-mono text-cyan-300 uppercase tracking-widest">— @EMMA.CLARK</div>
+</div>
+</div>
+<div class="relative bg-neutral-900 aspect-[3/4] overflow-hidden">
+<img alt="User in black coat/concrete" class="w-full h-full object-cover grayscale contrast-125" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAe8zakSsAVd2vfFfKL3FfAdEEEbdJ44qbCboeUMnj9Sp16hb1cn8pmUVn5eSuDIIikIaWw3BLm3CdM_YStrXelc9f8fWihNwiDlUUGAnLxEoRuCr36x971aIFw65nFh9vOuUKtumBlGPRqP05nrg6fYB9tceqOB7OPzMPBMjcKNN9ewlKlXtAYX-s8y3oocOL94AUgRnFSl82Ji1R1tFNu5ZncNhe9ZSQ-Jon7LTioXn3uTsFs4QN55354d-eDAOTnPRJcguWnp9N1"/>
+</div>
+<div class="bg-black border border-cyan-300/60 p-6 flex flex-col justify-between aspect-[3/4]">
+<div class="flex justify-between items-start">
+<span class="text-xs font-mono text-cyan-300/80">// 04</span>
+<div class="barcode-lg text-cyan-300/80"></div>
+</div>
+<div>
+<p class="text-sm font-mono leading-relaxed text-white mb-6 tracking-wide">
+                BUILT FOR MOVEMENT, NOT ATTENTION. YOU NOTICE THE QUALITY MORE WITH TIME, NOT THE FIRST WEAR.
+            </p>
+<div class="text-[10px] font-bold font-mono text-cyan-300 uppercase tracking-widest">— @MAYA.MILLS</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="bg-black text-white py-4 overflow-hidden border-t border-gray-800 w-full">
+<div class="animate-marquee whitespace-nowrap font-display font-bold uppercase tracking-wider text-sm flex items-center w-full">
+<span class="mx-8">EVERYDAY LIFE ©</span>
+<span class="mx-8">QUIET BY DESIGN ©</span>
+<span class="mx-8">MADE TO // BE REPEATED ©</span>
+<span class="mx-8">COTTONCLAWS ©</span>
+<span class="mx-8">EVERYDAY LIFE ©</span>
+<span class="mx-8">QUIET BY DESIGN ©</span>
+<span class="mx-8">MADE TO // BE REPEATED ©</span>
+<span class="mx-8">COTTONCLAWS ©</span>
+<span class="mx-8">EVERYDAY LIFE ©</span>
+<span class="mx-8">QUIET BY DESIGN ©</span>
+<span class="mx-8">MADE TO // BE REPEATED ©</span>
+<span class="mx-8">COTTONCLAWS ©</span>
+</div>
+</div>
+<section class="relative h-[40vh] w-full bg-gray-900 overflow-hidden">
+<img alt="Snow mountain techwear hero" class="absolute inset-0 w-full h-full object-cover opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAIokhNDaKfnXBpQaGp2RYXVOiBGIqnEVtxBDPWRJz82roBTGDJ2GubUHEXh1kfwDytIH8Xz_MtZ56LuPxojPgAdVChO03Qyx3uJQBtEWyqSxWIJ5IfrJ5sefP94eiXXlZEjx82ChNbkkpQ33aVaNUKCf0CKohm7CISoyzOk00g0iO5Rx0AFwclSCgBNo8ijllwLtu62DuKi0WRJyojEDI3eF1RkSDe-6zNd9eoU_4uCAbxjvr2FQee5kbBLTvQ6dEhHzxsghQRuD2"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center p-6">
+<div class="barcode text-white opacity-80 scale-150 mb-4"></div>
+<h2 class="font-display font-black text-4xl md:text-5xl text-white uppercase tracking-tighter mb-2">
+                Quiet By // Design
+            </h2>
+<p class="text-white/80 font-mono text-xs max-w-lg leading-relaxed uppercase">
+                Designed to move with you — No Noise. No Excess.
+            </p>
+<a class="mt-6 border border-white/50 bg-black/20 backdrop-blur text-white px-6 py-2 rounded-full hover:bg-white hover:text-black transition-all group" href="#">
+<span class="text-xs font-bold font-mono uppercase tracking-wider">Explore The Lineup ↗</span>
 </a>
 </div>
-</div>
-<div class="relative">
-<div class="relative z-10 transform hover:scale-105 transition-transform duration-500">
-<img alt="Happy diverse group of children running on a field holding sports gear" class="rounded-3xl shadow-2xl border-8 border-white/10 w-full object-cover h-[500px] blob-shape" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCn78IXpyWal2wMs9kS7Mm1oTybu-1XVtu2DTQzuJ0dFVuEr5vbpHSBhRsqyl4WT1W_TFpdVS5rCpX0O2riThKX8qTQU4CH7zWFjHF8n26V2JEniZM129pBE3s6wgTVir3AJ1qQVVT-30-5IqH21H27fLYIQLSTLm72fk7MWc7pNsGdv__M0tWUluRnLJ9KtFEb-XL7OZwnnBy2mPfqX3V-UiGOgWTByBPk0VODy4B7iGnFHnsnCz5pEhBVd9dg5krnYubXgtO2eSom"/>
-</div>
-<div class="absolute -top-10 -right-10 bg-secondary text-white p-4 rounded-2xl shadow-lg rotate-12 z-20">
-<span class="block font-display font-bold text-3xl">Ages</span>
-<span class="block font-display font-bold text-xl">4 - 12</span>
-</div>
-<div class="absolute -bottom-5 -left-5 bg-white text-accent p-4 rounded-2xl shadow-lg -rotate-6 z-20 flex items-center gap-3">
-<span class="material-symbols-outlined text-primary text-4xl">verified</span>
-<div>
-<span class="block font-bold text-lg leading-none">Certified</span>
-<span class="block text-sm text-slate-500">Coaches</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
-<svg class="relative block w-full h-[60px]" data-name="Layer 1" preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg">
-<path class="fill-background-light dark:fill-background-dark" d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
-</svg>
-</div>
 </section>
-<section class="py-20 bg-background-light dark:bg-background-dark overflow-hidden" id="about">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="grid lg:grid-cols-2 gap-16 items-center mb-20">
-<div class="relative order-2 lg:order-1">
-<div class="absolute inset-0 bg-primary rounded-3xl rotate-3 opacity-20 transform translate-x-4 translate-y-4"></div>
-<img alt="Modern indoor sports facility with colorful equipment" class="relative rounded-3xl shadow-xl w-full h-[500px] object-cover border-4 border-white dark:border-slate-800" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCdh7tImJuNsdZAUY8wlY6k2r_cekD0KN5LUVrxg-XDL1t9E8OKht9beGDyTagwUbjJ6A77qukNqFGdvNP31pD7gqC-LzRuP6C__wrc0_J8-zeIoviXaHf1N787IEG4nRZ1Xu_z4dU2qz-uKdescZBYLT-JRlG73pTT-_T1gFmBsG01noO7VZls_3xs2Sf0V7lPxSTLmY8CQvyojXVojGQfIuqVu9-1hNKkPiXeC3xgnpk17BndIIOL4IiYX3LiCI6eSWr-EUTGvPW"/>
-<div class="absolute -bottom-6 -right-6 bg-card-light dark:bg-card-dark p-6 rounded-2xl shadow-lg border border-slate-100 dark:border-slate-800 max-w-xs">
-<p class="font-display font-bold text-lg text-secondary mb-1">"A second home"</p>
-<p class="text-sm text-slate-500 dark:text-slate-400">Our facility is designed for safety, fun, and inclusive play.</p>
-</div>
-</div>
-<div class="order-1 lg:order-2">
-<span class="text-secondary font-bold uppercase tracking-wider text-sm mb-2 block">Our Story</span>
-<h2 class="text-4xl lg:text-5xl font-display font-bold text-slate-900 dark:text-white mb-6">More Than Just a Sports Club</h2>
-<div class="space-y-6 text-lg text-slate-600 dark:text-slate-300">
-<p>
-                            At LittlePros, we believe every child deserves a place where they can run free, shout loud, and discover the joy of movement. Founded in 2015 by former athletes and educators, we set out to create an evening sanctuary for busy parents and energetic kids.
-                        </p>
-<p>
-                            We transform routine evenings into exciting adventures. While you finish your workday, your kids aren't just "being watched"—they are learning valuable life skills like teamwork, resilience, and fair play on the field.
-                        </p>
-<p>
-                            Our facility boasts state-of-the-art indoor courts and safe outdoor fields, ensuring play never stops, rain or shine.
-                        </p>
-<div class="pt-4 flex gap-4">
-<div class="text-center px-4 py-2 bg-blue-50 dark:bg-slate-800 rounded-xl">
-<span class="block font-display font-bold text-3xl text-accent">8+</span>
-<span class="text-xs font-bold uppercase text-slate-500">Years Active</span>
-</div>
-<div class="text-center px-4 py-2 bg-yellow-50 dark:bg-slate-800 rounded-xl">
-<span class="block font-display font-bold text-3xl text-secondary">500+</span>
-<span class="text-xs font-bold uppercase text-slate-500">Happy Kids</span>
-</div>
-<div class="text-center px-4 py-2 bg-orange-50 dark:bg-slate-800 rounded-xl">
-<span class="block font-display font-bold text-3xl text-primary">15</span>
-<span class="text-xs font-bold uppercase text-slate-500">Pro Coaches</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="grid md:grid-cols-3 gap-8">
-<div class="bg-card-light dark:bg-card-dark p-8 rounded-3xl shadow-md hover:shadow-xl transition-all duration-300 border border-slate-100 dark:border-slate-800 hover:-translate-y-1">
-<div class="w-14 h-14 bg-orange-100 dark:bg-orange-900/30 rounded-2xl flex items-center justify-center mb-6 text-secondary">
-<span class="material-symbols-outlined text-3xl">schedule</span>
-</div>
-<h3 class="text-2xl font-display font-bold text-slate-900 dark:text-white mb-3">Evening Sessions</h3>
-<p class="text-slate-600 dark:text-slate-400">Perfect timing for working parents. Drop them off after school for supervised sports activities until dinner.</p>
-</div>
-<div class="bg-card-light dark:bg-card-dark p-8 rounded-3xl shadow-md hover:shadow-xl transition-all duration-300 border border-slate-100 dark:border-slate-800 hover:-translate-y-1">
-<div class="w-14 h-14 bg-blue-100 dark:bg-blue-900/30 rounded-2xl flex items-center justify-center mb-6 text-accent dark:text-blue-400">
-<span class="material-symbols-outlined text-3xl">diversity_3</span>
-</div>
-<h3 class="text-2xl font-display font-bold text-slate-900 dark:text-white mb-3">Team Building</h3>
-<p class="text-slate-600 dark:text-slate-400">We focus on cooperation over competition. Every child gets to play, learn, and make new friends.</p>
-</div>
-<div class="bg-card-light dark:bg-card-dark p-8 rounded-3xl shadow-md hover:shadow-xl transition-all duration-300 border border-slate-100 dark:border-slate-800 hover:-translate-y-1">
-<div class="w-14 h-14 bg-yellow-100 dark:bg-yellow-900/30 rounded-2xl flex items-center justify-center mb-6 text-yellow-600 dark:text-primary">
-<span class="material-symbols-outlined text-3xl">health_and_safety</span>
-</div>
-<h3 class="text-2xl font-display font-bold text-slate-900 dark:text-white mb-3">Safety First</h3>
-<p class="text-slate-600 dark:text-slate-400">Fully vetted coaches, first-aid trained staff, and secure facilities ensure your peace of mind.</p>
-</div>
-</div>
-</div>
-</section>
-<section class="py-24 bg-blue-50 dark:bg-slate-900 relative" id="programs">
-<div class="absolute inset-0 opacity-5 dark:opacity-5 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-<div class="flex flex-col md:flex-row justify-between items-end mb-16">
-<div>
-<span class="text-secondary font-bold uppercase tracking-wider text-sm">Our Activities</span>
-<h2 class="text-4xl md:text-5xl font-display font-bold text-slate-900 dark:text-white mt-2">Pick Your Passion</h2>
-</div>
-<div class="hidden md:block">
-<button class="text-accent dark:text-primary font-bold hover:underline flex items-center gap-1 group">View All Programs <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform text-sm">arrow_forward</span></button>
-</div>
-</div>
-<div class="grid md:grid-cols-3 gap-8">
-<div class="group relative bg-white dark:bg-card-dark rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-slate-100 dark:border-slate-800">
-<div class="h-56 overflow-hidden bg-orange-500 relative flex items-center justify-center">
-<span class="material-symbols-outlined text-white text-[10rem] opacity-20 absolute rotate-12 -right-8 -bottom-8">sports_basketball</span>
-<img alt="Kid playing basketball" class="w-full h-full object-cover mix-blend-overlay opacity-60 group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiPJzSz8Q_3dK8I7Q_UmWAqpsoHd5_wWgfm58tpcILYbjYAw7YDizVgA9Xe7oQLxvTolHN5mUFaTP7HYLbM189AkradXdZZx9dgBGMfbScku6qCaNOa6rkiIYjYLSQFzq63ckpekiXNM-5Zvd9qvn94EaXIjQVs2k4HVqA2-AH88Ue07J3n_ctvcPYbj8ZYcoxfr07QYiPREiSFidaNb8_XKNUGWBFu_BPg_vm3jv_VK_5VGnoQtfCGHQln3lU5nusAeaKqoV35bHV"/>
-<div class="absolute top-4 right-4 bg-orange-600 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">Popular</div>
-</div>
-<div class="p-8 relative">
-<div class="absolute -top-8 left-8 bg-white dark:bg-slate-800 p-3 rounded-2xl shadow-lg">
-<span class="material-symbols-outlined text-orange-500 text-3xl">sports_basketball</span>
-</div>
-<h3 class="text-2xl font-display font-bold text-slate-900 dark:text-white mb-2 mt-4">Basketball</h3>
-<p class="text-slate-600 dark:text-slate-300 mb-6 text-sm leading-relaxed">Dribbling, shooting, and court awareness. Great for coordination and agility.</p>
-<div class="space-y-3 mb-8 border-t border-slate-100 dark:border-slate-700 pt-4">
-<div class="flex items-center text-sm text-slate-500 dark:text-slate-400">
-<span class="material-symbols-outlined text-green-500 text-base mr-3">check_circle</span> Ages 6-12
-                            </div>
-<div class="flex items-center text-sm text-slate-500 dark:text-slate-400">
-<span class="material-symbols-outlined text-green-500 text-base mr-3">check_circle</span> Indoor Court
-                            </div>
-</div>
-<button class="w-full py-3 bg-orange-50 dark:bg-slate-700/50 text-orange-600 dark:text-orange-400 font-bold rounded-xl hover:bg-orange-100 dark:hover:bg-slate-700 transition-colors">View Details</button>
-</div>
-</div>
-<div class="group relative bg-white dark:bg-card-dark rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-slate-100 dark:border-slate-800">
-<div class="h-56 overflow-hidden bg-accent relative flex items-center justify-center">
-<span class="material-symbols-outlined text-white text-[10rem] opacity-20 absolute -rotate-12 -left-8 -bottom-8">sports_soccer</span>
-<img alt="Kid playing soccer" class="w-full h-full object-cover mix-blend-overlay opacity-60 group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlHKoBd3zhOw8sQLAtJHxO-JtRfWFx3iM4HH5VBXeV4Qxjw97c_VU5ogJ3RDoXo67NQs81JyhDOA-lKWcXFId0s0NlZeRgMKbyHAyLRMbElqM7qgE_yFHGbrqFUVIwD1117mFSyoJBwxqhQqJa5y1Mu7mfC9iHAR0aia1HwNs4YbEoIz76ZqSAfghST2d8iLmzZMadi_JiSLiZEHOt3mEM6CTt3UiH-i3lsyEkBgSDRizIsArucr0Wrkk2cZ3oLsJeAYiHDjQ5HNus"/>
-</div>
-<div class="p-8 relative">
-<div class="absolute -top-8 left-8 bg-white dark:bg-slate-800 p-3 rounded-2xl shadow-lg">
-<span class="material-symbols-outlined text-accent text-3xl">sports_soccer</span>
-</div>
-<h3 class="text-2xl font-display font-bold text-slate-900 dark:text-white mb-2 mt-4">Soccer</h3>
-<p class="text-slate-600 dark:text-slate-300 mb-6 text-sm leading-relaxed">The beautiful game! Focus on footwork, passing, and team strategy on the grass.</p>
-<div class="space-y-3 mb-8 border-t border-slate-100 dark:border-slate-700 pt-4">
-<div class="flex items-center text-sm text-slate-500 dark:text-slate-400">
-<span class="material-symbols-outlined text-green-500 text-base mr-3">check_circle</span> Ages 4-12
-                            </div>
-<div class="flex items-center text-sm text-slate-500 dark:text-slate-400">
-<span class="material-symbols-outlined text-green-500 text-base mr-3">check_circle</span> Outdoor Field
-                            </div>
-</div>
-<button class="w-full py-3 bg-blue-50 dark:bg-slate-700/50 text-accent dark:text-blue-400 font-bold rounded-xl hover:bg-blue-100 dark:hover:bg-slate-700 transition-colors">View Details</button>
-</div>
-</div>
-<div class="group relative bg-white dark:bg-card-dark rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-slate-100 dark:border-slate-800">
-<div class="h-56 overflow-hidden bg-primary relative flex items-center justify-center">
-<span class="material-symbols-outlined text-black text-[10rem] opacity-10 absolute rotate-45 right-0 bottom-0">sports_cricket</span>
-<img alt="Cricket equipment" class="w-full h-full object-cover mix-blend-overlay opacity-60 group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsiOfYS9vvV2SiAeLksePsX20Zr6j3we6DYbrQdo9ieWqvMQ8e4ibncnBnDAOKSZngq9egnhbYrcMiGs_CKJkBU_Ruwx9DFX_tf-7jfoRU3Mxtuf29qf3KXDKwsuSBahxMppf1jVlXqcISbzP3bPIPVM1UQ2d21ZxPcBLJ9ZAiBv1vC5oehlyFzVofDJDsuH_cO_EzgHJHyIQhiRXl5GWDj9B-E6rK3opxVvaRhxbA08NtN-a0VGSjgzwm-tEGnw6Aq7VrR6xzYOPz"/>
-</div>
-<div class="p-8 relative">
-<div class="absolute -top-8 left-8 bg-white dark:bg-slate-800 p-3 rounded-2xl shadow-lg">
-<span class="material-symbols-outlined text-yellow-600 text-3xl">sports_cricket</span>
-</div>
-<h3 class="text-2xl font-display font-bold text-slate-900 dark:text-white mb-2 mt-4">Cricket</h3>
-<p class="text-slate-600 dark:text-slate-300 mb-6 text-sm leading-relaxed">Batting, bowling, and fielding. A classic game that teaches patience and precision.</p>
-<div class="space-y-3 mb-8 border-t border-slate-100 dark:border-slate-700 pt-4">
-<div class="flex items-center text-sm text-slate-500 dark:text-slate-400">
-<span class="material-symbols-outlined text-green-500 text-base mr-3">check_circle</span> Ages 6-12
-                            </div>
-<div class="flex items-center text-sm text-slate-500 dark:text-slate-400">
-<span class="material-symbols-outlined text-green-500 text-base mr-3">check_circle</span> Nets &amp; Field
-                            </div>
-</div>
-<button class="w-full py-3 bg-yellow-50 dark:bg-slate-700/50 text-yellow-600 dark:text-primary font-bold rounded-xl hover:bg-yellow-100 dark:hover:bg-slate-700 transition-colors">View Details</button>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="py-24 bg-white dark:bg-background-dark overflow-hidden" id="coaches">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="text-center mb-16">
-<span class="text-secondary font-bold uppercase tracking-wider text-sm mb-2 block">Our Team</span>
-<h2 class="text-4xl md:text-5xl font-display font-bold text-slate-900 dark:text-white">Meet the Coaches</h2>
-<p class="mt-4 text-slate-600 dark:text-slate-300 text-lg max-w-2xl mx-auto">Experienced, certified, and passionate about youth development.</p>
-</div>
-<div class="grid md:grid-cols-3 gap-12">
-<div class="text-center group">
-<div class="relative w-48 h-48 mx-auto mb-6">
-<div class="absolute inset-0 bg-primary/20 rounded-full scale-110 group-hover:scale-125 transition-transform duration-500"></div>
-<img alt="Coach Michael" class="w-full h-full object-cover rounded-full border-4 border-white dark:border-slate-800 shadow-xl relative z-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7Sz4XGOQVDXZHXlDqBYsEF7Td6XgdgSB0HyKnemdqJH4BijVQ-vyYUgEnTFOykXaVepzJWiW1o5sGcEXZ30qc0-D5jSDobsHt18imVAMyhVVLRCVbiOS4xc9xd-ZGvSr4-OwhNfF2Lo3evwqe3__1Dv0ZfjcMP6S2hnMY0NVVUx54nt1nvFPdVhw8v6vVAvAdWrpt87u6yfbSCNMW1g6j1K-MArYOoJiCGgfeLG_44DOGil7DCb6nrHgSwgdTPw-xTw5rFwuRqzZw"/>
-<div class="absolute bottom-2 right-2 bg-accent text-white p-2 rounded-full z-20 shadow-md">
-<span class="material-symbols-outlined text-lg">sports_soccer</span>
-</div>
-</div>
-<h3 class="text-2xl font-display font-bold text-slate-900 dark:text-white mb-1">Michael Chen</h3>
-<p class="text-primary font-bold text-sm uppercase tracking-wide mb-3">Head Soccer Coach</p>
-<p class="text-slate-600 dark:text-slate-400 text-sm px-4">Former collegiate player with 10+ years of youth coaching experience. Specializes in technical skill building.</p>
-</div>
-<div class="text-center group">
-<div class="relative w-48 h-48 mx-auto mb-6">
-<div class="absolute inset-0 bg-secondary/20 rounded-full scale-110 group-hover:scale-125 transition-transform duration-500"></div>
-<img alt="Coach Sarah" class="w-full h-full object-cover rounded-full border-4 border-white dark:border-slate-800 shadow-xl relative z-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJMZYpzdpg64vt91K0b1vCcVY2lpGgroNehrGU9bzqSy8ticuOHWkhNpOFaUXTYLst6FtizhRwEy6F2Gwk837B53Q9s0-L4IurhRk7hHWmKL_fhBfMISjD1ERUHCUKRQNePhnXXw_Xvsn0YCjo7bwGZwubKuWRibVvw0h7cT_MYx7js6Gt9kPoNlUahgsshraXyd8240uu9fwpFLpmHXkPK50UYo4S5k8VklRcYTYlZ1T0MDD4F2SFNdgWR9aijsaRpWCVGiCWUhVx"/>
-<div class="absolute bottom-2 right-2 bg-secondary text-white p-2 rounded-full z-20 shadow-md">
-<span class="material-symbols-outlined text-lg">sports_basketball</span>
-</div>
-</div>
-<h3 class="text-2xl font-display font-bold text-slate-900 dark:text-white mb-1">Sarah Johnson</h3>
-<p class="text-secondary font-bold text-sm uppercase tracking-wide mb-3">Basketball Director</p>
-<p class="text-slate-600 dark:text-slate-400 text-sm px-4">Certified fitness trainer and youth basketball specialist. Focuses on agility, teamwork, and confidence.</p>
-</div>
-<div class="text-center group">
-<div class="relative w-48 h-48 mx-auto mb-6">
-<div class="absolute inset-0 bg-primary-dark/20 rounded-full scale-110 group-hover:scale-125 transition-transform duration-500"></div>
-<img alt="Coach David" class="w-full h-full object-cover rounded-full border-4 border-white dark:border-slate-800 shadow-xl relative z-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzavsEbTR4QoCPIxe2k0itkMaWJZ7F4538rNW0x-DobWE95nxhszklzbF1bp3bR5xnBsg_Ccu1yB9S6hB2I7_Mj5Bv54Cr1gj2ItQU8n6vdQ7xXmmYUxYVNC1AsNTGDZ_DxfOiXQBliWIZzG7LlZCCeaKjdlIS-qvv7hqq8oN7389IRgwnF35FtaEfj2lPvSmsoycOoqcgkntZzmTPAUDBHYHwzJa_on_4ESQqmZyL7nZ9yjMWShillNxKwyVAiOu_1xdbY0Ns4cWn"/>
-<div class="absolute bottom-2 right-2 bg-primary-dark text-white p-2 rounded-full z-20 shadow-md">
-<span class="material-symbols-outlined text-lg">sports_cricket</span>
-</div>
-</div>
-<h3 class="text-2xl font-display font-bold text-slate-900 dark:text-white mb-1">David Smith</h3>
-<p class="text-primary-dark font-bold text-sm uppercase tracking-wide mb-3">Cricket &amp; Sports Lead</p>
-<p class="text-slate-600 dark:text-slate-400 text-sm px-4">Passionate about introducing classic sports to new generations. Expert in strategy and sportsmanship.</p>
-</div>
-</div>
-</div>
-</section>
-<section class="py-24 bg-slate-50 dark:bg-slate-900 border-y border-slate-200 dark:border-slate-800">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="grid lg:grid-cols-2 gap-16 items-center">
-<div class="space-y-8">
-<div>
-<span class="text-accent font-bold uppercase tracking-wider text-sm mb-2 block">Peace of Mind</span>
-<h2 class="text-4xl font-display font-bold text-slate-900 dark:text-white">Safety &amp; Facilities</h2>
-<p class="mt-4 text-slate-600 dark:text-slate-300 text-lg">We maintain the highest standards of safety and hygiene so your children can play without worry.</p>
-</div>
-<div class="space-y-6">
-<div class="flex items-start gap-4">
-<div class="w-12 h-12 rounded-xl bg-blue-100 dark:bg-blue-900/30 text-accent dark:text-blue-400 flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-2xl">clean_hands</span>
-</div>
-<div>
-<h3 class="font-bold text-xl text-slate-900 dark:text-white mb-2">Hygienic Indoor Courts</h3>
-<p class="text-slate-600 dark:text-slate-400 text-sm">Professional-grade flooring sanitized daily. Climate-controlled environment for year-round play.</p>
-</div>
-</div>
-<div class="flex items-start gap-4">
-<div class="w-12 h-12 rounded-xl bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-2xl">medical_services</span>
-</div>
-<div>
-<h3 class="font-bold text-xl text-slate-900 dark:text-white mb-2">First-Aid Certified</h3>
-<p class="text-slate-600 dark:text-slate-400 text-sm">All coaches and staff hold current CPR and First Aid certifications. AED on-site.</p>
-</div>
-</div>
-<div class="flex items-start gap-4">
-<div class="w-12 h-12 rounded-xl bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-2xl">admin_panel_settings</span>
-</div>
-<div>
-<h3 class="font-bold text-xl text-slate-900 dark:text-white mb-2">Secure Check-in/out</h3>
-<p class="text-slate-600 dark:text-slate-400 text-sm">Digital check-in system with ID verification for authorized guardians only.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="relative h-full min-h-[400px]">
-<div class="absolute top-0 right-0 w-3/4 h-3/4 bg-accent rounded-3xl -rotate-3 z-0"></div>
-<div class="absolute bottom-0 left-0 w-3/4 h-3/4 bg-primary rounded-3xl rotate-3 z-0"></div>
-<img alt="Safe indoor sports facility" class="absolute inset-4 w-[calc(100%-2rem)] h-[calc(100%-2rem)] object-cover rounded-2xl shadow-2xl z-10 border-4 border-white dark:border-slate-800" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAD4piiaLTwFYuiFxkH9nAo2ARZLzG7_FZzpChx9uws15Uichlo6D31skkswu5l77TYYpwMoL7AhJ7TMVYRKfa88h8bBjlHgunq_3g8ZamW1GW2AykJVDA_ceIENWNMP6ycmRozB3vqNR5zKEyJNQ0b5cIciW02spQWERj7bXxiy_uw_mMeN06Hfit5BGaf39KecBwhMz7ubVVpBC6VdvmtkbziHr0BXGHTc9650iIOzyDPp5LXCk3Ifl31l8ElR7qSJTFgIiI8AOQl"/>
-</div>
-</div>
-</div>
-</section>
-<section class="py-24 bg-accent dark:bg-blue-900 text-white relative overflow-hidden">
-<div class="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
-<div class="absolute bottom-0 left-0 w-96 h-96 bg-primary opacity-10 rounded-full blur-3xl translate-y-1/3 -translate-x-1/3"></div>
-<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-<div class="text-center mb-16">
-<span class="text-primary font-bold uppercase tracking-wider text-sm mb-2 block">Plan Ahead</span>
-<h2 class="text-4xl md:text-5xl font-display font-bold mb-4">Weekly Schedule</h2>
-<p class="text-blue-100 text-lg max-w-2xl mx-auto">Consistent timings to help you plan your week perfectly. Drop-ins are welcome for first-timers!</p>
-</div>
-<div class="bg-white/10 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white/20 shadow-2xl">
-<div class="space-y-8">
-<div class="group flex flex-col md:flex-row justify-between items-center border-b border-white/10 pb-6 hover:bg-white/5 p-4 -mx-4 rounded-2xl transition-colors cursor-default">
-<div class="flex items-center gap-6 mb-4 md:mb-0 w-full md:w-auto">
-<div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-orange-400 text-slate-900 flex flex-col items-center justify-center font-bold shadow-lg transform group-hover:scale-110 transition-transform">
-<span class="text-xs uppercase opacity-70">Mon</span>
-<span class="text-xl">14</span>
-</div>
-<div>
-<h3 class="font-bold text-2xl group-hover:text-primary transition-colors">Soccer Skills</h3>
-<p class="text-blue-200 text-sm">Coach Michael • Ages 8-12</p>
-</div>
-</div>
-<div class="flex items-center gap-6 w-full md:w-auto justify-between md:justify-end">
-<div class="text-right">
-<span class="block text-lg font-bold">4:00 PM - 6:00 PM</span>
-<span class="text-primary text-sm font-bold flex items-center justify-end gap-1"><span class="material-symbols-outlined text-sm">location_on</span> Field A</span>
-</div>
-<button class="bg-white/20 hover:bg-white text-white hover:text-accent p-3 rounded-full transition-all">
-<span class="material-symbols-outlined">arrow_forward</span>
-</button>
-</div>
-</div>
-<div class="group flex flex-col md:flex-row justify-between items-center border-b border-white/10 pb-6 hover:bg-white/5 p-4 -mx-4 rounded-2xl transition-colors cursor-default">
-<div class="flex items-center gap-6 mb-4 md:mb-0 w-full md:w-auto">
-<div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-secondary to-red-500 text-white flex flex-col items-center justify-center font-bold shadow-lg transform group-hover:scale-110 transition-transform">
-<span class="text-xs uppercase opacity-70">Wed</span>
-<span class="text-xl">16</span>
-</div>
-<div>
-<h3 class="font-bold text-2xl group-hover:text-primary transition-colors">Basketball Drill</h3>
-<p class="text-blue-200 text-sm">Coach Sarah • Ages 6-10</p>
-</div>
-</div>
-<div class="flex items-center gap-6 w-full md:w-auto justify-between md:justify-end">
-<div class="text-right">
-<span class="block text-lg font-bold">4:30 PM - 6:30 PM</span>
-<span class="text-primary text-sm font-bold flex items-center justify-end gap-1"><span class="material-symbols-outlined text-sm">location_on</span> Court 1</span>
-</div>
-<button class="bg-white/20 hover:bg-white text-white hover:text-accent p-3 rounded-full transition-all">
-<span class="material-symbols-outlined">arrow_forward</span>
-</button>
-</div>
-</div>
-<div class="group flex flex-col md:flex-row justify-between items-center hover:bg-white/5 p-4 -mx-4 rounded-2xl transition-colors cursor-default">
-<div class="flex items-center gap-6 mb-4 md:mb-0 w-full md:w-auto">
-<div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-yellow-400 to-yellow-600 text-slate-900 flex flex-col items-center justify-center font-bold shadow-lg transform group-hover:scale-110 transition-transform">
-<span class="text-xs uppercase opacity-70">Fri</span>
-<span class="text-xl">18</span>
-</div>
-<div>
-<h3 class="font-bold text-2xl group-hover:text-primary transition-colors">Cricket Match</h3>
-<p class="text-blue-200 text-sm">Coach David • All Ages</p>
-</div>
-</div>
-<div class="flex items-center gap-6 w-full md:w-auto justify-between md:justify-end">
-<div class="text-right">
-<span class="block text-lg font-bold">4:00 PM - 7:00 PM</span>
-<span class="text-primary text-sm font-bold flex items-center justify-end gap-1"><span class="material-symbols-outlined text-sm">location_on</span> Main Oval</span>
-</div>
-<button class="bg-white/20 hover:bg-white text-white hover:text-accent p-3 rounded-full transition-all">
-<span class="material-symbols-outlined">arrow_forward</span>
-</button>
-</div>
-</div>
-</div>
-</div>
-<div class="text-center mt-12">
-<a class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary hover:bg-yellow-400 text-slate-900 font-display font-bold rounded-xl shadow-lg transition-transform transform hover:scale-105" href="#contact">
-                    Download Full Schedule <span class="material-symbols-outlined">download</span>
-</a>
-</div>
-</div>
-</section>
-<section class="py-24 bg-background-light dark:bg-background-dark" id="gallery">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="text-center mb-16">
-<span class="text-secondary font-bold uppercase tracking-wider text-sm mb-2 block">Gallery</span>
-<h2 class="text-4xl md:text-5xl font-display font-bold text-slate-900 dark:text-white">Little Pros in Action</h2>
-<p class="mt-4 text-slate-600 dark:text-slate-300 text-lg">Capturing high-energy moments of diverse children playing sports.</p>
-</div>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-<div class="group relative overflow-hidden rounded-3xl shadow-lg aspect-square bg-slate-200">
-<img alt="Diverse children playing soccer on a green field" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWbCV-VZpn8jC4jVhmHsxxqu7cS0KE9Axm8ZUO2Gu9ogXUeXZGmlYyBbfQyo3D0lk5v8UwJAcgU8oDEnMkWE2F2d8XsgSZ3cZhKjn2cU4Vc1bybil5Y_2_56ICepT9KMgJGBnWksKd3OgmoubryFWijzbFMS3mG8CKOhh-tEKXfZ1BJMRzXanMCccFwkqXRVVB9XR5yDRCGWcwm5os9Kcu7S4XwmIZmHvaw0jA3r4_v8V51SFviNqsZZXBGjPg57ur1fOlchQvZ8bO"/>
-<div class="absolute inset-0 bg-gradient-to-t from-accent/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
-<span class="text-white font-display font-bold text-xl">Soccer Stars</span>
-<p class="text-blue-100 text-sm">Learning teamwork on the pitch</p>
-</div>
-</div>
-<div class="group relative overflow-hidden rounded-3xl shadow-lg aspect-square bg-slate-200">
-<img alt="Young boy practicing basketball shooting" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADgyTNjo_Vg-xgcXoltmTy_yycJKC1BiuTWi-GM9v6tJNMbrkFvA1oI1c3Z-_8jddyVfiIX-0t4-Je0LpheZHGQCjfss38QhgfhoKDrFr89JR1UQQPa1j72wUif5dtZvlEEW9gAZZggrr_pXtgKQWyhzK9Z8Qf2PBDYlr4hdP1_wFM4fFdUZk0_s0WSUVGG4a86Isol4Uf-LWU4dtm_fuIQFabLahC5QKeeXsQZ8JNT6UXC3KdoeJz7zxVP4F5ekPuVecImQwiE4ZR"/>
-<div class="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
-<span class="text-white font-display font-bold text-xl">Hoop Dreams</span>
-<p class="text-orange-100 text-sm">Developing focus and precision</p>
-</div>
-</div>
-<div class="group relative overflow-hidden rounded-3xl shadow-lg aspect-square bg-slate-200">
-<img alt="Diverse children with tennis rackets at a sports hub" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfa08mTDB-U4h0HLH2uEEl9c1CSPwZADVY4cbaVcxNKmSQCO1fVzRRUG5WVy1yKqFkIhgETUNRf1_KW6edigYS6w8vmhaTatCBCCx9Y9f707gcjtav3zpscv2VQuaHmx_9tcxMHr8nyStPWtB1I_dNO9hFVg6MCLF0xrKkrRo8Lg5WvMABTQ9QANN5CoCkur_Evzt4m0oMLGH_-BQrTx4HsjdnsCopR8J-T0rdKb0ey4DMd798ecbvXL9xeJv0XTSqoHb662nW_eum"/>
-<div class="absolute inset-0 bg-gradient-to-t from-primary-dark/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
-<span class="text-white font-display font-bold text-xl">Tennis Aces</span>
-<p class="text-yellow-100 text-sm">Agility and coordination drills</p>
-</div>
-</div>
-<div class="group relative overflow-hidden rounded-3xl shadow-lg aspect-square bg-slate-200">
-<img alt="Two diverse kids giving a high-five during sports" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfdsnSsjEVqnEz2PGYJu_LRkdS4J2TFKkD0pkFTh0o2OL1JUNVpRY0ebl3m0DKE01J5vNGMGB_re3cMEcU-6LCxqlLsmlLrWF0BHAPpy7M_IereWRtmJxhawot2-s2xmZgtcaRsA0sVM6tczek96Bbw3ZM__BuxI7m05RVrdM7ho3kAOX-PL_bsNF-O7jlnDDHTaPd5Ya9jnVz_q300nusdh17YTPiyhRVur-7WknGuRwg37aIUITgtRDLpHTtM8ZSRZhhXGSLrxXD"/>
-<div class="absolute inset-0 bg-gradient-to-t from-accent/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
-<span class="text-white font-display font-bold text-xl">Fair Play</span>
-<p class="text-blue-100 text-sm">Friendships built on the field</p>
-</div>
-</div>
-<div class="group relative overflow-hidden rounded-3xl shadow-lg aspect-square bg-slate-200">
-<img alt="Diverse group of kids running a race" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwnqFudcwS42YoYSXsp0AaLtXocHAqyp-jioRh-enWMeesnwPKCqLGngjjL3FhV_B8FV7RhWK_MqBjDgUptsYXybymsFcD7JvH3EOc8Dkpna6Pop0qBO08Pa8--6JYBr0HznzmTeA-kNIp54K0iBIMZ0k3tqpL5MWUHyPUNVLN_M8GxU8cAOaWHJN_Cd_S-imVyIUfgej4qg6tF76Yy_huOTWKlWwydmaGM9sc8H4fHtmYwaK2_bySaEt6X39bVjWHwCyhjEjizUQY"/>
-<div class="absolute inset-0 bg-gradient-to-t from-secondary/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
-<span class="text-white font-display font-bold text-xl">Speed &amp; Power</span>
-<p class="text-orange-100 text-sm">Building athleticism through track</p>
-</div>
-</div>
-<div class="group relative overflow-hidden rounded-3xl shadow-lg aspect-square bg-slate-200">
-<img alt="Coach instructing diverse children in sports gear" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKC3BQlvuqXelfukoeozzxd3bYG4qryI07j1_KADL5tQ5dMNoJiyKJGtKOMHccIfpGKxD_P4QkP2w7zY1rHYRJ7kuda_YPejiK0UrqtrJDJ2JZGlfsNK8Qvz-XOUSFP0EKMWi8lU04PqOhFr7rtWrFGlsWB0tF8zNjIj1txUS3AnfqLiPzzXaCqWG54pbizpOBwJlGdYL0PkHs7yPqQDKGJR1OPW2yjM9exqlAkPqMkDURRjYwoKq67EBX0gOROfBVskaeys2cprRd"/>
-<div class="absolute inset-0 bg-gradient-to-t from-primary-dark/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
-<span class="text-white font-display font-bold text-xl">Expert Guidance</span>
-<p class="text-yellow-100 text-sm">Learning from the best professionals</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="py-24 bg-white dark:bg-slate-900 border-y border-slate-100 dark:border-slate-800" id="testimonials">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="text-center mb-16">
-<span class="text-secondary font-bold uppercase tracking-wider text-sm mb-2 block">Testimonials</span>
-<h2 class="text-4xl md:text-5xl font-display font-bold text-slate-900 dark:text-white">Parents Love Us</h2>
-</div>
-<div class="grid md:grid-cols-3 gap-8">
-<div class="bg-slate-50 dark:bg-card-dark p-8 rounded-3xl relative shadow-sm hover:shadow-lg transition-shadow border border-slate-100 dark:border-slate-800">
-<span class="material-symbols-outlined text-6xl text-primary/20 absolute top-4 right-6">format_quote</span>
-<div class="flex gap-1 text-yellow-400 mb-4">
-<span class="material-symbols-outlined text-xl fill-current">star</span>
-<span class="material-symbols-outlined text-xl fill-current">star</span>
-<span class="material-symbols-outlined text-xl fill-current">star</span>
-<span class="material-symbols-outlined text-xl fill-current">star</span>
-<span class="material-symbols-outlined text-xl fill-current">star</span>
-</div>
-<p class="text-slate-700 dark:text-slate-300 mb-6 italic">"My son has gained so much confidence since joining LittlePros. The coaches are incredibly patient and supportive. Highly recommended!"</p>
-<div class="flex items-center gap-4">
-<div class="h-12 w-12 rounded-full bg-accent text-white flex items-center justify-center font-bold text-lg">JD</div>
-<div>
-<h4 class="font-bold text-slate-900 dark:text-white">Jennifer Davis</h4>
-<p class="text-xs text-slate-500 uppercase tracking-wide">Parent of 8yo</p>
-</div>
-</div>
-</div>
-<div class="bg-slate-50 dark:bg-card-dark p-8 rounded-3xl relative shadow-sm hover:shadow-lg transition-shadow border border-slate-100 dark:border-slate-800">
-<span class="material-symbols-outlined text-6xl text-primary/20 absolute top-4 right-6">format_quote</span>
-<div class="flex gap-1 text-yellow-400 mb-4">
-<span class="material-symbols-outlined text-xl fill-current">star</span>
-<span class="material-symbols-outlined text-xl fill-current">star</span>
-<span class="material-symbols-outlined text-xl fill-current">star</span>
-<span class="material-symbols-outlined text-xl fill-current">star</span>
-<span class="material-symbols-outlined text-xl fill-current">star</span>
-</div>
-<p class="text-slate-700 dark:text-slate-300 mb-6 italic">"The evening schedule is a lifesaver. It's great knowing my kids are active and happy while I finish work. The facilities are top-notch."</p>
-<div class="flex items-center gap-4">
-<div class="h-12 w-12 rounded-full bg-secondary text-white flex items-center justify-center font-bold text-lg">MR</div>
-<div>
-<h4 class="font-bold text-slate-900 dark:text-white">Marcus Reed</h4>
-<p class="text-xs text-slate-500 uppercase tracking-wide">Parent of 10yo &amp; 6yo</p>
-</div>
-</div>
-</div>
-<div class="bg-slate-50 dark:bg-card-dark p-8 rounded-3xl relative shadow-sm hover:shadow-lg transition-shadow border border-slate-100 dark:border-slate-800">
-<span class="material-symbols-outlined text-6xl text-primary/20 absolute top-4 right-6">format_quote</span>
-<div class="flex gap-1 text-yellow-400 mb-4">
-<span class="material-symbols-outlined text-xl fill-current">star</span>
-<span class="material-symbols-outlined text-xl fill-current">star</span>
-<span class="material-symbols-outlined text-xl fill-current">star</span>
-<span class="material-symbols-outlined text-xl fill-current">star</span>
-<span class="material-symbols-outlined text-xl fill-current">star_half</span>
-</div>
-<p class="text-slate-700 dark:text-slate-300 mb-6 italic">"A wonderful community atmosphere. My daughter made her best friends here during soccer camp. We'll be back next season!"</p>
-<div class="flex items-center gap-4">
-<div class="h-12 w-12 rounded-full bg-primary text-slate-900 flex items-center justify-center font-bold text-lg">SL</div>
-<div>
-<h4 class="font-bold text-slate-900 dark:text-white">Sarah Lee</h4>
-<p class="text-xs text-slate-500 uppercase tracking-wide">Parent of 7yo</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="py-24 bg-slate-50 dark:bg-slate-900" id="contact">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="grid lg:grid-cols-2 gap-12">
-<div class="bg-white dark:bg-card-dark p-8 lg:p-10 rounded-3xl shadow-xl border border-slate-100 dark:border-slate-800">
-<h2 class="text-3xl font-display font-bold text-slate-900 dark:text-white mb-6">Join the Team!</h2>
-<p class="text-slate-600 dark:text-slate-300 mb-8">Ready to sign up or have questions? Send us a message and our team will get back to you within 24 hours.</p>
-<form class="space-y-6">
-<div class="grid grid-cols-2 gap-6">
-<div>
-<label class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">Parent's Name</label>
-<input class="w-full rounded-xl border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary transition-all p-3" placeholder="John Doe" type="text"/>
-</div>
-<div>
-<label class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">Child's Age</label>
-<input class="w-full rounded-xl border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary transition-all p-3" placeholder="7" type="number"/>
-</div>
-</div>
-<div>
-<label class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">Email Address</label>
-<input class="w-full rounded-xl border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary transition-all p-3" placeholder="john@example.com" type="email"/>
-</div>
-<div>
-<label class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">Interest</label>
-<select class="w-full rounded-xl border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary transition-all p-3">
-<option>Soccer</option>
-<option>Basketball</option>
-<option>Cricket</option>
-<option>General Inquiry</option>
-</select>
-</div>
-<button class="w-full py-4 bg-primary hover:bg-yellow-400 text-slate-900 font-display font-bold text-lg rounded-xl shadow-lg transition-transform transform active:scale-95 hover:shadow-xl mt-4" type="button">
-                            Send Message
-                        </button>
-</form>
-</div>
-<div class="space-y-8 flex flex-col h-full">
-<div class="h-80 lg:h-auto lg:flex-grow bg-slate-200 dark:bg-slate-700 rounded-3xl overflow-hidden relative shadow-inner">
-<iframe allowfullscreen="" height="100%" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1422937950147!2d-73.9873196845941!3d40.75889497932681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1620833156689!5m2!1sen!2sus" style="border:0;" width="100%"></iframe>
-</div>
-<div class="grid sm:grid-cols-2 gap-6 bg-white dark:bg-card-dark p-6 rounded-3xl shadow-sm border border-slate-100 dark:border-slate-800">
-<div class="flex items-start gap-4">
-<div class="w-12 h-12 rounded-2xl bg-accent text-white flex items-center justify-center shrink-0 shadow-md">
-<span class="material-symbols-outlined">location_on</span>
-</div>
-<div>
-<h4 class="font-bold text-slate-900 dark:text-white text-lg">Our Location</h4>
-<p class="text-sm text-slate-500 dark:text-slate-400 leading-snug">123 Sports Avenue,<br/>Playtown, PT 90210</p>
-</div>
-</div>
-<div class="flex items-start gap-4">
-<div class="w-12 h-12 rounded-2xl bg-secondary text-white flex items-center justify-center shrink-0 shadow-md">
-<span class="material-symbols-outlined">phone</span>
-</div>
-<div>
-<h4 class="font-bold text-slate-900 dark:text-white text-lg">Call Us</h4>
-<p class="text-sm text-slate-500 dark:text-slate-400 leading-snug">(555) 123-4567<br/>Mon-Fri, 9am - 6pm</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<footer class="bg-slate-900 text-white pt-16 pb-8 border-t border-slate-800">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+<footer class="bg-black text-white pt-20 pb-10 px-6 border-t border-gray-900">
+<div class="max-w-[1920px] mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
 <div class="space-y-4">
-<div class="flex items-center gap-2 mb-4">
-<div class="h-10 w-10 bg-accent rounded-full flex items-center justify-center text-primary font-display font-bold text-xl border-2 border-primary">
-                            LP
-                        </div>
-<span class="font-display font-bold text-2xl tracking-wide text-white">LittlePros</span>
+<h5 class="text-xs font-mono text-gray-500 uppercase mb-4">General</h5>
+<ul class="space-y-2 text-sm font-medium">
+<li><a class="hover:text-gray-400 transition-colors" href="#">Home</a></li>
+<li><a class="hover:text-gray-400 transition-colors" href="#">New Arrivals</a></li>
+<li><a class="hover:text-gray-400 transition-colors" href="#">Top Products</a></li>
+<li><a class="hover:text-gray-400 transition-colors" href="#">Collections</a></li>
+<li><a class="hover:text-gray-400 transition-colors" href="#">About</a></li>
+</ul>
 </div>
-<p class="text-slate-400 text-sm leading-relaxed">
-                        Building confidence and healthy habits through sports. Safe, fun, and inclusive environment for children of all ages.
+<div class="md:col-span-2 flex flex-col items-center text-center">
+<p class="text-xs font-mono text-gray-300 uppercase max-w-md mb-8 leading-relaxed">
+                        Subscribe to receive market updates, new<br/>
+                        listings, and curated insights — delivered<br/>
+                        with clarity. Never noise.
                     </p>
+<div class="w-full max-w-md relative">
+<input class="w-full bg-transparent border-b border-gray-700 py-2 text-sm focus:outline-none focus:border-white transition-colors text-center placeholder-gray-600" placeholder="YOUR EMAIL ADDRESS" type="email"/>
+<button class="absolute right-0 top-1/2 -translate-y-1/2 text-blue-400 hover:text-white transition-colors">
+<span class="material-icons-outlined text-sm">arrow_forward</span>
+</button>
 </div>
-<div>
-<h3 class="font-display font-bold text-lg mb-4 text-white">Quick Links</h3>
-<ul class="space-y-2 text-slate-400">
-<li><a class="hover:text-primary transition-colors" href="#about">About Us</a></li>
-<li><a class="hover:text-primary transition-colors" href="#programs">Our Programs</a></li>
-<li><a class="hover:text-primary transition-colors" href="#gallery">Gallery</a></li>
-<li><a class="hover:text-primary transition-colors" href="#testimonials">Testimonials</a></li>
-<li><a class="hover:text-primary transition-colors" href="#contact">Contact</a></li>
+</div>
+<div class="text-right space-y-4">
+<h5 class="text-xs font-mono text-gray-500 uppercase mb-4">Contact</h5>
+<ul class="space-y-1 text-sm font-mono text-gray-300">
+<li>+62 810 4350 1520</li>
+<li><a class="hover:underline" href="mailto:hello@cottonclaws.com">hello@cottonclaws.com</a></li>
+<li class="pt-2">850 Preston Inglewood,<br/>Maine 98380</li>
 </ul>
 </div>
-<div>
-<h3 class="font-display font-bold text-lg mb-4 text-white">Programs</h3>
-<ul class="space-y-2 text-slate-400">
-<li><a class="hover:text-primary transition-colors" href="#">Soccer Academy</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Basketball League</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Cricket Club</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Holiday Camps</a></li>
-</ul>
 </div>
-<div>
-<h3 class="font-display font-bold text-lg mb-4 text-white">Stay Connected</h3>
-<div class="flex gap-4 mb-6">
-<a class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-accent hover:text-white transition-all text-slate-400" href="#">
-<span class="font-bold">fb</span>
+<div class="flex justify-center gap-6 mb-20">
+<a class="w-8 h-8 rounded-full border border-gray-800 flex items-center justify-center hover:bg-white hover:text-black transition-colors text-xs" href="#">
+<span class="material-icons-outlined text-[14px]">smart_display</span>
 </a>
-<a class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-secondary hover:text-white transition-all text-slate-400" href="#">
-<span class="font-bold">ig</span>
+<a class="w-8 h-8 rounded-full border border-gray-800 flex items-center justify-center hover:bg-white hover:text-black transition-colors text-xs" href="#">
+<span class="material-icons-outlined text-[14px]">alternate_email</span>
 </a>
-<a class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-slate-900 transition-all text-slate-400" href="#">
-<span class="font-bold">tw</span>
+<a class="w-8 h-8 rounded-full border border-gray-800 flex items-center justify-center hover:bg-white hover:text-black transition-colors text-xs" href="#">
+<span class="material-icons-outlined text-[14px]">photo_camera</span>
 </a>
 </div>
-<p class="text-xs text-slate-500 mb-2">Subscribe for updates</p>
-<div class="flex">
-<input class="bg-slate-800 border-none rounded-l-lg text-sm w-full focus:ring-1 focus:ring-primary text-white py-2 px-3" placeholder="Email" type="email"/>
-<button class="bg-primary text-slate-900 px-4 rounded-r-lg font-bold text-sm hover:bg-yellow-400 transition-colors">GO</button>
+<div class="flex justify-between items-center text-[10px] font-mono text-gray-600 mb-4 border-t border-gray-900 pt-4">
+<div>// BASED IN TYO</div>
+<div class="flex items-center gap-2">
+<span>© 22-25</span>
+<div class="barcode text-gray-600 w-10"></div>
 </div>
 </div>
+<div class="w-full overflow-hidden">
+<h1 class="font-display font-black text-[15vw] leading-none tracking-tighter text-white text-center select-none">
+                    COTTONCLAWS
+                </h1>
 </div>
-<div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500">
-<div class="mb-4 md:mb-0">
-                    © 2023 LittlePros Sports Hub. All rights reserved.
-                </div>
-<div class="flex gap-6">
-<a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
-<a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+<div class="flex justify-between text-[10px] font-mono text-gray-600 mt-4">
+<div>© 2025 COTTONCLAWS. ALL RIGHTS RESERVED</div>
+<div class="flex gap-4">
+<a class="hover:text-white" href="#">TERMS &amp; CONDITION</a>
+<a class="hover:text-white" href="#">PRIVACY POLICY</a>
 </div>
 </div>
 </div>
 </footer>
-
 </body></html>

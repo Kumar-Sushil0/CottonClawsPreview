@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact - CottonClaws</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,400&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#000000",
+              secondary: "#ffffff",
+              "background-light": "#F2F2F2",
+              "background-dark": "#0A0A0A",
+              "neutral-100": "#f5f5f5",
+              "neutral-800": "#262626",
+            },
+            fontFamily: {
+              display: ['Archivo', 'sans-serif'],
+              sans: ['Inter', 'sans-serif'],
+            },
+            borderRadius: {
+              DEFAULT: "0px",
+              'sm': '2px',
+              'md': '4px',
+              'full': '9999px',
+            },
+            spacing: {
+                '128': '32rem',
+            },
+            letterSpacing: {
+                'tighter': '-0.05em',
+                'tight': '-0.025em',
+                'widest': '0.1em',
+            }
+          },
+        },
+      };
+    </script>
+<style>
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-100%); }
+        }
+        .animate-marquee {
+            display: inline-block;
+            white-space: nowrap;
+            animation: marquee 20s linear infinite;
+        }
+        .barcode {
+            background-image: repeating-linear-gradient(90deg, currentColor 0px, currentColor 1px, transparent 1px, transparent 3px);
+            height: 12px;
+            width: 60px;
+            display: inline-block;
+        }
+        .barcode-lg {
+             background-image: repeating-linear-gradient(90deg, currentColor 0px, currentColor 2px, transparent 2px, transparent 4px);
+             height: 16px;
+             width: 80px;
+             display: inline-block;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-900 bg-background-light dark:bg-background-dark dark:text-gray-100 transition-colors duration-300">
+<nav class="sticky top-0 z-50 bg-white/90 dark:bg-black/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+<div class="max-w-[1920px] mx-auto px-6 h-16 flex items-center justify-between">
+<div class="flex items-center gap-6">
+<a class="font-display font-black text-xl tracking-tighter" href="1.html">COTTONCLAWS</a>
+</div>
+<div class="hidden md:flex items-center gap-8 font-medium text-sm">
+<a class="hover:text-gray-500 transition-colors" href="1.html">Home</a>
+<a class="hover:text-gray-500 transition-colors" href="product.html">Shop</a>
+<a class="hover:text-gray-500 transition-colors" href="about.html">About</a>
+<a class="hover:text-gray-500 transition-colors" href="blog.html">Journal</a>
+<a class="hover:text-gray-500 transition-colors" href="contact.html">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors">
+<span class="material-icons-outlined">favorite_border</span>
+</button>
+<button class="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors">
+<span class="material-icons-outlined">shopping_bag</span>
+</button>
+</div>
+</div>
+</nav>
+
+<!-- Banner Section -->
+<section class="relative h-[50vh] w-full overflow-hidden flex flex-col items-center justify-center bg-black">
+<div class="absolute inset-0 z-0">
+<img alt="Contact CottonClaws" class="w-full h-full object-cover object-top opacity-70" src="mo7.png"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60"></div>
+<div class="relative z-10 w-full text-center px-4">
+<p class="text-xs font-mono text-white/80 uppercase tracking-widest mb-4">// GET IN TOUCH</p>
+<h1 class="font-display text-5xl md:text-7xl font-semibold uppercase tracking-tighter text-white mb-6">
+Contact // Us
+</h1>
+<div class="barcode-lg text-white opacity-60 mx-auto"></div>
+</div>
+</section>
+
+<div class="bg-black text-white py-4 overflow-hidden w-full">
+<div class="animate-marquee whitespace-nowrap font-display font-bold uppercase tracking-wider text-sm flex items-center w-full">
+<span class="mx-8">WE'RE LISTENING ©</span>
+<span class="mx-8">REACH OUT ©</span>
+<span class="mx-8">LET'S CONNECT ©</span>
+<span class="mx-8">COTTONCLAWS ©</span>
+<span class="mx-8">WE'RE LISTENING ©</span>
+<span class="mx-8">REACH OUT ©</span>
+<span class="mx-8">LET'S CONNECT ©</span>
+<span class="mx-8">COTTONCLAWS ©</span>
+<span class="mx-8">WE'RE LISTENING ©</span>
+<span class="mx-8">REACH OUT ©</span>
+<span class="mx-8">LET'S CONNECT ©</span>
+<span class="mx-8">COTTONCLAWS ©</span>
+</div>
+</div>
+
+<!-- 50/50 Split Section: Contact Info + Form -->
+<section class="bg-white text-black">
+<div class="max-w-[1920px] mx-auto grid grid-cols-1 lg:grid-cols-2">
+<!-- Left Side: Contact Information -->
+<div class="bg-white p-8 md:p-16 border-r border-black flex flex-col justify-center">
+<div class="flex items-center gap-4 mb-8">
+<div class="barcode text-black"></div>
+<span class="text-xs font-mono text-gray-600 uppercase">// CONTACT INFO</span>
+</div>
+<h2 class="font-display text-4xl md:text-6xl font-semibold uppercase tracking-tighter mb-12">
+Let's // Talk
+</h2>
+<div class="space-y-8">
+<div>
+<div class="flex items-center gap-3 mb-3">
+<span class="material-icons-outlined text-black">location_on</span>
+<h3 class="font-display text-xl font-bold uppercase tracking-tight">HEADQUARTERS</h3>
+</div>
+<p class="text-sm font-mono text-gray-700 uppercase pl-9">
+TOKYO, JAPAN<br/>
+SHIBUYA-KU, 150-0001<br/>
+3-CHOME BUILDING, 5F
+</p>
+</div>
+<div>
+<div class="flex items-center gap-3 mb-3">
+<span class="material-icons-outlined text-black">email</span>
+<h3 class="font-display text-xl font-bold uppercase tracking-tight">EMAIL</h3>
+</div>
+<p class="text-sm font-mono text-gray-700 pl-9">
+<a href="mailto:hello@cottonclaws.com" class="hover:text-black/50 transition-colors">HELLO@COTTONCLAWS.COM</a><br/>
+<a href="mailto:support@cottonclaws.com" class="hover:text-black/50 transition-colors">SUPPORT@COTTONCLAWS.COM</a>
+</p>
+</div>
+<div>
+<div class="flex items-center gap-3 mb-3">
+<span class="material-icons-outlined text-black">phone</span>
+<h3 class="font-display text-xl font-bold uppercase tracking-tight">PHONE</h3>
+</div>
+<p class="text-sm font-mono text-gray-700 pl-9">
++81 3-1234-5678<br/>
+MON-FRI: 9AM - 6PM JST
+</p>
+</div>
+<div>
+<div class="flex items-center gap-3 mb-3">
+<span class="material-icons-outlined text-black">schedule</span>
+<h3 class="font-display text-xl font-bold uppercase tracking-tight">RESPONSE TIME</h3>
+</div>
+<p class="text-sm font-mono text-gray-700 uppercase pl-9">
+WE AIM TO RESPOND WITHIN 24-48 HOURS
+</p>
+</div>
+</div>
+<div class="mt-12 pt-8 border-t border-gray-300">
+<h4 class="font-mono text-xs text-black mb-4 uppercase">FOLLOW US</h4>
+<div class="flex gap-4">
+<a class="w-12 h-12 border border-black flex items-center justify-center rounded-full hover:bg-black hover:text-white transition-colors text-black" href="#">IG</a>
+<a class="w-12 h-12 border border-black flex items-center justify-center rounded-full hover:bg-black hover:text-white transition-colors text-black" href="#">X</a>
+<a class="w-12 h-12 border border-black flex items-center justify-center rounded-full hover:bg-black hover:text-white transition-colors text-black" href="#">TT</a>
+</div>
+</div>
+</div>
+
+<!-- Right Side: Contact Form -->
+<div class="bg-gray-50 p-8 md:p-16 flex flex-col justify-center">
+<div class="flex items-center gap-4 mb-8">
+<div class="barcode text-black"></div>
+<span class="text-xs font-mono text-gray-600 uppercase">// SEND MESSAGE</span>
+</div>
+<h2 class="font-display text-3xl md:text-4xl font-semibold uppercase tracking-tighter mb-8">
+Drop Us // A Line
+</h2>
+<form class="space-y-6">
+<div>
+<label class="block text-xs font-mono text-black uppercase mb-2" for="name">NAME *</label>
+<input class="w-full bg-white border border-black px-4 py-3 text-sm font-mono focus:outline-none focus:ring-2 focus:ring-black uppercase" id="name" placeholder="YOUR NAME" required type="text"/>
+</div>
+<div>
+<label class="block text-xs font-mono text-black uppercase mb-2" for="email">EMAIL *</label>
+<input class="w-full bg-white border border-black px-4 py-3 text-sm font-mono focus:outline-none focus:ring-2 focus:ring-black" id="email" placeholder="YOUR@EMAIL.COM" required type="email"/>
+</div>
+<div>
+<label class="block text-xs font-mono text-black uppercase mb-2" for="subject">SUBJECT *</label>
+<select class="w-full bg-white border border-black px-4 py-3 text-sm font-mono focus:outline-none focus:ring-2 focus:ring-black uppercase" id="subject" required>
+<option value="">SELECT A TOPIC</option>
+<option value="general">GENERAL INQUIRY</option>
+<option value="order">ORDER SUPPORT</option>
+<option value="product">PRODUCT QUESTION</option>
+<option value="collaboration">COLLABORATION</option>
+<option value="press">PRESS / MEDIA</option>
+<option value="other">OTHER</option>
+</select>
+</div>
+<div>
+<label class="block text-xs font-mono text-black uppercase mb-2" for="message">MESSAGE *</label>
+<textarea class="w-full bg-white border border-black px-4 py-3 text-sm font-mono focus:outline-none focus:ring-2 focus:ring-black uppercase resize-none" id="message" placeholder="YOUR MESSAGE HERE..." required rows="6"></textarea>
+</div>
+<div class="flex items-start gap-3">
+<input class="mt-1 border-black focus:ring-black" id="consent" required type="checkbox"/>
+<label class="text-xs font-mono text-gray-700 uppercase" for="consent">
+I AGREE TO THE PRIVACY POLICY AND TERMS OF SERVICE
+</label>
+</div>
+<button class="w-full bg-black text-white px-8 py-4 font-bold uppercase text-sm hover:bg-white hover:text-black border border-black transition-colors" type="submit">
+SEND MESSAGE
+</button>
+</form>
+<div class="mt-8 p-4 border border-gray-300 bg-white">
+<p class="text-xs font-mono text-gray-600 uppercase leading-relaxed">
+<span class="font-bold">NOTE:</span> FOR ORDER-RELATED INQUIRIES, PLEASE INCLUDE YOUR ORDER NUMBER IN THE MESSAGE.
+</p>
+</div>
+</div>
+</div>
+</section>
+
+<div class="bg-black text-white py-4 overflow-hidden border-t border-gray-800 w-full">
+<div class="animate-marquee whitespace-nowrap font-display font-bold uppercase tracking-wider text-sm flex items-center w-full">
+<span class="mx-8">ALWAYS HERE ©</span>
+<span class="mx-8">READY TO HELP ©</span>
+<span class="mx-8">COTTONCLAWS ©</span>
+<span class="mx-8">ALWAYS HERE ©</span>
+<span class="mx-8">READY TO HELP ©</span>
+<span class="mx-8">COTTONCLAWS ©</span>
+<span class="mx-8">ALWAYS HERE ©</span>
+<span class="mx-8">READY TO HELP ©</span>
+<span class="mx-8">COTTONCLAWS ©</span>
+</div>
+</div>
+
+<footer class="bg-white text-black border-t border-black">
+<div class="grid grid-cols-1 md:grid-cols-5 divide-y md:divide-y-0 md:divide-x divide-black border-b border-black">
+<div class="p-8 md:p-12 flex flex-col justify-between h-[300px]">
+<h3 class="text-2xl font-bold tracking-tighter text-black">COTTONCLAWS</h3>
+<div class="font-mono text-[10px] text-black">
+TOKYO / NEW YORK / PARIS<br/>
+EST. 2024
+</div>
+</div>
+<div class="p-8 md:p-12">
+<h4 class="font-mono text-xs text-black mb-6 uppercase">Collections</h4>
+<ul class="space-y-4 font-bold text-sm uppercase">
+<li><a class="hover:text-black/50 transition-colors text-black" href="#">New Arrivals</a></li>
+<li><a class="hover:text-black/50 transition-colors text-black" href="#">Outerwear</a></li>
+<li><a class="hover:text-black/50 transition-colors text-black" href="#">Tops</a></li>
+<li><a class="hover:text-black/50 transition-colors text-black" href="#">Bottoms</a></li>
+<li><a class="hover:text-black/50 transition-colors text-black" href="#">Footwear</a></li>
+<li><a class="hover:text-black/50 transition-colors text-black" href="#">Accessories</a></li>
+</ul>
+</div>
+<div class="p-8 md:p-12">
+<h4 class="font-mono text-xs text-black mb-6 uppercase">Client Care</h4>
+<ul class="space-y-4 font-mono text-xs uppercase text-black">
+<li><a class="hover:text-black/50 transition-colors text-black" href="#">Order Status</a></li>
+<li><a class="hover:text-black/50 transition-colors text-black" href="#">Returns &amp; Exchanges</a></li>
+<li><a class="hover:text-black/50 transition-colors text-black" href="#">Size Guide</a></li>
+<li><a class="hover:text-black/50 transition-colors text-black" href="#">Garment Care</a></li>
+<li><a class="hover:text-black/50 transition-colors text-black" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div class="p-8 md:p-12">
+<h4 class="font-mono text-xs text-black mb-6 uppercase">Legal</h4>
+<ul class="space-y-4 font-mono text-xs uppercase text-black">
+<li><a class="hover:text-black/50 transition-colors text-black" href="#">Terms of Service</a></li>
+<li><a class="hover:text-black/50 transition-colors text-black" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-black/50 transition-colors text-black" href="#">Cookie Policy</a></li>
+<li><a class="hover:text-black/50 transition-colors text-black" href="#">Accessibility</a></li>
+</ul>
+</div>
+<div class="p-8 md:p-12 flex flex-col justify-between">
+<div>
+<h4 class="font-mono text-xs text-black mb-6 uppercase">Connect</h4>
+<div class="flex gap-4">
+<a class="w-10 h-10 border border-black flex items-center justify-center rounded-full hover:bg-black hover:text-white transition-colors text-black" href="#">IG</a>
+<a class="w-10 h-10 border border-black flex items-center justify-center rounded-full hover:bg-black hover:text-white transition-colors text-black" href="#">X</a>
+<a class="w-10 h-10 border border-black flex items-center justify-center rounded-full hover:bg-black hover:text-white transition-colors text-black" href="#">TT</a>
+</div>
+</div>
+<div class="font-mono text-[10px] text-black mt-8 md:mt-0">
+© 2024 COTTONCLAWS INC.<br/>ALL RIGHTS RESERVED.
+</div>
+</div>
+</div>
+<div class="p-4 text-center border-t border-black bg-white">
+<p class="font-mono text-[10px] uppercase text-black">Engineered for the Void.</p>
+</div>
+</footer>
+</body></html>

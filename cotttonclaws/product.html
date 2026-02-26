@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Technical Jacket - CottonClaws</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,400&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#000000",
+              secondary: "#ffffff",
+              "background-light": "#F2F2F2",
+              "background-dark": "#0A0A0A",
+              "neutral-100": "#f5f5f5",
+              "neutral-800": "#262626",
+            },
+            fontFamily: {
+              display: ['Archivo', 'sans-serif'],
+              sans: ['Inter', 'sans-serif'],
+            },
+            borderRadius: {
+              DEFAULT: "0px",
+              'sm': '2px',
+              'md': '4px',
+              'full': '9999px',
+            },
+            spacing: {
+                '128': '32rem',
+            },
+            letterSpacing: {
+                'tighter': '-0.05em',
+                'tight': '-0.025em',
+                'widest': '0.1em',
+            }
+          },
+        },
+      };
+    </script>
+<style>
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-100%); }
+        }
+        .animate-marquee {
+            display: inline-block;
+            white-space: nowrap;
+            animation: marquee 20s linear infinite;
+        }
+        .barcode {
+            background-image: repeating-linear-gradient(90deg, currentColor 0px, currentColor 1px, transparent 1px, transparent 3px);
+            height: 12px;
+            width: 60px;
+            display: inline-block;
+        }
+        .barcode-lg {
+             background-image: repeating-linear-gradient(90deg, currentColor 0px, currentColor 2px, transparent 2px, transparent 4px);
+             height: 16px;
+             width: 80px;
+             display: inline-block;
+        }
+        .thumbnail-active {
+            border: 2px solid #000;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-900 bg-background-light dark:bg-background-dark dark:text-gray-100 transition-colors duration-300">
+<nav class="sticky top-0 z-50 bg-white/90 dark:bg-black/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+<div class="max-w-[1920px] mx-auto px-6 h-16 flex items-center justify-between">
+<div class="flex items-center gap-6">
+<a class="font-display font-black text-xl tracking-tighter" href="1.html">COTTONCLAWS</a>
+</div>
+<div class="hidden md:flex items-center gap-8 font-medium text-sm">
+<a class="hover:text-gray-500 transition-colors" href="1.html">Home</a>
+<a class="hover:text-gray-500 transition-colors" href="product.html">Shop</a>
+<a class="hover:text-gray-500 transition-colors" href="about.html">About</a>
+<a class="hover:text-gray-500 transition-colors" href="blog.html">Journal</a>
+<a class="hover:text-gray-500 transition-colors" href="contact.html">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors">
+<span class="material-icons-outlined">favorite_border</span>
+</button>
+<button class="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors">
+<span class="material-icons-outlined">shopping_bag</span>
+</button>
+</div>
+</div>
+</nav>
+
+<!-- Breadcrumb -->
+<div class="bg-white border-b border-gray-200">
+<div class="max-w-[1920px] mx-auto px-6 py-4">
+<div class="flex items-center gap-2 text-xs font-mono uppercase">
+<a href="#" class="text-gray-600 hover:text-black">HOME</a>
+<span class="text-gray-400">/</span>
+<a href="#" class="text-gray-600 hover:text-black">OUTERWEAR</a>
+<span class="text-gray-400">/</span>
+<span class="text-black">TECHNICAL JACKET</span>
+</div>
+</div>
+</div>
+
+<!-- Product Section -->
+<section class="bg-white py-8 md:py-12">
+<div class="max-w-[1920px] mx-auto px-6">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+<!-- Left: Product Images -->
+<div class="space-y-4">
+<!-- Main Image -->
+<div class="bg-gray-100 aspect-square overflow-hidden border border-gray-200">
+<img id="mainImage" alt="Technical Jacket" class="w-full h-full object-cover object-top" src="mo1.png"/>
+</div>
+<!-- Thumbnail Images -->
+<div class="grid grid-cols-4 gap-4">
+<button class="thumbnail-active bg-gray-100 aspect-square overflow-hidden border border-gray-200 hover:border-black transition-colors" onclick="changeImage('mo1.png', this)">
+<img alt="View 1" class="w-full h-full object-cover object-top" src="mo1.png"/>
+</button>
+<button class="bg-gray-100 aspect-square overflow-hidden border border-gray-200 hover:border-black transition-colors" onclick="changeImage('mo2.png', this)">
+<img alt="View 2" class="w-full h-full object-cover object-top" src="mo2.png"/>
+</button>
+<button class="bg-gray-100 aspect-square overflow-hidden border border-gray-200 hover:border-black transition-colors" onclick="changeImage('mo3.png', this)">
+<img alt="View 3" class="w-full h-full object-cover object-top" src="mo3.png"/>
+</button>
+<button class="bg-gray-100 aspect-square overflow-hidden border border-gray-200 hover:border-black transition-colors" onclick="changeImage('mo4.png', this)">
+<img alt="View 4" class="w-full h-full object-cover object-top" src="mo4.png"/>
+</button>
+</div>
+</div>
+
+<!-- Right: Product Info -->
+<div class="space-y-6">
+<!-- Product Title & Price -->
+<div>
+<div class="flex items-center gap-3 mb-4">
+<div class="barcode text-black"></div>
+<span class="text-xs font-mono text-gray-600 uppercase">// SKU: CC-TJ-001</span>
+</div>
+<h1 class="font-display text-4xl md:text-5xl font-semibold uppercase tracking-tighter mb-4">
+Technical // Jacket
+</h1>
+<div class="flex items-baseline gap-4">
+<span class="text-3xl font-display font-bold">$298.00</span>
+<span class="text-lg text-gray-500 line-through">$398.00</span>
+<span class="bg-black text-white px-3 py-1 text-xs font-mono uppercase">25% OFF</span>
+</div>
+</div>
+
+<!-- Rating -->
+<div class="flex items-center gap-3 py-4 border-y border-gray-200">
+<div class="flex items-center">
+<span class="text-yellow-500">★★★★★</span>
+</div>
+<span class="text-sm font-mono text-gray-600">4.8 / 5.0</span>
+<span class="text-sm font-mono text-gray-400">(127 REVIEWS)</span>
+</div>
+
+<!-- Description -->
+<div>
+<p class="text-sm font-mono leading-relaxed text-gray-700 uppercase">
+ENGINEERED FOR URBAN ENVIRONMENTS. THIS TECHNICAL JACKET COMBINES WEATHER RESISTANCE WITH MINIMALIST DESIGN. BUILT WITH PREMIUM MATERIALS AND REINFORCED CONSTRUCTION FOR LASTING DURABILITY.
+</p>
+</div>
+
+<!-- Color Selection -->
+<div>
+<label class="block text-xs font-mono text-black uppercase mb-3">COLOR: <span class="font-bold">BLACK</span></label>
+<div class="flex gap-3">
+<button class="w-12 h-12 bg-black border-2 border-black hover:scale-110 transition-transform"></button>
+<button class="w-12 h-12 bg-gray-800 border-2 border-gray-300 hover:border-black hover:scale-110 transition-all"></button>
+<button class="w-12 h-12 bg-gray-400 border-2 border-gray-300 hover:border-black hover:scale-110 transition-all"></button>
+</div>
+</div>
+
+<!-- Size Selection -->
+<div>
+<div class="flex justify-between items-center mb-3">
+<label class="text-xs font-mono text-black uppercase">SIZE</label>
+<a href="#" class="text-xs font-mono text-gray-600 hover:text-black uppercase underline">SIZE GUIDE</a>
+</div>
+<div class="grid grid-cols-5 gap-2">
+<button class="border border-gray-300 py-3 text-sm font-mono uppercase hover:border-black hover:bg-black hover:text-white transition-colors">XS</button>
+<button class="border border-gray-300 py-3 text-sm font-mono uppercase hover:border-black hover:bg-black hover:text-white transition-colors">S</button>
+<button class="border border-black bg-black text-white py-3 text-sm font-mono uppercase">M</button>
+<button class="border border-gray-300 py-3 text-sm font-mono uppercase hover:border-black hover:bg-black hover:text-white transition-colors">L</button>
+<button class="border border-gray-300 py-3 text-sm font-mono uppercase hover:border-black hover:bg-black hover:text-white transition-colors">XL</button>
+</div>
+</div>
+
+<!-- Quantity -->
+<div>
+<label class="block text-xs font-mono text-black uppercase mb-3">QUANTITY</label>
+<div class="flex items-center border border-black w-32">
+<button class="px-4 py-3 hover:bg-gray-100 transition-colors">-</button>
+<input class="w-full text-center border-x border-black py-3 font-mono text-sm focus:outline-none" type="number" value="1" min="1"/>
+<button class="px-4 py-3 hover:bg-gray-100 transition-colors">+</button>
+</div>
+</div>
+
+<!-- Add to Cart -->
+<div class="space-y-3 pt-4">
+<button class="w-full bg-black text-white py-4 font-bold uppercase text-sm hover:bg-gray-800 transition-colors">
+ADD TO CART
+</button>
+<button class="w-full border border-black text-black py-4 font-bold uppercase text-sm hover:bg-black hover:text-white transition-colors">
+BUY IT NOW
+</button>
+</div>
+
+<!-- Product Features -->
+<div class="border-t border-gray-200 pt-6 space-y-3">
+<div class="flex items-start gap-3">
+<span class="material-icons-outlined text-black text-lg">check_circle</span>
+<span class="text-xs font-mono text-gray-700 uppercase">FREE SHIPPING ON ORDERS OVER $200</span>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-icons-outlined text-black text-lg">autorenew</span>
+<span class="text-xs font-mono text-gray-700 uppercase">30-DAY RETURN POLICY</span>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-icons-outlined text-black text-lg">verified</span>
+<span class="text-xs font-mono text-gray-700 uppercase">AUTHENTIC GUARANTEE</span>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-icons-outlined text-black text-lg">local_shipping</span>
+<span class="text-xs font-mono text-gray-700 uppercase">SHIPS WITHIN 2-3 BUSINESS DAYS</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<div class="bg-black text-white py-4 overflow-hidden border-t border-white/10 w-full">
+<div class="animate-marquee whitespace-nowrap font-display font-bold uppercase tracking-wider text-sm flex items-center w-full">
+<span class="mx-8">PRODUCT DETAILS ↓</span>
+<span class="mx-8 text-gray-500">//</span>
+<span class="mx-8">SPECIFICATIONS ↓</span>
+<span class="mx-8 text-gray-500">//</span>
+<span class="mx-8">COTTONCLAWS ↓</span>
+<span class="mx-8 text-gray-500">//</span>
+<span class="mx-8">PRODUCT DETAILS ↓</span>
+<span class="mx-8 text-gray-500">//</span>
+<span class="mx-8">SPECIFICATIONS ↓</span>
+<span class="mx-8 text-gray-500">//</span>
+<span class="mx-8">COTTONCLAWS ↓</span>
+</div>
+</div>
+
+<!-- Product Details Tabs -->
+<section class="bg-white py-12">
+<div class="max-w-[1920px] mx-auto px-6">
+<div class="border border-black">
+<!-- Tabs -->
+<div class="flex border-b border-black">
+<button class="flex-1 py-4 px-6 font-mono text-sm uppercase bg-black text-white">DETAILS</button>
+<button class="flex-1 py-4 px-6 font-mono text-sm uppercase hover:bg-gray-100 transition-colors border-l border-black">MATERIALS</button>
+<button class="flex-1 py-4 px-6 font-mono text-sm uppercase hover:bg-gray-100 transition-colors border-l border-black">CARE</button>
+<button class="flex-1 py-4 px-6 font-mono text-sm uppercase hover:bg-gray-100 transition-colors border-l border-black">SHIPPING</button>
+</div>
+<!-- Tab Content -->
+<div class="p-8 md:p-12">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div>
+<h3 class="font-display text-2xl font-bold uppercase tracking-tight mb-6">PRODUCT // DETAILS</h3>
+<div class="space-y-4 text-sm font-mono text-gray-700 uppercase">
+<div class="flex justify-between py-2 border-b border-gray-200">
+<span>STYLE:</span>
+<span class="font-bold">TECHNICAL JACKET</span>
+</div>
+<div class="flex justify-between py-2 border-b border-gray-200">
+<span>FIT:</span>
+<span class="font-bold">REGULAR</span>
+</div>
+<div class="flex justify-between py-2 border-b border-gray-200">
+<span>LENGTH:</span>
+<span class="font-bold">HIP LENGTH</span>
+</div>
+<div class="flex justify-between py-2 border-b border-gray-200">
+<span>CLOSURE:</span>
+<span class="font-bold">ZIP + SNAP BUTTONS</span>
+</div>
+<div class="flex justify-between py-2 border-b border-gray-200">
+<span>POCKETS:</span>
+<span class="font-bold">4 EXTERIOR, 2 INTERIOR</span>
+</div>
+<div class="flex justify-between py-2 border-b border-gray-200">
+<span>HOOD:</span>
+<span class="font-bold">ADJUSTABLE</span>
+</div>
+<div class="flex justify-between py-2 border-b border-gray-200">
+<span>WEIGHT:</span>
+<span class="font-bold">680G</span>
+</div>
+</div>
+</div>
+<div>
+<h3 class="font-display text-2xl font-bold uppercase tracking-tight mb-6">KEY // FEATURES</h3>
+<ul class="space-y-3 text-sm font-mono text-gray-700 uppercase">
+<li class="flex items-start gap-3">
+<span class="text-black mt-1">•</span>
+<span>WATER-RESISTANT OUTER SHELL</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="text-black mt-1">•</span>
+<span>BREATHABLE MEMBRANE LINING</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="text-black mt-1">•</span>
+<span>REINFORCED STRESS POINTS</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="text-black mt-1">•</span>
+<span>ADJUSTABLE CUFFS AND HEM</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="text-black mt-1">•</span>
+<span>HIDDEN VENTILATION ZIPPERS</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="text-black mt-1">•</span>
+<span>REFLECTIVE DETAILS</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="text-black mt-1">•</span>
+<span>INTERNAL MEDIA POCKET</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="text-black mt-1">•</span>
+<span>ARTICULATED SLEEVES FOR MOBILITY</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<div class="bg-black text-white py-4 overflow-hidden border-t border-white/10 w-full">
+<div class="animate-marquee whitespace-nowrap font-display font-bold uppercase tracking-wider text-sm flex items-center w-full">
+<span class="mx-8">YOU MAY ALSO LIKE ©</span>
+<span class="mx-8">RECOMMENDED ©</span>
+<span class="mx-8">COTTONCLAWS ©</span>
+<span class="mx-8">YOU MAY ALSO LIKE ©</span>
+<span class="mx-8">RECOMMENDED ©</span>
+<span class="mx-8">COTTONCLAWS ©</span>
+<span class="mx-8">YOU MAY ALSO LIKE ©</span>
+<span class="mx-8">RECOMMENDED ©</span>
+<span class="mx-8">COTTONCLAWS ©</span>
+</div>
+</div>
+
+<!-- Related Products -->
+<section class="bg-white py-12">
+<div class="max-w-[1920px] mx-auto px-6">
+<h2 class="font-display text-4xl md:text-6xl font-semibold uppercase tracking-tighter mb-12 text-center">
+You May // Also Like
+</h2>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<!-- Product 1 -->
+<div class="group">
+<div class="bg-gray-100 aspect-square overflow-hidden border border-gray-200 mb-4">
+<img alt="Product" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" src="mo5.png"/>
+</div>
+<h3 class="font-display text-lg font-bold uppercase tracking-tight mb-2">CARGO PANTS</h3>
+<p class="text-sm font-mono text-gray-600 mb-2">TECHNICAL UTILITY</p>
+<p class="text-lg font-display font-bold">$178.00</p>
+</div>
+<!-- Product 2 -->
+<div class="group">
+<div class="bg-gray-100 aspect-square overflow-hidden border border-gray-200 mb-4">
+<img alt="Product" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" src="mo6.png"/>
+</div>
+<h3 class="font-display text-lg font-bold uppercase tracking-tight mb-2">UTILITY VEST</h3>
+<p class="text-sm font-mono text-gray-600 mb-2">MODULAR SYSTEM</p>
+<p class="text-lg font-display font-bold">$148.00</p>
+</div>
+<!-- Product 3 -->
+<div class="group">
+<div class="bg-gray-100 aspect-square overflow-hidden border border-gray-200 mb-4">
+<img alt="Product" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" src="mo7.png"/>
+</div>
+<h3 class="font-display text-lg font-bold uppercase tracking-tight mb-2">BASE LAYER</h3>
+<p class="text-sm font-mono text-gray-600 mb-2">MERINO BLEND</p>
+<p class="text-lg font-display font-bold">$98.00</p>
+</div>
+<!-- Product 4 -->
+<div class="group">
+<div class="bg-gray-100 aspect-square overflow-hidden border border-gray-200 mb-4">
+<img alt="Product" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" src="mo8.png"/>
+</div>
+<h3 class="font-display text-lg font-bold uppercase tracking-tight mb-2">TECH BACKPACK</h3>
+<p class="text-sm font-mono text-gray-600 mb-2">25L CAPACITY</p>
+<p class="text-lg font-display font-bold">$228.00</p>
+</div>
+</div>
+</div>
+</section>
+
+<footer class="bg-white text-black border-t border-black">
+<div class="grid grid-cols-1 md:grid-cols-5 divide-y md:divide-y-0 md:divide-x divide-black border-b border-black">
+<div class="p-8 md:p-12 flex flex-col justify-between h-[300px]">
+<h3 class="text-2xl font-bold tracking-tighter text-black">COTTONCLAWS</h3>
+<div class="font-mono text-[10px] text-black">
+TOKYO / NEW YORK / PARIS<br/>
+EST. 2024
+</div>
+</div>
+<div class="p-8 md:p-12">
+<h4 class="font-mono text-xs text-black mb-6 uppercase">Collections</h4>
+<ul class="space-y-4 font-bold text-sm uppercase">
+<li><a class="hover:text-black/50 transition-colors text-black" href="#">New Arrivals</a></li>
+<li><a class="hover:text-black/50 transition-colors text-black" href="#">Outerwear</a></li>
+<li><a class="hover:text-black/50 transition-colors text-black" href="#">Tops</a></li>
+<li><a class="hover:text-black/50 transition-colors text-black" href="#">Bottoms</a></li>
+<li><a class="hover:text-black/50 transition-colors text-black" href="#">Footwear</a></li>
+<li><a class="hover:text-black/50 transition-colors text-black" href="#">Accessories</a></li>
+</ul>
+</div>
+<div class="p-8 md:p-12">
+<h4 class="font-mono text-xs text-black mb-6 uppercase">Client Care</h4>
+<ul class="space-y-4 font-mono text-xs uppercase text-black">
+<li><a class="hover:text-black/50 transition-colors text-black" href="#">Order Status</a></li>
+<li><a class="hover:text-black/50 transition-colors text-black" href="#">Returns &amp; Exchanges</a></li>
+<li><a class="hover:text-black/50 transition-colors text-black" href="#">Size Guide</a></li>
+<li><a class="hover:text-black/50 transition-colors text-black" href="#">Garment Care</a></li>
+<li><a class="hover:text-black/50 transition-colors text-black" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div class="p-8 md:p-12">
+<h4 class="font-mono text-xs text-black mb-6 uppercase">Legal</h4>
+<ul class="space-y-4 font-mono text-xs uppercase text-black">
+<li><a class="hover:text-black/50 transition-colors text-black" href="#">Terms of Service</a></li>
+<li><a class="hover:text-black/50 transition-colors text-black" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-black/50 transition-colors text-black" href="#">Cookie Policy</a></li>
+<li><a class="hover:text-black/50 transition-colors text-black" href="#">Accessibility</a></li>
+</ul>
+</div>
+<div class="p-8 md:p-12 flex flex-col justify-between">
+<div>
+<h4 class="font-mono text-xs text-black mb-6 uppercase">Connect</h4>
+<div class="flex gap-4">
+<a class="w-10 h-10 border border-black flex items-center justify-center rounded-full hover:bg-black hover:text-white transition-colors text-black" href="#">IG</a>
+<a class="w-10 h-10 border border-black flex items-center justify-center rounded-full hover:bg-black hover:text-white transition-colors text-black" href="#">X</a>
+<a class="w-10 h-10 border border-black flex items-center justify-center rounded-full hover:bg-black hover:text-white transition-colors text-black" href="#">TT</a>
+</div>
+</div>
+<div class="font-mono text-[10px] text-black mt-8 md:mt-0">
+© 2024 COTTONCLAWS INC.<br/>ALL RIGHTS RESERVED.
+</div>
+</div>
+</div>
+<div class="p-4 text-center border-t border-black bg-white">
+<p class="font-mono text-[10px] uppercase text-black">Engineered for the Void.</p>
+</div>
+</footer>
+
+<script>
+function changeImage(src, element) {
+    document.getElementById('mainImage').src = src;
+    document.querySelectorAll('.thumbnail-active').forEach(el => el.classList.remove('thumbnail-active'));
+    element.classList.add('thumbnail-active');
+}
+</script>
+</body></html>

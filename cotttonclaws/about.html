@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About - CottonClaws</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,400&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#000000",
+              secondary: "#ffffff",
+              "background-light": "#F2F2F2",
+              "background-dark": "#0A0A0A",
+              "neutral-100": "#f5f5f5",
+              "neutral-800": "#262626",
+            },
+            fontFamily: {
+              display: ['Archivo', 'sans-serif'],
+              sans: ['Inter', 'sans-serif'],
+            },
+            borderRadius: {
+              DEFAULT: "0px",
+              'sm': '2px',
+              'md': '4px',
+              'full': '9999px',
+            },
+            spacing: {
+                '128': '32rem',
+            },
+            letterSpacing: {
+                'tighter': '-0.05em',
+                'tight': '-0.025em',
+                'widest': '0.1em',
+            }
+          },
+        },
+      };
+    </script>
+<style>
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-100%); }
+        }
+        .animate-marquee {
+            display: inline-block;
+            white-space: nowrap;
+            animation: marquee 20s linear infinite;
+        }
+        .barcode {
+            background-image: repeating-linear-gradient(90deg, currentColor 0px, currentColor 1px, transparent 1px, transparent 3px);
+            height: 12px;
+            width: 60px;
+            display: inline-block;
+        }
+        .barcode-lg {
+             background-image: repeating-linear-gradient(90deg, currentColor 0px, currentColor 2px, transparent 2px, transparent 4px);
+             height: 16px;
+             width: 80px;
+             display: inline-block;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-900 bg-background-light dark:bg-background-dark dark:text-gray-100 transition-colors duration-300">
+<nav class="sticky top-0 z-50 bg-white/90 dark:bg-black/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+<div class="max-w-[1920px] mx-auto px-6 h-16 flex items-center justify-between">
+<div class="flex items-center gap-6">
+<a class="font-display font-black text-xl tracking-tighter" href="1.html">COTTONCLAWS</a>
+</div>
+<div class="hidden md:flex items-center gap-8 font-medium text-sm">
+<a class="hover:text-gray-500 transition-colors" href="1.html">Home</a>
+<a class="hover:text-gray-500 transition-colors" href="product.html">Shop</a>
+<a class="hover:text-gray-500 transition-colors" href="about.html">About</a>
+<a class="hover:text-gray-500 transition-colors" href="blog.html">Journal</a>
+<a class="hover:text-gray-500 transition-colors" href="contact.html">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors">
+<span class="material-icons-outlined">favorite_border</span>
+</button>
+<button class="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors">
+<span class="material-icons-outlined">shopping_bag</span>
+</button>
+</div>
+</div>
+</nav>
+
+<!-- SECTION 1: Hero Banner -->
+<section class="relative h-[70vh] w-full overflow-hidden flex flex-col items-center justify-center bg-black">
+<div class="absolute inset-0 z-0">
+<img alt="About CottonClaws" class="w-full h-full object-cover object-top opacity-70" src="cat1.png"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60"></div>
+<div class="relative z-10 w-full text-center px-4">
+<p class="text-xs font-mono text-white/80 uppercase tracking-widest mb-4">// EST. 2024</p>
+<h1 class="font-display text-5xl md:text-7xl font-semibold uppercase tracking-tighter text-white mb-6">
+About // CottonClaws
+</h1>
+<div class="barcode-lg text-white opacity-60 mx-auto"></div>
+</div>
+</section>
+
+<div class="bg-black text-white py-4 overflow-hidden w-full">
+<div class="animate-marquee whitespace-nowrap font-display font-bold uppercase tracking-wider text-sm flex items-center w-full">
+<span class="mx-8">WHO WE ARE ©</span>
+<span class="mx-8">WHAT WE STAND FOR ©</span>
+<span class="mx-8">BUILT DIFFERENT ©</span>
+<span class="mx-8">COTTONCLAWS ©</span>
+<span class="mx-8">WHO WE ARE ©</span>
+<span class="mx-8">WHAT WE STAND FOR ©</span>
+<span class="mx-8">BUILT DIFFERENT ©</span>
+<span class="mx-8">COTTONCLAWS ©</span>
+<span class="mx-8">WHO WE ARE ©</span>
+<span class="mx-8">WHAT WE STAND FOR ©</span>
+<span class="mx-8">BUILT DIFFERENT ©</span>
+<span class="mx-8">COTTONCLAWS ©</span>
+</div>
+</div>
+
+<!-- SECTION 2: Our Story -->
+<section class="bg-white text-black py-16 md:py-24 px-6 md:px-12">
+<div class="max-w-[1920px] mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<div class="flex items-center gap-4 mb-8">
+<div class="barcode text-black"></div>
+<span class="text-xs font-mono text-gray-600 uppercase">// ORIGIN STORY</span>
+</div>
+<h2 class="font-display text-4xl md:text-6xl font-semibold uppercase tracking-tighter mb-8">
+Built For // The Unseen
+</h2>
+<div class="space-y-6 text-sm font-mono leading-relaxed text-gray-700 uppercase">
+<p>
+COTTONCLAWS WAS BORN FROM A SIMPLE QUESTION: WHY CHOOSE BETWEEN COMFORT AND PRESENCE?
+</p>
+<p>
+FOUNDED IN TOKYO, 2024. WE SAW A GAP IN THE MARKET — CLOTHING THAT DOESN'T SCREAM FOR ATTENTION BUT COMMANDS IT ANYWAY. PIECES THAT MOVE WITH YOU, NOT AGAINST YOU.
+</p>
+<p>
+NO EXCESS. NO COMPROMISE. JUST ESSENTIALS ENGINEERED FOR EVERYDAY LIFE.
+</p>
+</div>
+</div>
+<div class="relative h-[60vh] bg-gray-200 overflow-hidden">
+<img alt="CottonClaws origin" class="w-full h-full object-cover object-top" src="mo9.png"/>
+</div>
+</div>
+</div>
+</section>
+
+<div class="bg-black text-white py-4 overflow-hidden border-t border-white/10 w-full">
+<div class="animate-marquee whitespace-nowrap font-display font-bold uppercase tracking-wider text-sm flex items-center w-full">
+<span class="mx-6">OUR PHILOSOPHY ↓</span>
+<span class="mx-6 text-gray-500">//</span>
+<span class="mx-6">DESIGN PRINCIPLES ↓</span>
+<span class="mx-6 text-gray-500">//</span>
+<span class="mx-6">COTTONCLAWS ↓</span>
+<span class="mx-6 text-gray-500">//</span>
+<span class="mx-6">OUR PHILOSOPHY ↓</span>
+<span class="mx-6 text-gray-500">//</span>
+<span class="mx-6">DESIGN PRINCIPLES ↓</span>
+<span class="mx-6 text-gray-500">//</span>
+<span class="mx-6">COTTONCLAWS ↓</span>
+<span class="mx-6 text-gray-500">//</span>
+<span class="mx-6">OUR PHILOSOPHY ↓</span>
+<span class="mx-6 text-gray-500">//</span>
+<span class="mx-6">DESIGN PRINCIPLES ↓</span>
+<span class="mx-6 text-gray-500">//</span>
+<span class="mx-6">COTTONCLAWS ↓</span>
+</div>
+</div>
+
+<!-- SECTION 3: Core Values - 3 Grid -->
+<section class="bg-white text-black py-16 md:py-24 px-6 md:px-12">
+<div class="max-w-[1920px] mx-auto">
+<div class="text-center mb-16">
+<p class="text-xs font-mono text-gray-600 uppercase mb-4">// WHAT DRIVES US</p>
+<h2 class="font-display text-4xl md:text-6xl font-semibold uppercase tracking-tighter">
+Core // Values
+</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="border border-black p-8">
+<div class="flex justify-between items-start mb-6">
+<span class="text-xs font-mono text-black">// 01</span>
+<div class="barcode-lg text-black"></div>
+</div>
+<h3 class="font-display text-2xl font-bold uppercase tracking-tight mb-4">FUNCTION FIRST</h3>
+<p class="text-xs font-mono leading-relaxed text-gray-700 uppercase">
+EVERY STITCH, EVERY SEAM, EVERY DETAIL SERVES A PURPOSE. NO DECORATION FOR DECORATION'S SAKE.
+</p>
+</div>
+<div class="border border-black p-8">
+<div class="flex justify-between items-start mb-6">
+<span class="text-xs font-mono text-black">// 02</span>
+<div class="barcode-lg text-black"></div>
+</div>
+<h3 class="font-display text-2xl font-bold uppercase tracking-tight mb-4">QUIET CONFIDENCE</h3>
+<p class="text-xs font-mono leading-relaxed text-gray-700 uppercase">
+WE DON'T SHOUT. WE DON'T NEED TO. OUR PIECES SPEAK THROUGH QUALITY, NOT LOGOS.
+</p>
+</div>
+<div class="border border-black p-8">
+<div class="flex justify-between items-start mb-6">
+<span class="text-xs font-mono text-black">// 03</span>
+<div class="barcode-lg text-black"></div>
+</div>
+<h3 class="font-display text-2xl font-bold uppercase tracking-tight mb-4">BUILT TO LAST</h3>
+<p class="text-xs font-mono leading-relaxed text-gray-700 uppercase">
+FAST FASHION IS NOISE. WE CREATE PIECES THAT ENDURE — IN STYLE AND CONSTRUCTION.
+</p>
+</div>
+</div>
+</div>
+</section>
+
+<div class="bg-black text-white py-4 overflow-hidden border-t border-white/10 w-full">
+<div class="animate-marquee whitespace-nowrap font-display font-bold uppercase tracking-wider text-sm flex items-center w-full">
+<span class="mx-8">THE PROCESS ↓</span>
+<span class="mx-8">CRAFTSMANSHIP ↓</span>
+<span class="mx-8">ATTENTION TO DETAIL ↓</span>
+<span class="mx-8">COTTONCLAWS ↓</span>
+<span class="mx-8">THE PROCESS ↓</span>
+<span class="mx-8">CRAFTSMANSHIP ↓</span>
+<span class="mx-8">ATTENTION TO DETAIL ↓</span>
+<span class="mx-8">COTTONCLAWS ↓</span>
+<span class="mx-8">THE PROCESS ↓</span>
+<span class="mx-8">CRAFTSMANSHIP ↓</span>
+<span class="mx-8">ATTENTION TO DETAIL ↓</span>
+<span class="mx-8">COTTONCLAWS ↓</span>
+</div>
+</div>
+
+<!-- SECTION 4: Design Process - 2x2 Grid -->
+<section class="bg-background-light dark:bg-background-dark py-12 px-6">
+<div class="max-w-[1920px] mx-auto">
+<div class="mb-12 text-center">
+<h2 class="font-display text-4xl md:text-6xl font-semibold uppercase tracking-tighter mb-4">
+Our // Process
+</h2>
+<p class="text-xs font-mono text-gray-600 uppercase">// FROM CONCEPT TO CREATION</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+<div class="relative h-[50vh] lg:h-[60vh] group overflow-hidden">
+<img alt="Design phase" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700" src="cat2.png"/>
+<div class="absolute inset-0 flex items-end justify-between p-6 z-10">
+<div class="flex flex-col">
+<h3 class="font-display font-black text-2xl md:text-3xl text-white uppercase drop-shadow-lg" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.6);">Design // Iteration</h3>
+<div class="mt-4 barcode text-white opacity-80"></div>
+</div>
+<div class="max-w-xs">
+<p class="text-white font-mono text-xs drop-shadow-md text-right" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.6);">MULTIPLE PROTOTYPES. ENDLESS REFINEMENT. UNTIL IT'S RIGHT.</p>
+</div>
+</div>
+</div>
+<div class="relative h-[50vh] lg:h-[60vh] group overflow-hidden bg-gray-100 dark:bg-gray-800">
+<img alt="Material selection" class="w-full h-full object-cover object-top group-hover:scale-105 transition-all" src="cat3.png"/>
+<div class="absolute inset-0 flex items-end justify-between p-6 z-10">
+<div class="flex flex-col">
+<h3 class="font-display font-black text-2xl md:text-3xl text-white uppercase drop-shadow-lg" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.6);">Material // Selection</h3>
+<div class="mt-4 barcode text-white opacity-80"></div>
+</div>
+<div class="max-w-xs">
+<p class="text-white font-mono text-xs drop-shadow-md text-right" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.6);">PREMIUM FABRICS. TESTED FOR DURABILITY AND COMFORT.</p>
+</div>
+</div>
+</div>
+<div class="relative h-[50vh] lg:h-[60vh] group overflow-hidden bg-gray-100 dark:bg-gray-800">
+<img alt="Construction" class="w-full h-full object-cover object-top group-hover:scale-105 transition-all" src="cat4.png"/>
+<div class="absolute inset-0 flex items-end justify-between p-6 z-10">
+<div class="flex flex-col">
+<h3 class="font-display font-black text-2xl md:text-3xl text-white uppercase drop-shadow-lg" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.6);">Construction // Quality</h3>
+<div class="mt-4 barcode text-white opacity-80"></div>
+</div>
+<div class="max-w-xs">
+<p class="text-white font-mono text-xs drop-shadow-md text-right" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.6);">PRECISION STITCHING. REINFORCED SEAMS. BUILT TO ENDURE.</p>
+</div>
+</div>
+</div>
+<div class="relative h-[50vh] lg:h-[60vh] group overflow-hidden bg-gray-100 dark:bg-gray-800">
+<img alt="Final product" class="w-full h-full object-cover object-top group-hover:scale-105 transition-all" src="mo1.png"/>
+<div class="absolute inset-0 flex items-end justify-between p-6 z-10">
+<div class="flex flex-col">
+<h3 class="font-display font-black text-2xl md:text-3xl text-white uppercase drop-shadow-lg" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.6);">Final // Product</h3>
+<div class="mt-4 barcode text-white opacity-80"></div>
+</div>
+<div class="max-w-xs">
+<p class="text-white font-mono text-xs drop-shadow-md text-right" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.6);">READY FOR REAL LIFE. NO COMPROMISES.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<div class="bg-black text-white py-4 overflow-hidden border-t border-white/10 w-full">
+<div class="animate-marquee whitespace-nowrap font-display font-bold uppercase tracking-wider text-sm flex items-center w-full">
+<span class="mx-8">SUSTAINABILITY ©</span>
+<span class="mx-8">RESPONSIBLE PRODUCTION ©</span>
+<span class="mx-8">FUTURE FOCUSED ©</span>
+<span class="mx-8">COTTONCLAWS ©</span>
+<span class="mx-8">SUSTAINABILITY ©</span>
+<span class="mx-8">RESPONSIBLE PRODUCTION ©</span>
+<span class="mx-8">FUTURE FOCUSED ©</span>
+<span class="mx-8">COTTONCLAWS ©</span>
+<span class="mx-8">SUSTAINABILITY ©</span>
+<span class="mx-8">RESPONSIBLE PRODUCTION ©</span>
+<span class="mx-8">FUTURE FOCUSED ©</span>
+<span class="mx-8">COTTONCLAWS ©</span>
+</div>
+</div>
+
+<!-- SECTION 5: Sustainability Commitment -->
+<section class="bg-white text-black py-16 md:py-24 px-6 md:px-12">
+<div class="max-w-[1920px] mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="relative h-[60vh] bg-gray-200 overflow-hidden order-2 lg:order-1">
+<img alt="Sustainable practices" class="w-full h-full object-cover object-top" src="mo3.png"/>
+</div>
+<div class="order-1 lg:order-2">
+<div class="flex items-center gap-4 mb-8">
+<div class="barcode text-black"></div>
+<span class="text-xs font-mono text-gray-600 uppercase">// RESPONSIBILITY</span>
+</div>
+<h2 class="font-display text-4xl md:text-6xl font-semibold uppercase tracking-tighter mb-8">
+Built To // Last Longer
+</h2>
+<div class="space-y-6 text-sm font-mono leading-relaxed text-gray-700 uppercase">
+<p>
+SUSTAINABILITY ISN'T A BUZZWORD FOR US. IT'S A COMMITMENT. EVERY PIECE IS DESIGNED TO LAST YEARS, NOT SEASONS.
+</p>
+<p>
+WE SOURCE RESPONSIBLY. WE PRODUCE MINDFULLY. WE MINIMIZE WASTE AT EVERY STEP.
+</p>
+<p>
+BECAUSE THE MOST SUSTAINABLE GARMENT IS THE ONE YOU DON'T NEED TO REPLACE.
+</p>
+</div>
+<div class="mt-12 grid grid-cols-2 gap-8">
+<div>
+<div class="text-4xl font-display font-bold mb-2">100%</div>
+<div class="text-xs font-mono text-gray-600 uppercase">TRACEABLE MATERIALS</div>
+</div>
+<div>
+<div class="text-4xl font-display font-bold mb-2">ZERO</div>
+<div class="text-xs font-mono text-gray-600 uppercase">PLANNED OBSOLESCENCE</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<div class="bg-black text-white py-4 overflow-hidden border-t border-gray-800 w-full">
+<div class="animate-marquee whitespace-nowrap font-display font-bold uppercase tracking-wider text-sm flex items-center w-full">
+<span class="mx-8">JOIN US ©</span>
+<span class="mx-8">BE PART OF THE MOVEMENT ©</span>
+<span class="mx-8">COTTONCLAWS ©</span>
+<span class="mx-8">JOIN US ©</span>
+<span class="mx-8">BE PART OF THE MOVEMENT ©</span>
+<span class="mx-8">COTTONCLAWS ©</span>
+<span class="mx-8">JOIN US ©</span>
+<span class="mx-8">BE PART OF THE MOVEMENT ©</span>
+<span class="mx-8">COTTONCLAWS ©</span>
+</div>
+</div>
+
+<!-- SECTION 6: Call to Action -->
+<section class="relative h-[50vh] w-full bg-gray-900 overflow-hidden">
+<img alt="Join CottonClaws" class="absolute inset-0 w-full h-full object-cover opacity-60" src="mo8.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center p-6">
+<div class="barcode text-white opacity-80 scale-150 mb-4"></div>
+<h2 class="font-display text-4xl md:text-6xl font-semibold text-white uppercase tracking-tighter mb-2">
+Ready To // Join Us?
+</h2>
+<p class="text-white/80 font-mono text-xs max-w-lg leading-relaxed uppercase mb-8">
+BE PART OF A MOVEMENT THAT VALUES SUBSTANCE OVER HYPE.
+</p>
+<a class="border border-white/50 bg-black/20 backdrop-blur text-white px-8 py-3 hover:bg-white hover:text-black transition-all group" href="#">
+<span class="text-xs font-bold font-mono uppercase tracking-wider">Explore Collection ↗</span>
+</a>
+</div>
+</section>
+
+<footer class="bg-white text-black border-t border-black">
+<div class="grid grid-cols-1 md:grid-cols-5 divide-y md:divide-y-0 md:divide-x divide-black border-b border-black">
+<div class="p-8 md:p-12 flex flex-col justify-between h-[300px]">
+<h3 class="text-2xl font-bold tracking-tighter text-black">COTTONCLAWS</h3>
+<div class="font-mono text-[10px] text-black">
+TOKYO / NEW YORK / PARIS<br/>
+EST. 2024
+</div>
+</div>
+<div class="p-8 md:p-12">
+<h4 class="font-mono text-xs text-black mb-6 uppercase">Collections</h4>
+<ul class="space-y-4 font-bold text-sm uppercase">
+<li><a class="hover:text-black/50 transition-colors text-black" href="#">New Arrivals</a></li>
+<li><a class="hover:text-black/50 transition-colors text-black" href="#">Outerwear</a></li>
+<li><a class="hover:text-black/50 transition-colors text-black" href="#">Tops</a></li>
+<li><a class="hover:text-black/50 transition-colors text-black" href="#">Bottoms</a></li>
+<li><a class="hover:text-black/50 transition-colors text-black" href="#">Footwear</a></li>
+<li><a class="hover:text-black/50 transition-colors text-black" href="#">Accessories</a></li>
+</ul>
+</div>
+<div class="p-8 md:p-12">
+<h4 class="font-mono text-xs text-black mb-6 uppercase">Client Care</h4>
+<ul class="space-y-4 font-mono text-xs uppercase text-black">
+<li><a class="hover:text-black/50 transition-colors text-black" href="#">Order Status</a></li>
+<li><a class="hover:text-black/50 transition-colors text-black" href="#">Returns &amp; Exchanges</a></li>
+<li><a class="hover:text-black/50 transition-colors text-black" href="#">Size Guide</a></li>
+<li><a class="hover:text-black/50 transition-colors text-black" href="#">Garment Care</a></li>
+<li><a class="hover:text-black/50 transition-colors text-black" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div class="p-8 md:p-12">
+<h4 class="font-mono text-xs text-black mb-6 uppercase">Legal</h4>
+<ul class="space-y-4 font-mono text-xs uppercase text-black">
+<li><a class="hover:text-black/50 transition-colors text-black" href="#">Terms of Service</a></li>
+<li><a class="hover:text-black/50 transition-colors text-black" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-black/50 transition-colors text-black" href="#">Cookie Policy</a></li>
+<li><a class="hover:text-black/50 transition-colors text-black" href="#">Accessibility</a></li>
+</ul>
+</div>
+<div class="p-8 md:p-12 flex flex-col justify-between">
+<div>
+<h4 class="font-mono text-xs text-black mb-6 uppercase">Connect</h4>
+<div class="flex gap-4">
+<a class="w-10 h-10 border border-black flex items-center justify-center rounded-full hover:bg-black hover:text-white transition-colors text-black" href="#">IG</a>
+<a class="w-10 h-10 border border-black flex items-center justify-center rounded-full hover:bg-black hover:text-white transition-colors text-black" href="#">X</a>
+<a class="w-10 h-10 border border-black flex items-center justify-center rounded-full hover:bg-black hover:text-white transition-colors text-black" href="#">TT</a>
+</div>
+</div>
+<div class="font-mono text-[10px] text-black mt-8 md:mt-0">
+© 2024 COTTONCLAWS INC.<br/>ALL RIGHTS RESERVED.
+</div>
+</div>
+</div>
+<div class="p-4 text-center border-t border-black bg-white">
+<p class="font-mono text-[10px] uppercase text-black">Engineered for the Void.</p>
+</div>
+</footer>
+</body></html>
